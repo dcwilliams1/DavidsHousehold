@@ -6,7 +6,7 @@ describe('HeaderControllerTests', function () {
     }));
 
     it('should return a user', function(){
-        expect(ctrl.user).toBeUntruthy();
+        expect(ctrl.user).toBeFalsy();
         ctrl.getUser();
         expect(ctrl.user).toBeTruthy();
     });
