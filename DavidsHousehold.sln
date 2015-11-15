@@ -3,8 +3,80 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Household.AngularClient", "Household.AngularClient", "{A7D9AB2F-F17C-4705-928B-5A84B073532B}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		HouseholdApp.js = HouseholdApp.js
+		Index.html = Index.html
+		karma.conf.js = karma.conf.js
+		package.json = package.json
+		Routes.js = Routes.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Household.ExpressApi", "Household.ExpressApi", "{894B1FA5-AB16-408B-A7A5-73C7CA74E82A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{0C68A7FF-5272-4D5E-8877-E6EAB22900D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{6261DCBB-96AB-4960-9C2E-C971AE3E9999}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8D236890-729A-4998-8344-8D90E1798A23}"
+	ProjectSection(SolutionItems) = preProject
+		Shared\HeaderController.js = Shared\HeaderController.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Money", "Money", "{C5B9DE05-8D44-4589-A33F-F2BE2515C508}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MonthEnd", "MonthEnd", "{96681E28-05DC-4C16-93B3-B49E77C2B3B6}"
+	ProjectSection(SolutionItems) = preProject
+		Modules\Money\MonthEnd\monthEnd.html = Modules\Money\MonthEnd\monthEnd.html
+		Modules\Money\MonthEnd\MonthEndController.js = Modules\Money\MonthEnd\MonthEndController.js
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain", "Household.Domain\Household.Domain.csproj", "{C667C5F3-9FA1-48D5-A210-40F4686F3633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data", "Household.Data\Household.Data.csproj", "{22E89A56-B772-4092-BF96-A25CDC3D66BF}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Release|x64.ActiveCfg = Release|Any CPU
+		{C667C5F3-9FA1-48D5-A210-40F4686F3633}.Release|x86.ActiveCfg = Release|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Release|ARM.ActiveCfg = Release|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Release|x64.ActiveCfg = Release|Any CPU
+		{22E89A56-B772-4092-BF96-A25CDC3D66BF}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C68A7FF-5272-4D5E-8877-E6EAB22900D6} = {A7D9AB2F-F17C-4705-928B-5A84B073532B}
+		{6261DCBB-96AB-4960-9C2E-C971AE3E9999} = {A7D9AB2F-F17C-4705-928B-5A84B073532B}
+		{8D236890-729A-4998-8344-8D90E1798A23} = {A7D9AB2F-F17C-4705-928B-5A84B073532B}
+		{C5B9DE05-8D44-4589-A33F-F2BE2515C508} = {6261DCBB-96AB-4960-9C2E-C971AE3E9999}
+		{96681E28-05DC-4C16-93B3-B49E77C2B3B6} = {C5B9DE05-8D44-4589-A33F-F2BE2515C508}
 	EndGlobalSection
 EndGlobal

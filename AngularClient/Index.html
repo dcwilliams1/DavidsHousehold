@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="DavidsHousehold">
+<head>
+    <title>David's Household</title>
+    <style>
+        .ng-cloak{
+            display: none !important;
+        }
+    </style>
+    
+</head>
+<body class="ng-cloak">
+    <header ng-controller="HeaderController as ctrl">
+        Hello {{ctrl.user}}<br />
+        <button ng-click="ctrl.getUser()" class="row">click</button>
+    </header>
+    <script type="text/javascript" src="./assets/libs/angular.js"></script>
+    <script type="text/javascript" src="HouseholdApp.js"></script>
+    <script type="text/javascript" src="./Shared/HeaderController.js"></script>
+</body>
+</html>
