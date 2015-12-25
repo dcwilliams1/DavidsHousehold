@@ -1,11 +1,11 @@
 (function () {
 
     householdApp = angular.module('DavidsHousehold');
-    householdApp.controller('HeaderController', [function(){
+    householdApp.controller('HeaderController', ['$scope', function($scope){
         var self = this;
-        self.user = '';
+        self.currentUser = '';
         self.getUser = function () {
-            self.user = 'David';
+            self.currentUser = 'David';
         };
     }]);
 })();

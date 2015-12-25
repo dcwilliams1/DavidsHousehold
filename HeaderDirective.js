@@ -1,7 +1,10 @@
 (function () {
-    angular.module("DavidsHousehould").directive("householdHeader", function () {
+    angular.module("DavidsHousehould", []).directive("householdHeader", function () {
         return {
-            templateUrl: "Header.html"
+            templateUrl: "Header.html",
+            restrict: "E",
+            scope: {},
+            controller: "HeaderController"
         };
 
     });

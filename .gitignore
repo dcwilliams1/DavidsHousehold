@@ -19,6 +19,8 @@
 *.rar
 *.tar
 *.zip
+packages*
+packages/*
 
 # Logs and databases #
 ######################
@@ -41,3 +43,27 @@ Household.Data/bin
 Household.Data/obj
 Household.Domain/bin
 Household.Domain/obj
+Household.Domain.DataContracts/bin
+Household.Domain.DataContracts/obj
+
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/

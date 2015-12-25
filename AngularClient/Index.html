@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="DavidsHousehold">
+<html>
 <head>
     <title>David's Household</title>
     <style>
@@ -7,15 +7,17 @@
             display: none !important;
         }
     </style>
-    
+    <link rel="stylesheet" type="text/css" href="Assets/css/App.css">
 </head>
-<body class="ng-cloak">
-    <header ng-controller="HeaderController as ctrl">
-        Hello {{ctrl.user}}<br />
-        <button ng-click="ctrl.getUser()" class="row">click</button>
+<body ng-app="DavidsHousehold" class="ng-cloak">
+    <header>
+        <household-header></household-header>
     </header>
     <script type="text/javascript" src="./assets/libs/angular.js"></script>
     <script type="text/javascript" src="HouseholdApp.js"></script>
-    <script type="text/javascript" src="./Shared/HeaderController.js"></script>
+    <script type="text/javascript" src="./Shared/Header/HeaderController.js"></script>
+    <script type="text/html" src="./Shared/Header/Header.html">
+    </script>
+    <script type="text/javascript" src="./Shared/Header/HeaderDirective.js"></script>
 </body>
 </html>
