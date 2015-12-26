@@ -15,14 +15,16 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            './AngularClient/Assets/libs/angular.js',
+            'AngularClient/App/Assets/libs/angular.js',
             './node_modules/angular-mocks/angular-mocks.js',
-          './AngularClient/Assets/js/*.js',
-          'AngularClient/*.js',
-          'AngularClient/*.html',
-          './AngularClient/Shared/*.js',
-          './AngluarClient/Shared/*.html',
-          './AngularClient/Test/*.js'
+            'AngularClient/App/Assets/js/*.js',
+            'AngularClient/*.js',
+            'AngularClient/*.html',
+            'AngularClient/App/Shared/Header/*.js',
+            './AngluarClient/Shared/Header/*.html',
+            'AngularClient/App/Shared/Menu/*.js',
+            './AngluarClient/Shared/Menu/*.html',
+            'AngularClient/UnitTests/*.js'
 
         ],
 

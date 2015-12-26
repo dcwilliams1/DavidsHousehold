@@ -1,0 +1,85 @@
+body
+{
+    font-family:Tahoma, Verdana;
+    background-color:#A3C2D1;
+    padding: 10px 20px 10px 20px;
+}
+
+.GridHeading
+{
+    font-family: Tahoma, Verdana;
+    font-size: 1.5em;
+}
+
+.InstructionLabel
+{
+    font-size:small
+}
+
+/* Header */
+.PageMainHeading
+{
+    font-family:Tahoma, Verdana;
+    font-size:2em;
+}
+
+.householdMenu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.householdMenu li{
+    display:inline;
+    float: left;
+}
+
+.householdMenu a {
+    display: block;
+    padding: 8px;
+    color: #2F6FAD;
+    text-decoration: none;
+}
+
+.householdMenu a:hover {
+    background-color: #5890AD;
+    color: white;
+    cursor: hand;
+}
+
+.householdMenu a:active{
+    background-color: #008800;
+}
+
+.householdMenu .dropdown {
+    display: inline-block;
+}
+
+.householdMenu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B6CAD4;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.householdMenu .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.householdMenu .dropdown-content a:hover {
+    background-color: #5890AD;
+    color: white;
+}
+
+.householdMenu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.userWelcome{
+    float:right;
+}

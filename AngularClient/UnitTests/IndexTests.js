@@ -1,13 +1,13 @@
-describe('HeaderControllerTests', function () {
+describe('HeaderController', function () {
+    var ctrl,  scope;
     beforeEach(module('DavidsHousehold'));
-    var ctrl;
     beforeEach(inject(function ($controller) {
         ctrl = $controller('HeaderController');
     }));
 
     it('should return a user', function(){
-        expect(ctrl.user).toBeFalsy();
+        expect(ctrl.currentUser).toBeFalsy();
         ctrl.getUser();
-        expect(ctrl.user).toBeTruthy();
+        expect(ctrl.currentUser).toBeTruthy();
     });
 })

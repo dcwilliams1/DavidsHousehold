@@ -2,16 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6828ae31-f03f-4451-b801-cf06eef109e8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularClient/Shared/HeaderController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Header.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Menu.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MenuDirective.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DavidsHousehold.v12.suo" afterPath="$PROJECT_DIR$/DavidsHousehold.v12.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/Index.html" afterPath="$PROJECT_DIR$/AngularClient/Index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/Assets/css/App.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/HouseholdApp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Money/MonthEnd/MonthEnd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/Routes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenuController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenuDirective.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/Protractor/CategoriesTests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/CategoriesViewPageDriver.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularClient/Assets/css/App.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularClient/HouseholdApp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularClient/Modules/Money/MonthEnd/monthEnd.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularClient/Shared/Header/Header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularClient/Shared/Menu/Menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AngularClient/Shared/Menu/MenuDirective.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DavidsHousehold.sln" afterPath="$PROJECT_DIR$/DavidsHousehold.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HeaderDirective.js" afterPath="$PROJECT_DIR$/HeaderDirective.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/repositories.config" afterPath="$PROJECT_DIR$/packages/repositories.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Assets/libs/angular.js" afterPath="$PROJECT_DIR$/AngularClient/App/Assets/libs/angular.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Assets/libs/angular.min.js" afterPath="$PROJECT_DIR$/AngularClient/App/Assets/libs/angular.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Index.html" afterPath="$PROJECT_DIR$/AngularClient/App/Index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Modules/Money/MonthEnd/MonthEndController.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Money/MonthEnd/MonthEndController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Routes.js" afterPath="$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/AppHeaderPageDriver.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Shared/Header/HeaderController.js" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Shared/Header/HeaderDirective.js" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/Test/IndexTests.js" afterPath="$PROJECT_DIR$/AngularClient/UnitTests/IndexTests.js" />
     </list>
     <ignored path="DavidsHousehold.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,102 +48,102 @@
     <favorites_list name="DavidsHousehold" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CategoryTests.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Household.Test/Domain/CategoryTests.cs">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AppHeader.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Header/Header.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41127348">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Menu.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Menu/Menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeaderController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Header/HeaderController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/Index.html">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeaderDirective.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Header/HeaderDirective.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angular.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/Assets/libs/angular.js">
+      <file leaf-file-name="AppHeaderDirective.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8782" column="67" selection-start-line="8782" selection-start-column="67" selection-end-line="8782" selection-end-column="67" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/Assets/css/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HouseholdApp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/HouseholdApp.js">
+      <file leaf-file-name="MonthEnd.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Money/MonthEnd/MonthEnd.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MonthEndController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Money/MonthEnd/MonthEndController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="protractor.conf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/protractor.conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoriesTests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/CategoriesTests.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RouteTests.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/RouteTests.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32864675">
+              <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoriesViewPageDriver.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/CategoriesViewPageDriver.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppHeaderPageDriver.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/AppHeaderPageDriver.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="13" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -138,6 +155,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -147,12 +165,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AngularClient/Index.html" />
-        <option value="$PROJECT_DIR$/AngularClient/Assets/css/App.css" />
-        <option value="$PROJECT_DIR$/AngularClient/Shared/Header/HeaderController.js" />
-        <option value="$PROJECT_DIR$/AngularClient/Shared/Header/HeaderDirective.js" />
-        <option value="$PROJECT_DIR$/AngularClient/Shared/Header/Header.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Header/HeaderController.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Test/IndexTests.js" />
+        <option value="$PROJECT_DIR$/karma.conf.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/Menu.html" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/MainMenuController.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/MenuDirective.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Header/HeaderDirective.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/MainMenuDirective.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/MainMenu.html" />
+        <option value="$PROJECT_DIR$/AngularClient/Assets/css/App.css" />
+        <option value="$PROJECT_DIR$/AngularClient/Shared/Header/Header.html" />
+        <option value="$PROJECT_DIR$/AngularClient/Index.html" />
+        <option value="$PROJECT_DIR$/AngularClient/HouseholdApp.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Routes.js" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Routes.js" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Index.html" />
+        <option value="$PROJECT_DIR$/AngularClient/Protractor/CategoriesTests.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/CategoriesView.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Protractor/protractor.conf.js" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html" />
+        <option value="$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/AppHeaderPageDriver.js" />
+        <option value="$PROJECT_DIR$/AngularClient/Protractor/RouteTests.js" />
       </list>
     </option>
   </component>
@@ -194,7 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,6 +346,10 @@
               <option name="myItemId" value="AngularClient" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UnitTests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -324,6 +362,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AngularClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Protractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Protractor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Page Drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -342,6 +442,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AngularClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -367,6 +471,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -386,6 +494,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AngularClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -415,6 +527,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Money" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DavidsHousehold" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AngularClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -433,6 +575,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -443,6 +589,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -451,11 +598,20 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/AngularClient/Index.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="javascript.karma.node_interpreter_path" value="C:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Run David's Housholed">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\David Personal\DavidsHousehold\AngularClient\App\Modules" />
+      <recent name="F:\David Personal\DavidsHousehold\AngularClient\App" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Run David's Houshold">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
@@ -475,6 +631,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -495,14 +656,23 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="Run David's Housholed" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/DavidsHousehold/AngularClient/Index.html">
+    <configuration default="false" name="Run David's Houshold" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/DavidsHousehold/AngularClient/App/Index.html">
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Run David's Housholed" />
+    <configuration default="false" name="Unit Tests" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="$PROJECT_DIR$/karma.conf.js">
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/karma" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Run David's Houshold" />
+      <item index="1" class="java.lang.String" itemvalue="Karma.Unit Tests" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6828ae31-f03f-4451-b801-cf06eef109e8" name="Default" comment="" />
@@ -512,28 +682,68 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unit_Tests - 2015.12.25 at 01h 21m 35s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 01h 22m 03s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 01h 23m 44s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 01h 29m 36s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 01h 43m 32s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 02h 21m 41s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 02h 21m 53s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 02h 22m 11s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 02h 22m 12s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+    <history-entry file="Unit_Tests - 2015.12.25 at 02h 25m 28s.xml">
+      <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30786517" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -542,106 +752,58 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/AngularClient/Shared/Header/HeaderDirective.js</url>
+          <url>file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js</url>
           <line>12</line>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/AngularClient/UnitTests/IndexTests.js</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/AngularClient/UnitTests/IndexTests.js</url>
+          <line>4</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/css/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Household.Test/Domain/BudgetLineItemTests.cs">
+    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/IndexTests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Modules/Money/MonthEnd/MonthEndController.js">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Modules/Money/MonthEnd/monthEnd.html">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Household.Test/Domain/CategoryTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/HouseholdApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Assets/css/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Menu/Menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Menu/MenuDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Assets/libs/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8782" column="67" selection-start-line="8782" selection-start-column="67" selection-end-line="8782" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Header/HeaderDirective.js">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
@@ -649,7 +811,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Header/HeaderController.js">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenuDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenuController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
@@ -657,11 +835,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/Shared/Header/Header.html">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/HouseholdApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/css/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/IndexTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/css/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/HouseholdApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/IndexTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/libs/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9091" column="6" selection-start-line="9091" selection-start-column="6" selection-end-line="9091" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Household.Test/Domain/BudgetLineItemTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Household.Test/Domain/CategoryTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -669,6 +971,228 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41127348">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/IndexTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21693735">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/css/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.961538">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/img/FinanceIcon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/libs/angular.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9091" column="6" selection-start-line="9091" selection-start-column="6" selection-end-line="9091" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/libs/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/libs/angular-route.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/libs/angular-route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1451084539857" expanded="true" signature="11427:12174" placeholder="..." />
+            <marker date="1451084539857" expanded="true" signature="12714:12867" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="12949:13058" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="13143:13255" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="13327:14085" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="13506:13776" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="13605:13759" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="14243:14830" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="27896:28610" placeholder="..." />
+            <marker date="1451084539857" expanded="true" signature="28221:28291" placeholder="..." />
+            <marker date="1451084539857" expanded="true" signature="28669:28774" placeholder="..." />
+            <marker date="1451084539857" expanded="true" signature="28836:28998" placeholder="..." />
+            <marker date="1451084539857" expanded="true" signature="29082:29268" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="29292:29327" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="29384:29682" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="29715:29747" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="29795:29824" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="29872:29905" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="30035:30618" placeholder="[...]" />
+            <marker date="1451084539857" expanded="true" signature="30131:30617" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="30201:30345" placeholder="{&quot;templateUrl&quot;: 'book.html'...}" />
+            <marker date="1451084539857" expanded="true" signature="30400:30553" placeholder="{&quot;templateUrl&quot;: 'chapter.html'...}" />
+            <marker date="1451084539857" expanded="true" signature="30654:30888" placeholder="[...]" />
+            <marker date="1451084539857" expanded="true" signature="30748:30887" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="30924:31054" placeholder="[...]" />
+            <marker date="1451084539857" expanded="true" signature="30964:31053" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="31093:31226" placeholder="[...]" />
+            <marker date="1451084539857" expanded="true" signature="31133:31225" placeholder="{...}" />
+            <marker date="1451084539857" expanded="true" signature="31363:31896" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenuDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Menu/MainMenuController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/HouseholdApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="46" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Money/MonthEnd/MonthEnd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Money/MonthEnd/MonthEndController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/CategoriesTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/protractor.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/CategoriesViewPageDriver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/Page Drivers/AppHeaderPageDriver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/Protractor/RouteTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32864675">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
           <folding />
         </state>
       </provider>

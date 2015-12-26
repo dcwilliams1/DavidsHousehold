@@ -40,8 +40,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header", "Header", "{3AB29ABF-62C3-475C-8B1D-7F69E8DE5616}"
 	ProjectSection(SolutionItems) = preProject
 		AngularClient\Shared\Header\Header.html = AngularClient\Shared\Header\Header.html
-		AngularClient\Shared\Header\HeaderController.js = AngularClient\Shared\Header\HeaderController.js
-		HeaderDirective.js = HeaderDirective.js
+		AngularClient\Shared\Header\AppHeaderController.js = AngularClient\Shared\Header\AppHeaderController.js
+		AppHeaderDirective.js = AppHeaderDirective.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sidebar", "Sidebar", "{E6068201-A0CF-4E1F-AB05-0AC9EBCF3E7F}"
@@ -58,7 +58,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menu", "Menu", "{7B2488F4-5E61-467A-B59D-50C18942D844}"
 	ProjectSection(SolutionItems) = preProject
 		AngularClient\Shared\Menu\Menu.html = AngularClient\Shared\Menu\Menu.html
-		AngularClient\Shared\Menu\MenuDirective.js = AngularClient\Shared\Menu\MenuDirective.js
+		AngularClient\Shared\Menu\MainMenuDirective.js = AngularClient\Shared\Menu\MainMenuDirective.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{553E19BA-3C77-4D47-BEC0-125B64A6EEA0}"

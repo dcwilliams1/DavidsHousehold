@@ -6,10 +6,10 @@
             scope: {},
             controller: "HeaderController",
             controllerAs: "ctrl",
-            link: link
+            link: linkFunction
         };
 
-        function link(scope, element, attrs, ctrl){
+        function linkFunction(scope, element, attrs, ctrl){
             ctrl.getUser();
 
         }
