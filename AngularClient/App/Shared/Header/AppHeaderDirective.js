@@ -1,10 +1,10 @@
 (function () {
     angular.module("DavidsHousehold").directive("householdHeader", function () {
         return {
-            templateUrl: "shared/Header/Header.html",
+            templateUrl: "Shared/Header/AppHeader.html",
             restrict: "E",
             scope: {},
-            controller: "HeaderController",
+            controller: "AppHeaderController",
             controllerAs: "ctrl",
             link: linkFunction
         };

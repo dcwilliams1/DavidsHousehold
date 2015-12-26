@@ -12,5 +12,5 @@ exports.config = {
     //    'browserName': 'firefox'
     //}],
 
-    baseUrl: 'http://localhost:63342/DavidsHousehold/AngularClient/Index.html'
+    baseUrl: 'http://localhost:63342/DavidsHousehold/AngularClient/App/Index.html'
 };

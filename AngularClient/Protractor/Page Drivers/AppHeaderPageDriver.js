@@ -3,6 +3,11 @@ var AppHeader = function(){
 };
 
 AppHeader.prototype = Object.create({},{
+    moneyLink: {
+      get: function() {
+          return element(by.id('lnkMoney'));
+      }
+    },
     categoriesLink: {
         get: function (){
             return element(by.linkText('Categories'));
@@ -10,3 +15,5 @@ AppHeader.prototype = Object.create({},{
     }
 
 });
+
+module.exports = AppHeader;

@@ -2,7 +2,7 @@ describe('HeaderController', function () {
     var ctrl,  scope;
     beforeEach(module('DavidsHousehold'));
     beforeEach(inject(function ($controller) {
-        ctrl = $controller('HeaderController');
+        ctrl = $controller('AppHeaderController');
     }));
 
     it('should return a user', function(){
