@@ -1,5 +1,5 @@
 describe('HeaderController', function () {
-    var ctrl,  scope;
+    var ctrl;
     beforeEach(module('DavidsHousehold'));
     beforeEach(inject(function ($controller) {
         ctrl = $controller('AppHeaderController');
@@ -10,4 +10,13 @@ describe('HeaderController', function () {
         ctrl.getUser();
         expect(ctrl.currentUser).toBeTruthy();
     });
-})
+});
+
+describe('Index Page', function(){
+    beforeEach(module('DavidsHousehold'));
+
+    it('should have a sidebar', function(){
+
+    });
+
+});

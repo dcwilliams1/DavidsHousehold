@@ -83,3 +83,12 @@ body
 .userWelcome{
     float:right;
 }
+
+/*Page*/
+.featureHeader{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    display: block;
+}
