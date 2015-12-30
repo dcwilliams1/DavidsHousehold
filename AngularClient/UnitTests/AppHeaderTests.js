@@ -12,11 +12,3 @@ describe('HeaderController', function () {
     });
 });
 
-describe('Index Page', function(){
-    beforeEach(module('DavidsHousehold'));
-
-    it('should have a sidebar', function(){
-
-    });
-
-});

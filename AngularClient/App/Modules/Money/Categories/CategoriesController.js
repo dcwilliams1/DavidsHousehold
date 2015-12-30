@@ -5,7 +5,7 @@
     var categoryControllerFunction = function(){
 
     };
-    angular.module('DavidsHousehold').controller("CategoriesController", categoryControllerFunction);
+    angular.module('Money').controller("CategoriesController", categoryControllerFunction);
 })();
 
 
