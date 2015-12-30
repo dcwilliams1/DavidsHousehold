@@ -11,7 +11,6 @@
 
         function linkFunction(scope, element, attrs, ctrl){
             ctrl.getUser();
-
         }
     });
 })();

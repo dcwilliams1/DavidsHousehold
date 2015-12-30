@@ -27,7 +27,7 @@ body
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .householdMenu li{
@@ -56,9 +56,12 @@ body
     display: inline-block;
 }
 
+.householdMenu .dropdownContentContainer{
+    position: relative;
+}
 .householdMenu .dropdown-content {
     display: none;
-    position: absolute;
+    /*position: absolute;*/
     background-color: #B6CAD4;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -78,6 +81,8 @@ body
 
 .householdMenu .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 10000 !important;
+    position: fixed;
 }
 
 .userWelcome{
@@ -85,6 +90,9 @@ body
 }
 
 /*Page*/
+.contentSection{
+
+}
 .featureHeader{
     font-size: 24px;
     font-weight: 500;
