@@ -23,6 +23,9 @@ module.exports = function (config) {
             'App/*.html',
             'App/Shared/Header/*.js',
             'App/Shared/Header/*.html',
+            'App/Modules/Money/Categories/*.js',
+            'App/Modules/Money/Categories/*.html',
+            'App/Modules/Money/Services/*.js',
             'UnitTests/*.js'
         ],
 
