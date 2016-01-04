@@ -1,17 +1,20 @@
 describe('Application Header', function () {
-    var ctrl;
-    beforeEach(module('DavidsHousehold'));
-    beforeEach(inject(function ($controller) {
-        ctrl = $controller('AppHeaderController');
-    }));
+    var appHeaderCtrl, rootScope, compile;
 
     describe('Header Controller', function() {
+        beforeEach(module('DavidsHousehold'));
+        beforeEach(inject(function ($controller, $compile, $rootScope) {
+            appHeaderCtrl = $controller('AppHeaderController');
+        }));
+
         it('should return a user', function () {
-            expect(ctrl.currentUser).toBeFalsy();
-            ctrl.getUser();
-            expect(ctrl.currentUser).toBeTruthy();
+
+            expect(appHeaderCtrl.currentUser).toBeFalsy();
+            appHeaderCtrl.getUser();
+            expect(appHeaderCtrl.currentUser).toBeTruthy();
         });
     });
+
 
     //describe('Main Menu', function(){
     //    var location;

@@ -7,12 +7,20 @@ describe('Money Data Service', function(){
         httpBackend = $httpBackend;
     }));
 
-    it('should call the backend api', function(){
+    beforeEach(function(){
         httpBackend.expectGET('http://localhost:8081/categories')
             .respond(200, {categories: 'GET successful'});
+    });
 
+    it('calls the backend api', function(){
         var testCategories = dataService.categories();
         httpBackend.flush();
+    });
+
+    it('returns test data', function(){
+        dataService.categories(function(data){
+           expect(data.categories).toEqual('GET successful');
+        });
     });
 
     afterEach(function(){

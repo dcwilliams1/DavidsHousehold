@@ -10,7 +10,7 @@ describe('CategoriesController', function(){
         ctrl = $controller('CategoriesController', {$scope: scope});
     }));
 
-    it('should call the MoneyDataService', function(){
+    it('calls the MoneyDataService', function(){
         var testCategories = ctrl.categories;
         expect(dataService.categories).toHaveBeenCalled();
         expect(dataService.categories.calls.count()).toEqual(1);
