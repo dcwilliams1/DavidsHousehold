@@ -1,12 +1,11 @@
 ﻿<div>
-    <span class="PageMainHeading">David's Household</span><span class="userWelcome">Welcome {{ctrl.currentUser}}</span>
+    <span class="PageMainHeading">David's Household</span><span id="userWelcome" class="userWelcome">Welcome {{ctrl.currentUser}}</span>
     <div class="householdMenu">
         <ul>
             <li>
-            <div id="moneyMenu" class="dropdown">
-                <a id="lnkMoney" href="#" class="dropbtn">Money</a>
-                <div id="moneyMenuDropdown" class="dropdown-content">
-                    <a href="#">Budget</a>
+            <div id="budgetMenu" class="dropdown">
+                <a id="lnkBudget" href="#" class="dropbtn">Budget</a>
+                <div id="budgetMenuDropdown" class="dropdown-content">
                     <a href="#categories">Categories</a>
                     <a href="#">Ledger</a>
                     <a href="#">Deep Reserves</a>

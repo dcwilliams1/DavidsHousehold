@@ -1,6 +1,6 @@
 (function () {
 
-    var moneyDataServiceFunction = function ($http, $q) {
+    var budgetDataServiceFunction = function ($http, $q) {
         var apiUrl = 'http://localhost:8081';
         var http = $http;
         //var q = $q;
@@ -18,5 +18,5 @@
         };
     };
 
-    angular.module('Money').factory('MoneyDataService', moneyDataServiceFunction);
+    angular.module('Budget').factory('BudgetDataService', budgetDataServiceFunction);
 })();

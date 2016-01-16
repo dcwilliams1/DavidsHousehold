@@ -1,3 +1,3 @@
-angular.module('DavidsHousehold', ['ngRoute', 'Money']);
+angular.module('DavidsHousehold', ['ngRoute', 'Budget']);
 
-angular.module('Money',[]);
+angular.module('Budget',[]);

@@ -2,15 +2,15 @@ angular.module('DavidsHousehold')
     .config(function($routeProvider, $locationProvider){
         $routeProvider
             .when('#', {
-                templateUrl: 'Modules/Money/Categories/categories.html',
+                templateUrl: 'Modules/Budget/Categories/categories.html',
                 controller: 'CategoriesController'
             })
             .when('/', {
-                templateUrl: 'Modules/Money/Categories/categories.html',
+                templateUrl: 'Modules/Budget/Categories/categories.html',
                 controller: 'CategoriesController'
             })
             .when('/categories', {
-                templateUrl: 'Modules/Money/Categories/categories.html',
+                templateUrl: 'Modules/Budget/Categories/categories.html',
                 controller: 'CategoriesController'
             });
 
