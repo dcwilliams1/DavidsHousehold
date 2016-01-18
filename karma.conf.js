@@ -18,14 +18,15 @@ module.exports = function (config) {
             'App/Assets/libs/angular.js',
             'App/Assets/libs/angular-route.js',
             '../node_modules/angular-mocks/angular-mocks.js',
-            'App/Assets/js/*.js',
             'App/HouseholdApp.js',
             'App/*.html',
             'App/Shared/Header/*.js',
             'App/Shared/Header/*.html',
-            'AngularClient/App/Modules/Budget/Categories/*.js',
-            'AngularClient/App/Modules/Budget/Categories/*.html',
-            'AngularClient/App/Modules/Budget/Services/*.js',
+            'App/Modules/Budget/Categories/CategoriesController.js',
+            'App/Modules/Budget/Categories/categories.html',
+            'App/Modules/Budget/MonthEnd/MonthEndController.js',
+            'App/Modules/Budget/MonthEnd/MonthEnd.html',
+            'App/Modules/Budget/Services/BudgetDataService.js',
             'UnitTests/*.js'
         ],
 
@@ -38,8 +39,8 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            "App/Modules/Money/Categories/CategoriesController.js" : ['coverage'],
-            "App/Modules/Money/Services/MoneyDataService.js" : ['coverage'],
+            "App/Modules/Budget/Categories/CategoriesController.js" : ['coverage'],
+            "App/Modules/Budget/Services/BudgetDataService.js" : ['coverage'],
             "App/Shared/Header/AppHeaderController.js" : ['coverage'],
             "App/Shared/Header/AppHeaderDirective.js" : ['coverage'],
             "App/Shared/Header/*.html" : ['ng-html2js'],
@@ -72,7 +73,7 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['IE', 'Chrome'],
+        browsers: ['Chrome'],
 
 
         // Continuous Integration mode

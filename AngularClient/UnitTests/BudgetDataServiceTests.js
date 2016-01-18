@@ -1,9 +1,9 @@
-describe('Money Data Service', function(){
+describe('Budget Data Service', function(){
     var httpBackend, ctrl, dataService;
-    beforeEach(module('Money'));
+    beforeEach(module('Budget'));
 
     beforeEach(inject(function($rootScope, $httpBackend, $controller, $injector){
-        dataService = $injector.get('MoneyDataService');
+        dataService = $injector.get('BudgetDataService');
         httpBackend = $httpBackend;
     }));
 

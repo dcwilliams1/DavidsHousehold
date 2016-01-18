@@ -1,19 +1,23 @@
-describe('CategoriesController', function(){
-    var ctrl, dataService;
-    beforeEach(module('Money'));
+describe('CategoriesController', function() {
+    var ctrl, dataService, httpBackend;
+    beforeEach(module('Budget'));
 
-    beforeEach(inject(function($rootScope, $controller, MoneyDataService){
+    beforeEach(inject(function ($rootScope, $controller, $httpBackend, BudgetDataService) {
         scope = $rootScope.$new();
-        spyOn(MoneyDataService, 'categories')
-            .and.returnValue([{id: 1, name: 'TestCategory'}])
-        dataService = MoneyDataService;
+        httpBackend = $httpBackend;
+        dataService = BudgetDataService;
         ctrl = $controller('CategoriesController', {$scope: scope});
+        httpBackend.when('GET', 'http://localhost:8081/categories')
+            .respond({categories: [{id: 1, name: 'TestCategory'}]});
     }));
 
-    it('calls the MoneyDataService', function(){
-        var testCategories = ctrl.categories;
-        expect(dataService.categories).toHaveBeenCalled();
-        expect(dataService.categories.calls.count()).toEqual(1);
-        expect(ctrl.categories).toEqual([{id: 1, name: 'TestCategory'}]);
+    it('calls the Budget Data Service to get categories', function () {
+        dataService.categories(function (data) {
+            httpBackend.flush();
+            expect(ctrl.categories).toEqual([{id: 1, name: 'TestCategory'}]);
+        });
     });
+
 });
+
+
