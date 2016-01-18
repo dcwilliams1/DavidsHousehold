@@ -1,5 +1,5 @@
 describe('Application Header', function () {
-    var appHeaderCtrl, rootScope, compile;
+    var appHeaderCtrl;
     beforeEach(module('DavidsHousehold'));
 
     describe('Header Controller', function() {
@@ -15,11 +15,22 @@ describe('Application Header', function () {
     });
 
     describe('Header Directive', function(){
+        var getUserSpy, element;
+        beforeEach(function(){
+
+            //element = $compile('<household-header></household-header>')($rootScope);
+            //$rootScope.$digest();
+        });
         it('should have a user', function($compile, $rootScope){
             element = $compile('<household-header></household-header>')($rootScope);
             $rootScope.$digest();
             var userWelcome = angular.element(element.find('#userWelcome'));
             expect(userWelcome.length).toBeGreaterThan(8);
+        });
+
+        it ('should call the controller to find the user', function(){
+            getUserSpy = spyOn(appHeaderCtrl, 'getUser');
+           expect(getUserSpy).toHaveBeenCalled;
         });
     });
     //describe('Main Menu', function(){
