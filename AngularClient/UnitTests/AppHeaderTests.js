@@ -33,20 +33,21 @@ describe('Application Header', function () {
            expect(getUserSpy).toHaveBeenCalled;
         });
     });
-    //describe('Main Menu', function(){
-    //    var location;
-    //    beforeEach(inject(function($location){
-    //        location = $location;
-    //    }));
-    //
-    //    describe('Category Link', function(){
-    //       it('should navigate to the category view', function(){
-    //            location.path('/');
-    //           //navigate here
-    //            expect(location.path()).toEqual('/categories');
-    //       });
-    //    });
-    //});
+
+    describe('Header Menu', function(){
+        var location;
+        beforeEach(inject(function($location){
+            location = $location;
+        }));
+
+        describe('Category Link', function(){
+           it('should navigate to the category view', function(){
+                location.path('/');
+               //navigate here
+                expect(location.path()).toEqual('/categories');
+           });
+        });
+    });
 });
 
 
