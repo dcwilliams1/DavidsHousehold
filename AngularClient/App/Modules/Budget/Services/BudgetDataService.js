@@ -1,6 +1,6 @@
 (function () {
 
-    var budgetDataServiceFunction = function ($http, $q) {
+    function budgetDataServiceFunction($http, $q) {
         var apiUrl = 'http://localhost:8081';
         var http = $http;
         //var q = $q;
@@ -16,7 +16,7 @@
         return {
             categories: getCategories
         };
-    };
+    }
 
     angular.module('Budget').factory('BudgetDataService', budgetDataServiceFunction);
 })();
