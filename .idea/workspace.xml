@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6828ae31-f03f-4451-b801-cf06eef109e8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Index.html" afterPath="$PROJECT_DIR$/AngularClient/App/Index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Budget/Services/BudgetDataService.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Budget/Services/BudgetDataService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentDataService.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentDataService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js" afterPath="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/UnitTests/AppHeaderTests.js" afterPath="$PROJECT_DIR$/AngularClient/UnitTests/AppHeaderTests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Categories/CategoriesController.js.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Categories/CategoriesController.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Categories/index.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Categories/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Services/BudgetDataService.js.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Services/BudgetDataService.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Services/index.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Modules/Budget/Services/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Shared/Header/AppHeaderController.js.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Shared/Header/AppHeaderController.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Shared/Header/AppHeaderDirective.js.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Shared/Header/AppHeaderDirective.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Shared/Header/index.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/Shared/Header/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/index.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 47.0.2526 (Windows 8.1 0.0.0)/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentData.html" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentInputForm.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentInputController.js" />
     </list>
     <ignored path="DavidsHousehold.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MonthEndController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/MonthEnd/MonthEndController.js">
+      <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/karma.conf.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -62,37 +72,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HouseholdApp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/App/HouseholdApp.js">
+      <file leaf-file-name="MonthEndController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/MonthEnd/MonthEndController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvestmentData.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentData.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvestmentDataController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HouseholdApi.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HouseholdApi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExpressApi/HouseholdApi.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -102,14 +92,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvestmentDataService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentDataService.js">
+      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppHeaderTests.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/AppHeaderTests.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8172232">
+              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppHeader.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.230769">
+              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,17 +126,17 @@
         <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+              <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BudgetDataService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/Services/BudgetDataService.js">
+      <file leaf-file-name="CatetoriesControllerTests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/CatetoriesControllerTests.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -180,22 +188,22 @@
         <option value="$PROJECT_DIR$/AngularClient/App/Modules/Money/Categories/CategoriesController.js" />
         <option value="$PROJECT_DIR$/AngularClient/App/Modules/Money/Services/MoneyDataService.js" />
         <option value="$PROJECT_DIR$/coverage.karma.conf.js" />
-        <option value="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html" />
         <option value="$PROJECT_DIR$/AngularClient/UnitTests/MoneyDataServiceTests.js" />
         <option value="$PROJECT_DIR$/AngularClient/UnitTests/BudgetDataServiceTests.js" />
         <option value="$PROJECT_DIR$/AngularClient/UnitTests/CatetoriesControllerTests.js" />
-        <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/AngularClient/App/HouseholdApp.js" />
         <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData.html" />
         <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentDataController.js" />
-        <option value="$PROJECT_DIR$/AngularClient/App/Index.html" />
-        <option value="$PROJECT_DIR$/AngularClient/UnitTests/AppHeaderTests.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentDataService.js" />
-        <option value="$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js" />
         <option value="$PROJECT_DIR$/AngularClient/App/Modules/Budget/Services/BudgetDataService.js" />
         <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Index.html" />
+        <option value="$PROJECT_DIR$/karma.conf.js" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js" />
         <option value="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html" />
+        <option value="$PROJECT_DIR$/AngularClient/UnitTests/AppHeaderTests.js" />
       </list>
     </option>
   </component>
@@ -237,7 +245,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -367,44 +374,6 @@
               <option name="myItemId" value="Modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Investments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DavidsHousehold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DavidsHousehold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AngularClient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Investments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InvestmentData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -429,40 +398,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Budget" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DavidsHousehold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DavidsHousehold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AngularClient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Budget" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MonthEnd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,34 +431,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DavidsHousehold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DavidsHousehold" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AngularClient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Budget" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -547,7 +457,7 @@
       <recent name="F:\David Personal\DavidsHousehold" />
     </key>
   </component>
-  <component name="RunManager" selected="Karma.Unit Tests">
+  <component name="RunManager" selected="JavaScript Debug.Run David's Houshold">
     <configuration default="false" name="MoneyDataServiceTests.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="$PROJECT_DIR$/AngularClient/UnitTests/BudgetDataServiceTests.js" working-dir="$PROJECT_DIR$/AngularClient/UnitTests">
       <method />
     </configuration>
@@ -640,34 +550,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unit_Tests - 2016.01.17 at 22h 39m 21s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 32m 03s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.17 at 22h 41m 35s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 32m 55s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.17 at 22h 42m 43s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 34m 17s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.18 at 22h 21m 26s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 46m 25s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.18 at 22h 50m 16s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 47m 42s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.18 at 22h 51m 23s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 48m 18s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.18 at 22h 59m 39s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 49m 09s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.18 at 23h 00m 32s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 50m 24s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.18 at 23h 28m 19s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 51m 16s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.01.18 at 23h 37m 29s.xml">
+    <history-entry file="Unit_Tests - 2016.01.24 at 21h 51m 35s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
   </component>
@@ -680,7 +590,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -718,11 +628,6 @@
           <url>file://$PROJECT_DIR$/AngularClient/App/Routes.js</url>
           <line>12</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js</url>
-          <line>7</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -970,20 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/CatetoriesControllerTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/categories.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
@@ -991,39 +882,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="29" selection-start-line="8" selection-start-column="56" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/AppHeaderTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-27.777779">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentData.html">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentInputForm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
@@ -1041,42 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/MonthEnd/MonthEndController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/Services/BudgetDataService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1089,7 +923,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js">
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentInputController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
@@ -1101,6 +935,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/MonthEnd/MonthEndController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/CatetoriesControllerTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeaderController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Shared/Header/AppHeader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/AppHeaderTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8172232">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
           <folding />
         </state>
       </provider>

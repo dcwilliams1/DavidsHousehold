@@ -8,7 +8,7 @@
         self.categories = dataService.categories();
     }
 
-    CategoriesController.$inject = [$scope, BudgetDataService];
+    //CategoriesController.$inject = [$scope, BudgetDataService];
     angular.module('Budget').controller("CategoriesController", categoryControllerFunction);
 })();
 

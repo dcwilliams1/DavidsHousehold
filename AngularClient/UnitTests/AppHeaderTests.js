@@ -1,6 +1,10 @@
 describe('Application Header', function () {
-    var appHeaderCtrl;
+    var appHeaderCtrl, appHeaderElement, element;
     beforeEach(module('DavidsHousehold'));
+    beforeEach(function(){
+        appHeaderElement = angular.element('<household-header></household-header>');
+
+    });
 
     describe('Header Controller', function() {
         beforeEach(inject(function ($controller) {
@@ -35,7 +39,7 @@ describe('Application Header', function () {
     });
 
     describe('Header Menu', function(){
-        var location;
+        var location, categoryLink;
         beforeEach(inject(function($location){
             location = $location;
         }));
@@ -43,7 +47,8 @@ describe('Application Header', function () {
         describe('Category Link', function(){
            it('should navigate to the category view', function(){
                 location.path('/');
-               //navigate here
+               categoryLink = angular.element(appHeaderElement.find('#mainMenuCategoryLink'));
+               categoryLink.triggerHandler('click');
                 expect(location.path()).toEqual('/categories');
            });
         });
