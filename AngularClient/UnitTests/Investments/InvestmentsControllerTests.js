@@ -12,12 +12,11 @@ describe('InvestmentsController', function() {
     }));
 
     it('calls the Investment Data Service to post a transaction', function () {
-
+        var serviceMethod = spyOn(dataService, 'postTransaction');
         ctrl.submitTransaction(function (data) {
-            httpBackend.expectPOST('http://localhost:8081/transaction')
         });
+        expect(serviceMethod).toHaveBeenCalled();
 
-        httpBackend.flush();
     });
 
     afterEach(function() {

@@ -3,10 +3,9 @@
  */
 
 (function(){
-    function investmentDataServiceFunction ($http, $q){
+    function investmentDataServiceFunction ($http){
         var apiUrl = 'http://localhost:8081';
         var http = $http;
-        //var q = $q;
 
         function postTransaction(newTransaction){
             http.post(apiUrl + '/transaction', newTransaction)
