@@ -7,15 +7,22 @@ describe('InvestmentsController', function() {
         httpBackend = $httpBackend;
         dataService = $injector.get('InvestmentsDataService');
         ctrl = $controller('InvestmentDataController', {$scope: scope});
-        httpBackend.when('POST', 'http://localhost:8081/Transaction')
+        httpBackend.when('POST', 'http://localhost:8081/transaction')
             .respond({transaction: [{id: 1, name: 'TestInvestment'}]});
     }));
 
     it('calls the Investment Data Service to post a transaction', function () {
+
         ctrl.submitTransaction(function (data) {
-            httpBackend.flush();
-            expect(ctrl.transaction).toEqual([{id: 1, name: 'TestInvestment'}]);
+            httpBackend.expectPOST('http://localhost:8081/transaction')
         });
+
+        httpBackend.flush();
+    });
+
+    afterEach(function() {
+        httpBackend.verifyNoOutstandingExpectation();
+        httpBackend.verifyNoOutstandingRequest();
     });
 
 });

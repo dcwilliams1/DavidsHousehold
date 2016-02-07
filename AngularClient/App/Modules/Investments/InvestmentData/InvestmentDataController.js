@@ -10,7 +10,7 @@
     function submitTransaction(){
         transaction = dataService.postTransaction();
     }
-    //investmentDataControllerFunction.$inject = ['$scope', 'InvestmentsDataService'];
+    investmentDataControllerFunction.$inject = ['$scope', 'InvestmentsDataService'];
     angular.module('Investments').controller('InvestmentDataController', investmentDataControllerFunction);
 
 })();

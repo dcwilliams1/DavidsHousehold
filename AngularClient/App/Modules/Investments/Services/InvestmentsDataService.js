@@ -9,7 +9,7 @@
         //var q = $q;
 
         function postTransaction(newTransaction){
-            http.post(apiUrl + '/transactiontest', newTransaction)
+            http.post(apiUrl + '/transaction', newTransaction)
                 .then(function(response){
                     return response.data;
                 }, function(error){
