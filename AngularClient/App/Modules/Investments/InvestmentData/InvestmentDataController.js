@@ -1,15 +1,14 @@
 (function(){
     var dataService, transaction;
     function investmentDataControllerFunction($scope, InvestmentsDataService){
-        var self = this;
+        var investmentDataCtrl = this;
         dataService = InvestmentsDataService;
-        self.submitTransaction = submitTransaction;
-
+        investmentDataCtrl.submitTransaction = function(){
+            investmentDataCtrl.transaction = dataService.postTransaction();
+        }
     }
 
-    function submitTransaction(){
-        transaction = dataService.postTransaction();
-    }
+
     investmentDataControllerFunction.$inject = ['$scope', 'InvestmentsDataService'];
     angular.module('Investments').controller('InvestmentDataController', investmentDataControllerFunction);
 

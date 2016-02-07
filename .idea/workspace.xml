@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6828ae31-f03f-4451-b801-cf06eef109e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsDataServiceTests.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js" afterPath="$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js" afterPath="$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AngularClient/coverage/Chrome 48.0.2564 (Windows 8.1 0.0.0)/Modules/Budget/Categories/CategoriesController.js.html" afterPath="$PROJECT_DIR$/AngularClient/coverage/Chrome 48.0.2564 (Windows 8.1 0.0.0)/Modules/Budget/Categories/CategoriesController.js.html" />
@@ -37,21 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CategoriesController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Budget/Categories/CategoriesController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="InvestmentsControllerTests.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2563805">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.3611111">
+              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -61,20 +51,10 @@
         <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvestmentsDataServiceTests.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsDataServiceTests.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/libs/angular.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14708" column="6" selection-start-line="14708" selection-start-column="6" selection-end-line="14708" selection-end-column="6" />
+              <caret line="417" column="4" selection-start-line="417" selection-start-column="4" selection-end-line="417" selection-end-column="4" />
               <folding>
                 <marker date="1447557600810" expanded="true" signature="22536:23018" placeholder="..." />
                 <marker date="1447557600810" expanded="true" signature="22575:22936" placeholder="..." />
@@ -821,13 +801,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="InvestmentsDataServiceTests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsDataServiceTests.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InvestmentDataController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="debug.html" pinned="false" current-in-tab="false">
+        <entry file="http://localhost:9876/debug.html">
+          <provider selected="true" editor-type-id="httpFileEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -858,8 +855,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AngularClient/Shared/Header/HeaderController.js" />
-        <option value="$PROJECT_DIR$/AngularClient/Test/IndexTests.js" />
         <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/Menu.html" />
         <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/MainMenuController.js" />
         <option value="$PROJECT_DIR$/AngularClient/Shared/Menu/MenuDirective.js" />
@@ -905,9 +900,11 @@
         <option value="$PROJECT_DIR$/ExpressApi/HouseholdApi.js" />
         <option value="$PROJECT_DIR$/AngularClient/App/Index.html" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
-        <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" />
-        <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js" />
         <option value="$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsDataServiceTests.js" />
+        <option value="vm:58" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js" />
+        <option value="localhost:9876/debug.html" />
+        <option value="$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js" />
         <option value="$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js" />
       </list>
     </option>
@@ -1459,49 +1456,49 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 04m 18s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 07m 21s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 04m 43s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 08m 03s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 05m 30s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 11m 03s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 08m 16s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 15m 45s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 08m 35s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 23m 16s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 08m 58s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 24m 51s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 09m 28s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 25m 36s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 11m 10s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 25m 56s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 14m 15s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 28m 56s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
-    <history-entry file="Unit_Tests - 2016.02.06 at 22h 14m 26s.xml">
+    <history-entry file="Unit_Tests - 2016.02.06 at 23h 29m 29s.xml">
       <configuration name="Unit Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1284" height="1000" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22791798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18927445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29438204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28089887" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28089887" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1513,6 +1510,26 @@
       <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28089887" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25788644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29438204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30786517" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1540,7 +1557,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js</url>
-          <line>15</line>
+          <line>17</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -1554,24 +1571,31 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js</url>
-          <line>10</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js</url>
           <line>10</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js</url>
+          <line>20</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js</url>
+          <line>15</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="32" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavaScriptTestRunnerKarma">
         <watch expression="location.path()" language="JavaScript" />
+        <watch expression="ctrl" />
+        <watch expression="investmentDataCtrl.transaction" />
       </configuration>
       <configuration name="JavascriptDebugType">
         <watch expression="location.path()" language="JavaScript" />
@@ -1579,14 +1603,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AngularClient/App/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularClient/App/HouseholdApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1913,7 +1929,7 @@
     <entry file="file://$PROJECT_DIR$/AngularClient/App/Assets/libs/angular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14708" column="6" selection-start-line="14708" selection-start-column="6" selection-end-line="14708" selection-end-column="6" />
+          <caret line="417" column="4" selection-start-line="417" selection-start-column="4" selection-end-line="417" selection-end-column="4" />
           <folding>
             <marker date="1447557600810" expanded="true" signature="22536:23018" placeholder="..." />
             <marker date="1447557600810" expanded="true" signature="22575:22936" placeholder="..." />
@@ -2650,10 +2666,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsDataServiceTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="http://localhost:9876/debug.html">
+      <provider selected="true" editor-type-id="httpFileEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -2661,25 +2690,17 @@
     <entry file="file://$PROJECT_DIR$/AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsDataServiceTests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AngularClient/UnitTests/Investments/InvestmentsControllerTests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2563805">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.3611111">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding />
         </state>
       </provider>
