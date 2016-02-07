@@ -28,7 +28,12 @@ module.exports = function (config) {
             'App/Modules/Budget/MonthEnd/MonthEndController.js',
             'App/Modules/Budget/MonthEnd/MonthEnd.html',
             'App/Modules/Budget/Services/BudgetDataService.js',
-            'UnitTests/*.js'
+            'App/Modules/Investments/InvestmentData/InvestmentDataController.js',
+            'App/Modules/Investments/InvestmentData/InvestmentInputForm.html',
+            'App/Modules/Investments/Services/InvestmentsDataService.js',
+            'UnitTests/AppHeader/*.js',
+            'UnitTests/Budget/*.js',
+            'UnitTests/Investments/*.js'
         ],
 
 
@@ -42,9 +47,11 @@ module.exports = function (config) {
         preprocessors: {
             "App/Modules/Budget/Categories/CategoriesController.js" : ['coverage'],
             "App/Modules/Budget/Services/BudgetDataService.js" : ['coverage'],
+            "App/Modules/Investments/InvestmentData/InvestmentsDataController.js" : ['coverage'],
+            "App/Modules/Investments/Services/InvestmentsDataServices.js" : ['coverage'],
             "App/Shared/Header/AppHeaderController.js" : ['coverage'],
             "App/Shared/Header/AppHeaderDirective.js" : ['coverage'],
-            "App/Shared/Header/*.html" : ['ng-html2js'],
+            "App/Shared/Header/*.html" : ['ng-html2js']
             //'**/*.html': ['ng-html2js']
         },
 

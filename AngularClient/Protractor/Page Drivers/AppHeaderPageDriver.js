@@ -5,7 +5,7 @@ var AppHeader = function(){
 AppHeader.prototype = Object.create({},{
     moneyLink: {
       get: function() {
-          return element(by.id('lnkMoney'));
+          return element(by.id('lnkBudget'));
       }
     },
     categoriesLink: {
