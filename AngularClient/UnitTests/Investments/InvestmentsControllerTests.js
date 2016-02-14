@@ -8,7 +8,7 @@ describe('InvestmentsController', function() {
         dataService = $injector.get('InvestmentsDataService');
         ctrl = $controller('InvestmentDataController', {$scope: scope});
         httpBackend.when('POST', 'http://localhost:8081/transaction')
-            .respond({transaction: [{id: 1, name: 'TestInvestment'}]});
+            .respond({id: 2, name: 'TestInvestment'});
     }));
 
    it('calls the Investment Data Service to post a transaction', function () {

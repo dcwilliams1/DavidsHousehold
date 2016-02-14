@@ -2,6 +2,7 @@ var express = require("express");
 //var favicon = require('serve-favicon');
 var fs = require("fs");
 var url = require("url");
+var edge = require("edge"); //for .Net
 
 var webServer = express();
 

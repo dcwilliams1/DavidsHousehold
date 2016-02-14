@@ -11,7 +11,6 @@ describe('Investments Data Service', function() {
             .respond(200);
         dataService.postTransaction(function (data) {
         });
-
         httpBackend.flush();
     });
 

@@ -3,6 +3,7 @@
     function investmentDataControllerFunction($scope, InvestmentsDataService){
         var investmentDataCtrl = this;
         dataService = InvestmentsDataService;
+
         investmentDataCtrl.submitTransaction = function(){
             investmentDataCtrl.transaction = dataService.postTransaction();
         }

@@ -68,4 +68,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 
- AngularClient/coverage/**
+###########
+## Karma ##
+###########
+AngularClien/coverage/
