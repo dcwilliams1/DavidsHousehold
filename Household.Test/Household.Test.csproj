@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Domain\BudgetLineItemTests.cs" />
     <Compile Include="Domain\CategoryTests.cs" />
+    <Compile Include="Domain\InvestmentTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

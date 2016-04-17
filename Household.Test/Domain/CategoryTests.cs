@@ -1,6 +1,7 @@
 ﻿using System;
 using Household.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Core;
 
 namespace Household.Test.Domain
 {

@@ -1,5 +1,5 @@
 var express = require('express');
-var router = express.Router();
+var indexRouter = express.Router();
 
 
-module.exports = router;
+module.exports = indexRouter;

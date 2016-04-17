@@ -1,14 +1,16 @@
 var express = require("express");
 var webServer = express();
+
 //var favicon = require('serve-favicon');
 var fs = require("fs");
 var url = require("url");
+
 //var edge = require("edge"); //for .Net
 var routes = require('./routes/indexRoutes');
-var investments = require('./routes/investmentsRoutes');
+var investmentRoutes = require('./routes/investmentsRoutes');
 
 webServer.use('/', routes);
-webServer.use('/investments', investments);
+webServer.use('/investments', investmentRoutes);
 
 
 
