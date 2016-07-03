@@ -1,17 +1,17 @@
 var express = require('express');
 var investmentRouter = express.Router();
-var investments = require('../investments');
+var investments = require('../Investments/transactions');
+var exports = module.exports;
 
 investmentRouter.get('/', function(request, response){
-    response.send("score!");
-});
-
-investmentRouter.post('/insertData', function(request, response){
-    response.send("inserted");
-    investments.insert(response);
-});
+      response.send("score!");
+  });
 
 
-
+investmentRouter.post('/transaction', function(request, response){
+    response.send("inserting now");
+    investments.insert(request);
+    //response.send("investments router");
+  });
 
 module.exports = investmentRouter;

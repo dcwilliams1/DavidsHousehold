@@ -5,7 +5,7 @@ module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: 'AngularClient',
+        basePath: '',
 
 
         // frameworks to use
@@ -15,25 +15,27 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'App/Assets/libs/angular.js',
-            'App/Assets/libs/angular-route.js',
-            '../node_modules/angular-mocks/angular-mocks.js',
-            'App/HouseholdApp.js',
-            'App/*.html',
-            'App/Shared/Header/AppHeaderController.js',
-            'App/Shared/Header/AppHeaderDirective.js',
-            'App/Shared/Header/*.html',
-            'App/Modules/Budget/Categories/CategoriesController.js',
-            'App/Modules/Budget/Categories/categories.html',
-            'App/Modules/Budget/MonthEnd/MonthEndController.js',
-            'App/Modules/Budget/MonthEnd/MonthEnd.html',
-            'App/Modules/Budget/Services/BudgetDataService.js',
-            'App/Modules/Investments/InvestmentData/InvestmentDataController.js',
-            'App/Modules/Investments/InvestmentData/InvestmentInputForm.html',
-            'App/Modules/Investments/Services/InvestmentsDataService.js',
-            'UnitTests/AppHeader/*.js',
-            'UnitTests/Budget/*.js',
-            'UnitTests/Investments/*.js'
+            'AngularClient/App/Assets/libs/angular.js',
+            'AngularClient/App/Assets/libs/angular-route.js',
+            'node_modules/angular-mocks/angular-mocks.js',
+            'AngularClient/App/HouseholdApp.js',
+            'AngularClient/App/*.html',
+            'AngularClient/App/Shared/Header/AppHeaderController.js',
+            'AngularClient/App/Shared/Header/AppHeaderDirective.js',
+            'AngularClient/App/Shared/Header/*.html',
+            'AngularClient/App/Modules/Budget/Categories/CategoriesController.js',
+            'AngularClient/App/Modules/Budget/Categories/categories.html',
+            'AngularClient/App/Modules/Budget/MonthEnd/MonthEndController.js',
+            'AngularClient/App/Modules/Budget/MonthEnd/MonthEnd.html',
+            'AngularClient/App/Modules/Budget/Services/BudgetDataService.js',
+            'AngularClient/App/Modules/Investments/InvestmentData/InvestmentDataController.js',
+            'AngularClient/App/Modules/Investments/InvestmentData/InvestmentInputForm.html',
+            'AngularClient/App/Modules/Investments/Services/InvestmentsDataService.js',
+            'AngularClient/UnitTests/AppHeader/*.js',
+            'AngularClient/UnitTests/Budget/*.js',
+            'AngularClient/UnitTests/Investments/*.js',
+
+            'ExpressApi/UnitTests/InvestmentsTests.js'
         ],
 
 
@@ -45,13 +47,13 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            "App/Modules/Budget/Categories/CategoriesController.js" : ['coverage'],
-            "App/Modules/Budget/Services/BudgetDataService.js" : ['coverage'],
-            "App/Modules/Investments/InvestmentData/InvestmentsDataController.js" : ['coverage'],
-            "App/Modules/Investments/Services/InvestmentsDataServices.js" : ['coverage'],
-            "App/Shared/Header/AppHeaderController.js" : ['coverage'],
-            "App/Shared/Header/AppHeaderDirective.js" : ['coverage'],
-            "App/Shared/Header/*.html" : ['ng-html2js']
+            "AngularClient/App/Modules/Budget/Categories/CategoriesController.js" : ['coverage'],
+            "AngularClient/App/Modules/Budget/Services/BudgetDataService.js" : ['coverage'],
+            "AngularClient/App/Modules/Investments/InvestmentData/InvestmentsDataController.js" : ['coverage'],
+            "AngularClient/App/Modules/Investments/Services/InvestmentsDataServices.js" : ['coverage'],
+            "AngularClient/App/Shared/Header/AppHeaderController.js" : ['coverage'],
+            "AngularClient/App/Shared/Header/AppHeaderDirective.js" : ['coverage'],
+            "AngularClient/App/Shared/Header/*.html" : ['ng-html2js']
             //'**/*.html': ['ng-html2js']
         },
 

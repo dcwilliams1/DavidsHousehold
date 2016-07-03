@@ -71,4 +71,6 @@ bld/
 ###########
 ## Karma ##
 ###########
-AngularClien/coverage/
+/coverage
+AngularClient/coverage/
+ExpressApi/coverage

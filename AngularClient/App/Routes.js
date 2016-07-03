@@ -12,6 +12,11 @@ angular.module('DavidsHousehold')
             .when('/categories', {
                 templateUrl: 'Modules/Budget/Categories/categories.html',
                 controller: 'CategoriesController'
+            })
+
+            .when('/investments', {
+                templateUrl: 'Modules/Investments/InvestmentData/InvestmentInput.html',
+                controller: 'InvestmentDataController'
             });
 
         //if(window.history && window.history.pushState){
