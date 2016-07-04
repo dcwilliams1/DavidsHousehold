@@ -1,7 +1,6 @@
 var express = require('express');
 var investmentRouter = express.Router();
-var investments = require('../Investments/transactions');
-var exports = module.exports;
+var investments = require('../Investments/transactions.js');
 
 investmentRouter.get('/', function(request, response){
       response.send("score!");

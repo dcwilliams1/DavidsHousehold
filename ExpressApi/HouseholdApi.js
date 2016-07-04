@@ -25,7 +25,7 @@ var server = webServer.listen(8081, function () {
     console.log("Example app listening at http://%s:%s", host, port)
 });
 
-
+module.exports = server;
 //to start server
 //cd ExpressApi
 //node HouseholdApi.js
