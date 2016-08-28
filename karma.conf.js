@@ -34,8 +34,6 @@ module.exports = function (config) {
             'AngularClient/UnitTests/AppHeader/*.js',
             'AngularClient/UnitTests/Budget/*.js',
             'AngularClient/UnitTests/Investments/*.js',
-
-            'ExpressApi/UnitTests/InvestmentsTests.js'
         ],
 
 
@@ -62,7 +60,10 @@ module.exports = function (config) {
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ['progress', 'coverage'],
-
+        coverageReporter: {
+      // specify a common output directory
+          dir: 'build/reports/coverage'
+        },
 
         // web server port
         port: 9876,
