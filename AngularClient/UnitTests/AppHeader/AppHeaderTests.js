@@ -30,7 +30,6 @@ describe('Application Header', function () {
             $rootScope.$digest();
             var userWelcome = angular.element(element.find('#userWelcome'));
             expect(userWelcome.length).toBeGreaterThan(8);
-            console.console.log("first test");
         });
 
         it ('should call the controller to find the user', function(){

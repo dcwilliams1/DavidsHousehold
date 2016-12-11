@@ -1,8 +1,6 @@
-var investments = function(request){
+var transactions = function(request){
     require("edge");
     this.insert = function(){response.send("dataInserted")};
-
-
 };
 
-module.exports = investments;
+module.exports = transactions;

@@ -1,6 +1,6 @@
 var express = require('express');
 var investmentRouter = express.Router();
-var investments = require('../Investments/transactions.js');
+var transactions = require('../Investments/transactions.js');
 
 investmentRouter.get('/', function(request, response){
       response.send("score!");
@@ -9,7 +9,7 @@ investmentRouter.get('/', function(request, response){
 
 investmentRouter.post('/transaction', function(request, response){
     response.send("inserting now");
-    investments.insert(request);
+    transactions.insert(request);
     //response.send("investments router");
   });
 
