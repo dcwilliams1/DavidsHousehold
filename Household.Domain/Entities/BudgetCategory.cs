@@ -8,19 +8,19 @@ namespace Household.Domain.Entities
 {
     public class BudgetCategory : Category
     {
-        protected override void EditCategoryName(string newName)
+        public void EditCategoryName(string newname)
         {
-            base.EditCategoryName(newName);
+            base.EditCategoryName(newname);
         }
 
-        public BudgetCategory()
-        {
+        //public BudgetCategory()
+        //{
 
-        }
+        //}
 
         public BudgetCategory(string name)
         {
-            this.EditCategoryName(name);
+            base.EditCategoryName(name);
         }
 
         public decimal BudgetAmount

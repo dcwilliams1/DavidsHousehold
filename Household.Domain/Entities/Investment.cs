@@ -54,11 +54,10 @@ namespace Household.Domain.Entities
             }
         }
 
-        
-
+        public decimal Balance { get; private set; }
         public string AccountName { get; private set; }
         public string FundName { get; private set; }
-        public decimal Balance { get; private set; }
+        
 
         private Account investmentAccount;
         private Fund investmentFund;
@@ -68,6 +67,12 @@ namespace Household.Domain.Entities
             this.investmentAccount = new Account(accountId);
             this.investmentFund = new Fund(fundId);
             this.Balance = 0.00M;
+        }
+
+        public decimal UpdateBalance(decimal amount)
+        {
+            this.Balance += amount;
+            return this.Balance;
         }
 
     }

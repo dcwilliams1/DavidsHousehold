@@ -72,10 +72,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FincanceModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="FincanceModel.Designer.cs">
+    <Compile Include="FinanceModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FincanceModel.edmx</DependentUpon>
+      <DependentUpon>FinanceModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReserveAccount.cs">
@@ -107,9 +107,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="FincanceModel.edmx">
+    <EntityDeploy Include="FinanceModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FincanceModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>FinanceModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
@@ -118,15 +118,15 @@
     </None>
     <None Include="FincanceModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FincanceModel.edmx</DependentUpon>
+      <DependentUpon>FinanceModel.edmx</DependentUpon>
       <LastGenOutput>FincanceModel.Context.cs</LastGenOutput>
     </None>
-    <None Include="FincanceModel.edmx.diagram">
-      <DependentUpon>FincanceModel.edmx</DependentUpon>
+    <None Include="FinanceModel.edmx.diagram">
+      <DependentUpon>FinanceModel.edmx</DependentUpon>
     </None>
     <None Include="FincanceModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FincanceModel.edmx</DependentUpon>
+      <DependentUpon>FinanceModel.edmx</DependentUpon>
       <LastGenOutput>FincanceModel.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />

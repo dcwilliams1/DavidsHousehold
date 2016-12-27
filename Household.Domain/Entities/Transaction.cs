@@ -14,7 +14,7 @@ namespace Household.Domain.Entities
             {
                 if (this.investment != null)
                 {
-                    return this.Investment;
+                    return this.investment;
                 }
                 else
                 {
@@ -27,7 +27,7 @@ namespace Household.Domain.Entities
         {
             get
             {
-                return this.Amount;
+                return this.amount;
             }
         }
 
@@ -37,7 +37,8 @@ namespace Household.Domain.Entities
         public Transaction(Investment Investment, decimal Amount)
         {
             this.investment = Investment;
-            this.amount = Amount;    
+            this.amount = Amount;
+            this.investment.UpdateBalance(amount);
         }
 
     }

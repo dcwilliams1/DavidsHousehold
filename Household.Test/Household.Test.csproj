@@ -70,7 +70,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Domain\BudgetLineItemTests.cs" />
-    <Compile Include="Domain\CategoryTests.cs" />
+    <Compile Include="Domain\BudgetCategoryTests.cs" />
     <Compile Include="Domain\InvestmentTests.cs" />
     <Compile Include="Domain\TransactionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
