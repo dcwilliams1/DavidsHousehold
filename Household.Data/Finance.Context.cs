@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Household.Data.Model
+namespace Household.Data.EntityFramework
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class HouseholdEntities : DbContext
+    public partial class Finance : DbContext
     {
-        public HouseholdEntities()
-            : base("name=HouseholdEntities")
+        public Finance()
+            : base("name=Finance")
         {
         }
     
@@ -33,8 +33,11 @@ namespace Household.Data.Model
         public virtual DbSet<ReserveAccount> ReserveAccounts { get; set; }
         public virtual DbSet<ReserveCategory> ReserveCategories { get; set; }
         public virtual DbSet<ScheduledTran> ScheduledTrans { get; set; }
+        public virtual DbSet<tblDataPoint> tblDataPoints { get; set; }
         public virtual DbSet<TransactionType> TransactionTypes { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Cholesterol> Cholesterols { get; set; }
+        public virtual DbSet<tblAccountFund> tblAccountFunds { get; set; }
+        public virtual DbSet<tblAccount> tblAccounts { get; set; }
+        public virtual DbSet<tblFund> tblFunds { get; set; }
     }
 }

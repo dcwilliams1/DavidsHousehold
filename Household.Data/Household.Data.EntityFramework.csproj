@@ -50,26 +50,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BudgetCategory.cs" />
-    <Compile Include="BudgetLineItem.cs" />
-    <Compile Include="DeepReserve.cs" />
-    <Compile Include="EnergyBill.cs" />
-    <Compile Include="Finance.cs" />
-    <Compile Include="MonthlyData.cs" />
+    <Compile Include="BudgetCategory.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetLineItem.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeepReserve.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EnergyBill.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Finance.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Finance.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Finance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Finance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Finance.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyData.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReserveAccount.cs" />
-    <Compile Include="ReserveCategory.cs" />
-    <Compile Include="ScheduledTran.cs" />
-    <Compile Include="tblAccount.cs" />
-    <Compile Include="tblAccountFund.cs" />
-    <Compile Include="tblDataPoint.cs" />
-    <Compile Include="tblFund.cs" />
-    <Compile Include="TransactionType.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="ReserveAccount.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReserveCategory.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduledTran.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblAccount.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblAccountFund.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblDataPoint.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblFund.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionType.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Finance.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Finance.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Finance.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Finance.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Finance.edmx</DependentUpon>
+      <LastGenOutput>Finance.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Finance.edmx.diagram">
+      <DependentUpon>Finance.edmx</DependentUpon>
+    </None>
+    <None Include="Finance.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Finance.edmx</DependentUpon>
+      <LastGenOutput>Finance.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
