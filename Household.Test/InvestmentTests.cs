@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Household.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Household.Test.Domain
+namespace Household.Domain.Test
 {
 
     [TestClass]

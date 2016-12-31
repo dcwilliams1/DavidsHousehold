@@ -69,10 +69,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Domain\BudgetLineItemTests.cs" />
-    <Compile Include="Domain\BudgetCategoryTests.cs" />
-    <Compile Include="Domain\InvestmentTests.cs" />
-    <Compile Include="Domain\TransactionTests.cs" />
+    <Compile Include="BudgetLineItemTests.cs" />
+    <Compile Include="BudgetCategoryTests.cs" />
+    <Compile Include="InvestmentTests.cs" />
+    <Compile Include="TransactionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

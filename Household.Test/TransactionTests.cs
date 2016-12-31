@@ -3,7 +3,7 @@ using Household.Domain.Entities;
 using Household.Domain.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Household.Test.Domain
+namespace Household.Domain.Test
 {
     [TestClass]
     public class TransactionTests

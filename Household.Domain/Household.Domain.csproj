@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Factories\" />
-    <Folder Include="Repositories\" />
+    <Folder Include="RepositoryInterface\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
