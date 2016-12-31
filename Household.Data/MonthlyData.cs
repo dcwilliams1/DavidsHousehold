@@ -6,18 +6,25 @@ namespace Household.Data.EntityFramework
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tblAccountFund
+    [Table("MonthlyData")]
+    public partial class MonthlyData
     {
         [Key]
         [Column(Order = 0)]
-        public short AccountFundID { get; set; }
+        public byte MonthID { get; set; }
 
         [Key]
         [Column(Order = 1)]
-        public byte FundID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public short YearID { get; set; }
+
+        public bool? Initialized { get; set; }
+
+        [Column(TypeName = "smallmoney")]
+        public decimal? Savings { get; set; }
 
         [Key]
         [Column(Order = 2)]
-        public byte AccountID { get; set; }
+        public byte UserID { get; set; }
     }
 }

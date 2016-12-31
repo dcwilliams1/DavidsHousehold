@@ -35,13 +35,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MonthEnd", "MonthEnd", "{96
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain", "Household.Domain\Household.Domain.csproj", "{C667C5F3-9FA1-48D5-A210-40F4686F3633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data", "Household.Data\Household.Data.csproj", "{22E89A56-B772-4092-BF96-A25CDC3D66BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data.EntityFramework", "Household.Data\Household.Data.EntityFramework.csproj", "{22E89A56-B772-4092-BF96-A25CDC3D66BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header", "Header", "{3AB29ABF-62C3-475C-8B1D-7F69E8DE5616}"
 	ProjectSection(SolutionItems) = preProject
-		AngularClient\Shared\Header\Header.html = AngularClient\Shared\Header\Header.html
 		AngularClient\Shared\Header\AppHeaderController.js = AngularClient\Shared\Header\AppHeaderController.js
 		AppHeaderDirective.js = AppHeaderDirective.js
+		AngularClient\Shared\Header\Header.html = AngularClient\Shared\Header\Header.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sidebar", "Sidebar", "{E6068201-A0CF-4E1F-AB05-0AC9EBCF3E7F}"
@@ -57,8 +57,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8EFFD521-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menu", "Menu", "{7B2488F4-5E61-467A-B59D-50C18942D844}"
 	ProjectSection(SolutionItems) = preProject
-		AngularClient\Shared\Menu\Menu.html = AngularClient\Shared\Menu\Menu.html
 		AngularClient\Shared\Menu\MainMenuDirective.js = AngularClient\Shared\Menu\MainMenuDirective.js
+		AngularClient\Shared\Menu\Menu.html = AngularClient\Shared\Menu\Menu.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{553E19BA-3C77-4D47-BEC0-125B64A6EEA0}"

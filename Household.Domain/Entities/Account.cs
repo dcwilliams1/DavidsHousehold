@@ -10,6 +10,7 @@ namespace Household.Domain.Entities
     {
         public int AccountId { get; private set; }
         public string AccountName { get; private set; }
+        public decimal Balance { get; private set; }
 
         public Account(int accountId)
         {

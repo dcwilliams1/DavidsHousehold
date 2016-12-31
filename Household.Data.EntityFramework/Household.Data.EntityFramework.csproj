@@ -7,8 +7,8 @@
     <ProjectGuid>{22E89A56-B772-4092-BF96-A25CDC3D66BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Household.Data</RootNamespace>
-    <AssemblyName>Household.Data</AssemblyName>
+    <RootNamespace>Household.Data.EntityFramework</RootNamespace>
+    <AssemblyName>Household.Data.EntityFramework</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,84 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BudgetCategory.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BudgetLineItem.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DeepReserve.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EnergyBill.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FincanceModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FincanceModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FincanceModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FinanceModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FinanceModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReserveAccount.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ReserveCategory.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ScheduledTran.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblAccount.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblAccountFund.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblDataPoint.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tblFund.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TransactionType.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>FincanceModel.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="FinanceModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FinanceModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="FincanceModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FinanceModel.edmx</DependentUpon>
-      <LastGenOutput>FincanceModel.Context.cs</LastGenOutput>
-    </None>
-    <None Include="FinanceModel.edmx.diagram">
-      <DependentUpon>FinanceModel.edmx</DependentUpon>
-    </None>
-    <None Include="FincanceModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FinanceModel.edmx</DependentUpon>
-      <LastGenOutput>FincanceModel.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

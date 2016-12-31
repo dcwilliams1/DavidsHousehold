@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Household.Domain.Entities
+using Household.Domain.Entities;
+
+namespace Household.Domain.ValueObjects
 {
     public class Transaction
     {

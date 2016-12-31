@@ -11,6 +11,8 @@ namespace Household.Domain.Entities
          public int FundId { get; private set; }
          public string FundName { get; private set; }
 
+         public decimal Balance { get; private set; }
+
          public Fund(int fundId)
         {
             this.FundId = fundId;
