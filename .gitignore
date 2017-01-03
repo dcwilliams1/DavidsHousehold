@@ -39,12 +39,12 @@ ehthumbs.db
 Thumbs.db
 
 node_modules
-Household.Data/bin
-Household.Data/obj
-Household.Domain/bin
-Household.Domain/obj
-Household.Domain.DataContracts/bin
-Household.Domain.DataContracts/obj
+Household.Data.EntityFramework/bin
+Household.Data.EntityFramework/obj
+Household.Domain.Model/bin
+Household.Domain.Model/obj
+Household.Domain.Servicess/bin
+Household.Domain.Services/obj
 
 
 # User-specific files
@@ -55,6 +55,9 @@ Household.Domain.DataContracts/obj
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+
+#EntityFramework
+Household.Data.EntityFramework.Model/*
 
 # Build results
 [Dd]ebug/

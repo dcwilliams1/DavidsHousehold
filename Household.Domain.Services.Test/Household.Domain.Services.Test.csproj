@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}</ProjectGuid>
+    <ProjectGuid>{D389DF58-76D4-4C4B-A8A1-E70D5F702570}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Household.Data.EntityFramework.Test</RootNamespace>
-    <AssemblyName>Household.Data.EntityFramework.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>Household.Domain.Services.Test</RootNamespace>
+    <AssemblyName>Household.Domain.Services.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -45,16 +49,26 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
-          <Private>False</Private>
-        </Reference>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="InvestmentRepositoryTests.cs" />
+    <Compile Include="InvestmentServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BudgetCategoryRepositoryTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Household.Domain.Model\Household.Domain.Model.csproj">
+      <Project>{c667c5f3-9fa1-48d5-a210-40f4686f3633}</Project>
+      <Name>Household.Domain.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Household.Domain.Services\Household.Domain.Services.csproj">
+      <Project>{acf5ea5b-d1f0-4f69-92b9-30c7b2ef5df2}</Project>
+      <Name>Household.Domain.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

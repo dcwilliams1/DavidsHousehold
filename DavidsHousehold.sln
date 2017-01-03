@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Household.AngularClient", "Household.AngularClient", "{A7D9AB2F-F17C-4705-928B-5A84B073532B}"
 	ProjectSection(SolutionItems) = preProject
@@ -33,9 +33,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MonthEnd", "MonthEnd", "{96
 		AngularClient\Modules\Money\MonthEnd\MonthEndController.js = AngularClient\Modules\Money\MonthEnd\MonthEndController.js
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain", "Household.Domain\Household.Domain.csproj", "{C667C5F3-9FA1-48D5-A210-40F4686F3633}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain.Model", "Household.Domain.Model\Household.Domain.Model.csproj", "{C667C5F3-9FA1-48D5-A210-40F4686F3633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data.EntityFramework", "Household.Data\Household.Data.EntityFramework.csproj", "{22E89A56-B772-4092-BF96-A25CDC3D66BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data.EntityFramework", "Household.Data.EntityFramework\Household.Data.EntityFramework.csproj", "{22E89A56-B772-4092-BF96-A25CDC3D66BF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header", "Header", "{3AB29ABF-62C3-475C-8B1D-7F69E8DE5616}"
 	ProjectSection(SolutionItems) = preProject
@@ -46,7 +46,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header", "Header", "{3AB29A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sidebar", "Sidebar", "{E6068201-A0CF-4E1F-AB05-0AC9EBCF3E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain.Test", "Household.Test\Household.Domain.Test.csproj", "{9B42F587-F4C3-465E-BB6C-85D54BB6D8F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain.Model.Test", "Household.Domain.Model.Test\Household.Domain.Model.Test.csproj", "{9B42F587-F4C3-465E-BB6C-85D54BB6D8F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8EFFD521-EB5D-4CFA-BC41-A270B92DC88D}"
 	ProjectSection(SolutionItems) = preProject
@@ -63,6 +63,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{553E19BA-3
 	ProjectSection(SolutionItems) = preProject
 		AngularClient\Assets\libs\angular.js = AngularClient\Assets\libs\angular.js
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data.EntityFramework.Test", "Household.Data.EntityFramework.Test\Household.Data.EntityFramework.Test.csproj", "{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain.Services", "Household.Domain.Services\Household.Domain.Services.csproj", "{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain.Services.Test", "Household.Domain.Services.Test\Household.Domain.Services.Test.csproj", "{D389DF58-76D4-4C4B-A8A1-E70D5F702570}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,6 +112,54 @@ Global
 		{9B42F587-F4C3-465E-BB6C-85D54BB6D8F9}.Release|ARM.ActiveCfg = Release|Any CPU
 		{9B42F587-F4C3-465E-BB6C-85D54BB6D8F9}.Release|x64.ActiveCfg = Release|Any CPU
 		{9B42F587-F4C3-465E-BB6C-85D54BB6D8F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|ARM.Build.0 = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|x64.Build.0 = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Debug|x86.Build.0 = Debug|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|ARM.Build.0 = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|x64.ActiveCfg = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|x64.Build.0 = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|x86.ActiveCfg = Release|Any CPU
+		{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}.Release|x86.Build.0 = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|ARM.Build.0 = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|x64.Build.0 = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Debug|x86.Build.0 = Debug|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|ARM.ActiveCfg = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|ARM.Build.0 = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|x64.ActiveCfg = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|x64.Build.0 = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|x86.ActiveCfg = Release|Any CPU
+		{ACF5EA5B-D1F0-4F69-92B9-30C7B2EF5DF2}.Release|x86.Build.0 = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|ARM.Build.0 = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|x64.Build.0 = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Debug|x86.Build.0 = Debug|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|ARM.ActiveCfg = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|ARM.Build.0 = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|x64.ActiveCfg = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|x64.Build.0 = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|x86.ActiveCfg = Release|Any CPU
+		{D389DF58-76D4-4C4B-A8A1-E70D5F702570}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
