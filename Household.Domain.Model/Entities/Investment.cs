@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Household.Domain.Model.ValueObjects;
+
 namespace Household.Domain.Model.Entities
 {
     public class Investment

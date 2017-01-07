@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+using Household.Data.EntityFramework.Model;
 using Household.Domain.Model.DataInterface;
 using Household.Domain.Model.Entities;
 

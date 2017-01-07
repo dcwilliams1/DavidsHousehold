@@ -16,7 +16,7 @@ namespace Household.Domain.Model.Test
             var expectedInvestentAccountId = 3;
             var expectedInvestmnt = new Investment(expectedInvestentAccountId, expectedInvestmentFundId);
 
-            var tx = new Transaction(expectedInvestmnt, expectedTransactionAmt);
+            var tx = new InvestmentTransaction(expectedInvestmnt, expectedTransactionAmt);
 
             var actualTransactionAmt = tx.Amount;
             var actualInvestmentFundID = tx.Investment.FundId;
@@ -35,7 +35,7 @@ namespace Household.Domain.Model.Test
             var expectedInvestentAccountId = 3;
             var expectedInvestmnt = new Investment(expectedInvestentAccountId, expectedInvestmentFundId);
 
-            var tx = new Transaction(expectedInvestmnt, expectedTransactionAmt);
+            var tx = new InvestmentTransaction(expectedInvestmnt, expectedTransactionAmt);
 
             var actualTransactionAmt = tx.Amount;
             var actualInvestmentFundID = tx.Investment.FundId;
