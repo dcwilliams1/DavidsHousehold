@@ -3,66 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Household.AngularClient", "Household.AngularClient", "{A7D9AB2F-F17C-4705-928B-5A84B073532B}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		AngularClient\HouseholdApp.js = AngularClient\HouseholdApp.js
-		AngularClient\Index.html = AngularClient\Index.html
-		karma.conf.js = karma.conf.js
-		package.json = package.json
-		AngularClient\Routes.js = AngularClient\Routes.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Household.ExpressApi", "Household.ExpressApi", "{894B1FA5-AB16-408B-A7A5-73C7CA74E82A}"
-	ProjectSection(SolutionItems) = preProject
-		ExpressApi\HouseholdApi.js = ExpressApi\HouseholdApi.js
-		ExpressApi\package.json = ExpressApi\package.json
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{0C68A7FF-5272-4D5E-8877-E6EAB22900D6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{6261DCBB-96AB-4960-9C2E-C971AE3E9999}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8D236890-729A-4998-8344-8D90E1798A23}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Money", "Money", "{C5B9DE05-8D44-4589-A33F-F2BE2515C508}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MonthEnd", "MonthEnd", "{96681E28-05DC-4C16-93B3-B49E77C2B3B6}"
-	ProjectSection(SolutionItems) = preProject
-		AngularClient\Modules\Money\MonthEnd\monthEnd.html = AngularClient\Modules\Money\MonthEnd\monthEnd.html
-		AngularClient\Modules\Money\MonthEnd\MonthEndController.js = AngularClient\Modules\Money\MonthEnd\MonthEndController.js
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain.Model", "Household.Domain.Model\Household.Domain.Model.csproj", "{C667C5F3-9FA1-48D5-A210-40F4686F3633}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data.EntityFramework", "Household.Data.EntityFramework\Household.Data.EntityFramework.csproj", "{22E89A56-B772-4092-BF96-A25CDC3D66BF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header", "Header", "{3AB29ABF-62C3-475C-8B1D-7F69E8DE5616}"
-	ProjectSection(SolutionItems) = preProject
-		AngularClient\Shared\Header\AppHeaderController.js = AngularClient\Shared\Header\AppHeaderController.js
-		AppHeaderDirective.js = AppHeaderDirective.js
-		AngularClient\Shared\Header\Header.html = AngularClient\Shared\Header\Header.html
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sidebar", "Sidebar", "{E6068201-A0CF-4E1F-AB05-0AC9EBCF3E7F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Domain.Model.Test", "Household.Domain.Model.Test\Household.Domain.Model.Test.csproj", "{9B42F587-F4C3-465E-BB6C-85D54BB6D8F9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8EFFD521-EB5D-4CFA-BC41-A270B92DC88D}"
-	ProjectSection(SolutionItems) = preProject
-		AngularClient\Test\AppHeaderTests.js = AngularClient\Test\AppHeaderTests.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menu", "Menu", "{7B2488F4-5E61-467A-B59D-50C18942D844}"
-	ProjectSection(SolutionItems) = preProject
-		AngularClient\Shared\Menu\MainMenuDirective.js = AngularClient\Shared\Menu\MainMenuDirective.js
-		AngularClient\Shared\Menu\Menu.html = AngularClient\Shared\Menu\Menu.html
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{553E19BA-3C77-4D47-BEC0-125B64A6EEA0}"
-	ProjectSection(SolutionItems) = preProject
-		AngularClient\Assets\libs\angular.js = AngularClient\Assets\libs\angular.js
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Data.EntityFramework.Test", "Household.Data.EntityFramework.Test\Household.Data.EntityFramework.Test.csproj", "{9624F7B3-04E8-4FB9-895E-53CBB60AEAA2}"
 EndProject
@@ -163,17 +108,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{0C68A7FF-5272-4D5E-8877-E6EAB22900D6} = {A7D9AB2F-F17C-4705-928B-5A84B073532B}
-		{6261DCBB-96AB-4960-9C2E-C971AE3E9999} = {A7D9AB2F-F17C-4705-928B-5A84B073532B}
-		{8D236890-729A-4998-8344-8D90E1798A23} = {A7D9AB2F-F17C-4705-928B-5A84B073532B}
-		{C5B9DE05-8D44-4589-A33F-F2BE2515C508} = {6261DCBB-96AB-4960-9C2E-C971AE3E9999}
-		{96681E28-05DC-4C16-93B3-B49E77C2B3B6} = {C5B9DE05-8D44-4589-A33F-F2BE2515C508}
-		{3AB29ABF-62C3-475C-8B1D-7F69E8DE5616} = {8D236890-729A-4998-8344-8D90E1798A23}
-		{E6068201-A0CF-4E1F-AB05-0AC9EBCF3E7F} = {8D236890-729A-4998-8344-8D90E1798A23}
-		{8EFFD521-EB5D-4CFA-BC41-A270B92DC88D} = {A7D9AB2F-F17C-4705-928B-5A84B073532B}
-		{7B2488F4-5E61-467A-B59D-50C18942D844} = {8D236890-729A-4998-8344-8D90E1798A23}
-		{553E19BA-3C77-4D47-BEC0-125B64A6EEA0} = {0C68A7FF-5272-4D5E-8877-E6EAB22900D6}
 	EndGlobalSection
 EndGlobal
