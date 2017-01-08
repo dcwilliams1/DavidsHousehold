@@ -7,6 +7,7 @@ using Household.Domain.Model.ValueObjects;
 using Household.Domain.Services;
 
 using Rhino.Mocks;
+//see http://www.wrightfully.com/using-rhino-mocks-quick-guide-to-generating-mocks-and-stubs/
 
 
 namespace Household.Domain.Services.Test

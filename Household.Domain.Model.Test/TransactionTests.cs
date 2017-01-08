@@ -8,12 +8,27 @@ namespace Household.Domain.Model.Test
     [TestClass]
     public class TransactionTests
     {
+        decimal transactionAmt;
+        int investmentFundId;
+        int accountId;
+        Investment testInvestmnt;
+
+
+        [TestInitialize]
+        public void TestSetup()
+        {
+            transactionAmt = 10.5M;
+            investmentFundId = 2;
+            accountId = 3;
+            testInvestmnt = new Investment(accountId, investmentFundId);
+        }
+
         [TestMethod]
         public void TransactionIsCreatedWithInvestmentAndAmount()
         {
-            var expectedTransactionAmt = 10.5M;
-            var expectedInvestmentFundId = 2;
-            var expectedInvestentAccountId = 3;
+            var expectedTransactionAmt = transactionAmt;
+            var expectedInvestmentFundId = investmentFundId;
+            var expectedInvestentAccountId = accountId;
             var expectedInvestmnt = new Investment(expectedInvestentAccountId, expectedInvestmentFundId);
 
             var tx = new InvestmentTransaction(expectedInvestmnt, expectedTransactionAmt);
@@ -31,8 +46,8 @@ namespace Household.Domain.Model.Test
         public void TransactionAmountCanBeNegative()
         {
             var expectedTransactionAmt = -10.5M;
-            var expectedInvestmentFundId = 2;
-            var expectedInvestentAccountId = 3;
+            var expectedInvestmentFundId = investmentFundId;
+            var expectedInvestentAccountId = accountId;
             var expectedInvestmnt = new Investment(expectedInvestentAccountId, expectedInvestmentFundId);
 
             var tx = new InvestmentTransaction(expectedInvestmnt, expectedTransactionAmt);
@@ -44,6 +59,18 @@ namespace Household.Domain.Model.Test
             Assert.AreEqual(expectedTransactionAmt, actualTransactionAmt);
             Assert.AreEqual(expectedInvestmentFundId, actualInvestmentFundID);
             Assert.AreEqual(expectedInvestentAccountId, actualInvestmentAccountID);
+        }
+
+        [TestMethod]
+        public void TransactionUpdatesInvestmentPrinciple()
+        {
+            var invstmt = new Investment(accountId, investmentFundId);
+            var initialPrinciple = invstmt.Principle;
+
+            var tx = new InvestmentTransaction(invstmt, transactionAmt);
+
+            Assert.AreEqual(invstmt.Principle, initialPrinciple + tx.Amount);
+
         }
     }
 }

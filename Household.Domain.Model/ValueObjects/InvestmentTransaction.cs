@@ -31,6 +31,7 @@ namespace Household.Domain.Model.ValueObjects
         public InvestmentTransaction(Investment investment, decimal amount) : base(amount)
         {
             this.investment = investment;
+            this.investment.UdatePrinciple(amount);
 
         }
 

@@ -56,6 +56,7 @@ namespace Household.Domain.Model.Entities
             }
         }
 
+        public decimal Principle { get; protected set; }
         public decimal Balance { get; }
         public string AccountName { get; private set; }
         public string FundName { get; private set; }
@@ -69,6 +70,11 @@ namespace Household.Domain.Model.Entities
             this.investmentAccount = new Account(accountId);
             this.investmentFund = new Fund(fundId);
             this.Balance = 0.00M;
+        }
+
+        public void UdatePrinciple(decimal amount)
+        {
+            this.Principle += amount;
         }
     }
 }
