@@ -72,10 +72,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Finance.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Finance.Designer.cs">
+    <Compile Include="Model\FinanceDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Finance.edmx</DependentUpon>
+      <DependentUpon>FinanceDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\MonthlyData.cs">
       <DependentUpon>Finance.tt</DependentUpon>
@@ -114,21 +114,21 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="Model\Finance.edmx">
+    <EntityDeploy Include="Model\FinanceDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Finance.Designer.cs</LastGenOutput>
+      <LastGenOutput>FinanceDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Model\Finance.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Finance.edmx</DependentUpon>
+      <DependentUpon>FinanceDB.edmx</DependentUpon>
       <LastGenOutput>Finance.Context.cs</LastGenOutput>
     </None>
-    <None Include="Model\Finance.edmx.diagram">
-      <DependentUpon>Finance.edmx</DependentUpon>
+    <None Include="Model\FinanceDB.edmx.diagram">
+      <DependentUpon>FinanceDB.edmx</DependentUpon>
     </None>
     <None Include="Model\Finance.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Finance.edmx</DependentUpon>
+      <DependentUpon>FinanceDB.edmx</DependentUpon>
       <LastGenOutput>Finance.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
