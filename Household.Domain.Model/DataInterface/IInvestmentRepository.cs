@@ -4,6 +4,6 @@ namespace Household.Domain.Model.DataInterface
 {
     public interface IInvestmentRepository
     {
-        decimal UpdateInvestmentPrinciple(Investment investment, decimal amount);
+        bool UpdateInvestmentPrinciple(Investment Investment, decimal Amount);
     }
 }

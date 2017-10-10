@@ -5,6 +5,7 @@ using Household.Domain.Model.DataInterface;
 using Household.Domain.Model.Entities;
 using Household.Domain.Model.ValueObjects;
 using Household.Domain.Services;
+using System.Data;
 
 using Rhino.Mocks;
 //see http://www.wrightfully.com/using-rhino-mocks-quick-guide-to-generating-mocks-and-stubs/
@@ -36,10 +37,10 @@ namespace Household.Domain.Services.Test
         }
 
         [TestMethod]
-        public void UpdatingPrincipleCallsRepository()
+        public void InvestmentServiceUpdatingPrincipleCallsRepository()
         {
             var initialBalance = testInvestmnt.Balance;
-            repository.Expect(rep => rep.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt)).Return(initialBalance + transactionAmt);
+            repository.Expect(rep => rep.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt)).Return(true);
             repository.Replay();
 
             svc.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt);
@@ -48,16 +49,34 @@ namespace Household.Domain.Services.Test
         }
 
         [TestMethod]
-        public void UpdatingPrincipleReturnsInvestmentBalance()
+        public void InvestmentServiceUpdatingPrincipleReturnsPrinciple()
         {
             var initialBalance = testInvestmnt.Balance;
-            repository.Expect(rep => rep.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt)).Return(initialBalance + transactionAmt);
+            repository.Expect(rep => rep.UpdateInvestmentPrinciple(testInvestmnt,transactionAmt)).Return(true);
             repository.Replay();
 
-            var actualBalance = svc.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt);
-            var expectedBalance = initialBalance + transactionAmt;
+            var actualResult = svc.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt);
+            var expectedResult = initialBalance + transactionAmt;
             
-            Assert.AreEqual(expectedBalance, actualBalance);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void InvestmentServiceThrowsExceptionWhenUpdateFails()
+        {
+            repository.Expect(rep => rep.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt)).Throw(new DataException());
+            repository.Replay();
+
+            try
+            {
+                var actualResult = svc.UpdateInvestmentPrinciple(testInvestmnt, transactionAmt);
+                Assert.Fail("no exception thrown");
+            }
+            catch(Exception ex)
+            {
+                Assert.IsTrue(ex is Exception);
+            }
+
         }
 
         [TestCleanup]

@@ -1,0 +1,1159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Household.Data.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BudgetCategories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BudgetAmount" Type="smallmoney" />
+          <Property Name="Display" Type="bit" Nullable="false" />
+          <Property Name="Archived" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BudgetLineItems">
+          <Key>
+            <PropertyRef Name="LineID" />
+          </Key>
+          <Property Name="LineID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="smalldatetime" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="75" Nullable="false" />
+          <Property Name="CategoryID" Type="smallint" Nullable="false" />
+          <Property Name="TransTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="UserID" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CategoryUser">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="CategoryID" Type="smallint" Nullable="false" />
+          <Property Name="UserID" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Finance.dbo.Cholesterol' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cholesterol">
+          <Key>
+            <PropertyRef Name="TestID" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="TestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="LDL" Type="int" />
+          <Property Name="HDL" Type="int" />
+          <Property Name="VLDL" Type="int" />
+          <Property Name="Total Cholesterol" Type="int" />
+          <Property Name="Triglycerides" Type="int" />
+          <Property Name="Non HDL" Type="int" />
+          <Property Name="Total/HDL Ratio" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="apoB100-calc" Type="int" />
+          <Property Name="LDL-R" Type="int" />
+          <Property Name="Lp(a)" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="IDL" Type="int" />
+          <Property Name="Remnant Lipo (IDL + VLDL3)" Type="int" />
+          <Property Name="HDL-2" Type="int" />
+          <Property Name="HDL-3" Type="int" />
+          <Property Name="VLDL-3" Type="int" />
+          <Property Name="LDL1 Pattern A" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="LDL-2 Pattern A" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="LDL-3 Pattern B" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="LDL-4 Pattern B" Type="decimal" Precision="4" Scale="2" />
+          <Property Name="LDL Density" Type="varchar" MaxLength="5" />
+          <Property Name="Systolic" Type="int" />
+          <Property Name="Diastolic" Type="int" />
+          <Property Name="Comment" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="DeepReserves">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="Amount" Type="money" />
+          <Property Name="AccountID" Type="int" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="ReserveCategoryID" Type="int" />
+          <Property Name="Balance" Type="int" />
+        </EntityType>
+        <EntityType Name="EnergyBills">
+          <Key>
+            <PropertyRef Name="BillID" />
+          </Key>
+          <Property Name="BillID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BillEnd" Type="datetime" />
+          <Property Name="DaysInPeriod" Type="int" />
+          <Property Name="KwH" Type="int" />
+          <Property Name="ElectricCost" Type="money" />
+          <Property Name="KwHPrice" Type="money" />
+          <Property Name="Meter" Type="int" />
+          <Property Name="SolarProduction" Type="int" />
+          <Property Name="SolarUsage" Type="int" />
+          <Property Name="SolarSavings" Type="money" StoreGeneratedPattern="Computed" />
+          <Property Name="Therms" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="GasCost" Type="money" />
+          <Property Name="AvgTemp" Type="int" />
+          <Property Name="Thermostat" Type="int" />
+          <Property Name="Mode" Type="varchar" MaxLength="4" />
+          <Property Name="Comment" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="InvestmentTransactions">
+          <Key>
+            <PropertyRef Name="InvestmentTransactionID" />
+          </Key>
+          <Property Name="InvestmentTransactionID" Type="int" Nullable="false" />
+          <Property Name="DataPointID" Type="int" Nullable="false" />
+          <Property Name="ReserveCategoryID" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="Basis" Type="money" Nullable="false" />
+          <Property Name="InvestmentDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReserveAccounts">
+          <Key>
+            <PropertyRef Name="ReserveAccountID" />
+          </Key>
+          <Property Name="ReserveAccountID" Type="int" Nullable="false" />
+          <Property Name="AccountName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ReserveCategories">
+          <Key>
+            <PropertyRef Name="ReserveCategoryID" />
+          </Key>
+          <Property Name="ReserveCategoryID" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="Display" Type="bit" />
+          <Property Name="Archived" Type="bit" />
+          <Property Name="ParentCategoryID" Type="smallint" />
+        </EntityType>
+        <EntityType Name="ScheduledTrans">
+          <Key>
+            <PropertyRef Name="TranID" />
+          </Key>
+          <Property Name="TranID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TranTypeID" Type="tinyint" Nullable="false" />
+          <Property Name="CategoryID" Type="smallint" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="Day" Type="tinyint" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="UserID" Type="tinyint" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="LastEntry" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Finance.dbo.tblAccountFunds' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblAccountFunds">
+          <Key>
+            <PropertyRef Name="AccountFundID" />
+            <PropertyRef Name="FundID" />
+            <PropertyRef Name="AccountID" />
+            <PropertyRef Name="Active" />
+          </Key>
+          <Property Name="AccountFundID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FundID" Type="tinyint" Nullable="false" />
+          <Property Name="AccountID" Type="tinyint" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Finance.dbo.tblAccounts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblAccounts">
+          <Key>
+            <PropertyRef Name="AccountID" />
+            <PropertyRef Name="AccountName" />
+            <PropertyRef Name="Active" />
+            <PropertyRef Name="Display" />
+          </Key>
+          <Property Name="AccountID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AccountDescription" Type="varchar" MaxLength="250" />
+          <Property Name="AccountNumber" Type="varchar" MaxLength="20" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Display" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblDataPoints">
+          <Key>
+            <PropertyRef Name="DataPointID" />
+          </Key>
+          <Property Name="DataPointID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DataDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="DataValue" Type="money" Nullable="false" />
+          <Property Name="AccountFundID" Type="smallint" Nullable="false" />
+          <Property Name="Type" Type="char" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Finance.dbo.tblFunds' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblFunds">
+          <Key>
+            <PropertyRef Name="FundID" />
+            <PropertyRef Name="FundSymbol" />
+          </Key>
+          <Property Name="FundID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FundSymbol" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="FundName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Finance.dbo.tblFundsPreferences' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblFundsPreferences">
+          <Property Name="DefaultStartDate" Type="smalldatetime" />
+          <Property Name="DefaultEndDate" Type="smalldatetime" />
+          <Property Name="EditDateFormat" Type="varchar" MaxLength="15" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblLoans">
+          <Key>
+            <PropertyRef Name="LoanID" />
+          </Key>
+          <Property Name="LoanID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoanedTo" Type="varchar" MaxLength="50" />
+          <Property Name="LoanDate" Type="datetime" />
+          <Property Name="LoanAmount" Type="money" />
+          <Property Name="Purpose" Type="varchar" MaxLength="20" />
+          <Property Name="AmountPaid" Type="money" />
+          <Property Name="PaidDate" Type="datetime" />
+          <Property Name="Paid" Type="bit" />
+          <Property Name="Account" Type="money" />
+        </EntityType>
+        <EntityType Name="TransactionTypes">
+          <Key>
+            <PropertyRef Name="TypeID" />
+          </Key>
+          <Property Name="TypeID" Type="tinyint" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="tinyint" Nullable="false" />
+          <Property Name="Lname" Type="varchar" MaxLength="50" />
+          <Property Name="Fname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__BudgetLin__Categ__7D78A4E7">
+          <End Role="BudgetCategories" Type="Self.BudgetCategories" Multiplicity="1" />
+          <End Role="BudgetLineItems" Type="Self.BudgetLineItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="BudgetLineItems">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BudgetLin__Trans__7E6CC920">
+          <End Role="TransactionTypes" Type="Self.TransactionTypes" Multiplicity="1" />
+          <End Role="BudgetLineItems" Type="Self.BudgetLineItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TransactionTypes">
+              <PropertyRef Name="TypeID" />
+            </Principal>
+            <Dependent Role="BudgetLineItems">
+              <PropertyRef Name="TransTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BudgetLin__UserI__7F60ED59">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="BudgetLineItems" Type="Self.BudgetLineItems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="BudgetLineItems">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CategoryU__Categ__398D8EEE">
+          <End Role="BudgetCategories" Type="Self.BudgetCategories" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CategoryUser" Type="Self.CategoryUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="CategoryUser">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CategoryU__UserI__3A81B327">
+          <End Role="Users" Type="Self.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CategoryUser" Type="Self.CategoryUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="CategoryUser">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BudgetCategories_BudgetCategories">
+          <End Role="BudgetCategories" Type="Self.BudgetCategories" Multiplicity="1" />
+          <End Role="BudgetCategories1" Type="Self.BudgetCategories" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="BudgetCategories1">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeepReserves_ReserveAccountID">
+          <End Role="ReserveAccounts" Type="Self.ReserveAccounts" Multiplicity="0..1" />
+          <End Role="DeepReserves" Type="Self.DeepReserves" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReserveAccounts">
+              <PropertyRef Name="ReserveAccountID" />
+            </Principal>
+            <Dependent Role="DeepReserves">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeepReserves_ReserveCategoryID">
+          <End Role="ReserveCategories" Type="Self.ReserveCategories" Multiplicity="0..1" />
+          <End Role="DeepReserves" Type="Self.DeepReserves" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReserveCategories">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Principal>
+            <Dependent Role="DeepReserves">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvestmentTransactions_tblDataPoints">
+          <End Role="tblDataPoints" Type="Self.tblDataPoints" Multiplicity="1" />
+          <End Role="InvestmentTransactions" Type="Self.InvestmentTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDataPoints">
+              <PropertyRef Name="DataPointID" />
+            </Principal>
+            <Dependent Role="InvestmentTransactions">
+              <PropertyRef Name="DataPointID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvestmentTransactions_tblReserveCategories">
+          <End Role="ReserveCategories" Type="Self.ReserveCategories" Multiplicity="0..1" />
+          <End Role="InvestmentTransactions" Type="Self.InvestmentTransactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReserveCategories">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Principal>
+            <Dependent Role="InvestmentTransactions">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReserveCategories_BudgetCategories">
+          <End Role="BudgetCategories" Type="Self.BudgetCategories" Multiplicity="0..1" />
+          <End Role="ReserveCategories" Type="Self.ReserveCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="ReserveCategories">
+              <PropertyRef Name="ParentCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HouseholdDataStoreContainer">
+          <EntitySet Name="BudgetCategories" EntityType="Self.BudgetCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BudgetLineItems" EntityType="Self.BudgetLineItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoryUser" EntityType="Self.CategoryUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeepReserves" EntityType="Self.DeepReserves" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnergyBills" EntityType="Self.EnergyBills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InvestmentTransactions" EntityType="Self.InvestmentTransactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReserveAccounts" EntityType="Self.ReserveAccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReserveCategories" EntityType="Self.ReserveCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScheduledTrans" EntityType="Self.ScheduledTrans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDataPoints" EntityType="Self.tblDataPoints" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransactionTypes" EntityType="Self.TransactionTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cholesterol" EntityType="Self.Cholesterol" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Cholesterol].[TestID] AS [TestID], 
+    [Cholesterol].[Date] AS [Date], 
+    [Cholesterol].[LDL] AS [LDL], 
+    [Cholesterol].[HDL] AS [HDL], 
+    [Cholesterol].[VLDL] AS [VLDL], 
+    [Cholesterol].[Total Cholesterol] AS [Total Cholesterol], 
+    [Cholesterol].[Triglycerides] AS [Triglycerides], 
+    [Cholesterol].[Non HDL] AS [Non HDL], 
+    [Cholesterol].[Total/HDL Ratio] AS [Total/HDL Ratio], 
+    [Cholesterol].[apoB100-calc] AS [apoB100-calc], 
+    [Cholesterol].[LDL-R] AS [LDL-R], 
+    [Cholesterol].[Lp(a)] AS [Lp(a)], 
+    [Cholesterol].[IDL] AS [IDL], 
+    [Cholesterol].[Remnant Lipo (IDL + VLDL3)] AS [Remnant Lipo (IDL + VLDL3)], 
+    [Cholesterol].[HDL-2] AS [HDL-2], 
+    [Cholesterol].[HDL-3] AS [HDL-3], 
+    [Cholesterol].[VLDL-3] AS [VLDL-3], 
+    [Cholesterol].[LDL1 Pattern A] AS [LDL1 Pattern A], 
+    [Cholesterol].[LDL-2 Pattern A] AS [LDL-2 Pattern A], 
+    [Cholesterol].[LDL-3 Pattern B] AS [LDL-3 Pattern B], 
+    [Cholesterol].[LDL-4 Pattern B] AS [LDL-4 Pattern B], 
+    [Cholesterol].[LDL Density] AS [LDL Density], 
+    [Cholesterol].[Systolic] AS [Systolic], 
+    [Cholesterol].[Diastolic] AS [Diastolic], 
+    [Cholesterol].[Comment] AS [Comment]
+    FROM [dbo].[Cholesterol] AS [Cholesterol]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblAccountFunds" EntityType="Self.tblAccountFunds" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblAccountFunds].[AccountFundID] AS [AccountFundID], 
+    [tblAccountFunds].[FundID] AS [FundID], 
+    [tblAccountFunds].[AccountID] AS [AccountID], 
+    [tblAccountFunds].[Active] AS [Active]
+    FROM [dbo].[tblAccountFunds] AS [tblAccountFunds]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblAccounts" EntityType="Self.tblAccounts" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblAccounts].[AccountID] AS [AccountID], 
+    [tblAccounts].[AccountName] AS [AccountName], 
+    [tblAccounts].[AccountDescription] AS [AccountDescription], 
+    [tblAccounts].[AccountNumber] AS [AccountNumber], 
+    [tblAccounts].[CompanyName] AS [CompanyName], 
+    [tblAccounts].[Active] AS [Active], 
+    [tblAccounts].[Display] AS [Display]
+    FROM [dbo].[tblAccounts] AS [tblAccounts]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblFunds" EntityType="Self.tblFunds" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblFunds].[FundID] AS [FundID], 
+    [tblFunds].[FundSymbol] AS [FundSymbol], 
+    [tblFunds].[FundName] AS [FundName]
+    FROM [dbo].[tblFunds] AS [tblFunds]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblLoans" EntityType="Self.tblLoans" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblLoans].[LoanID] AS [LoanID], 
+    [tblLoans].[LoanedTo] AS [LoanedTo], 
+    [tblLoans].[LoanDate] AS [LoanDate], 
+    [tblLoans].[LoanAmount] AS [LoanAmount], 
+    [tblLoans].[Purpose] AS [Purpose], 
+    [tblLoans].[AmountPaid] AS [AmountPaid], 
+    [tblLoans].[PaidDate] AS [PaidDate], 
+    [tblLoans].[Paid] AS [Paid], 
+    [tblLoans].[Account] AS [Account]
+    FROM [dbo].[tblLoans] AS [tblLoans]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__BudgetLin__Categ__7D78A4E7" Association="Self.FK__BudgetLin__Categ__7D78A4E7">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="BudgetLineItems" EntitySet="BudgetLineItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BudgetLin__Trans__7E6CC920" Association="Self.FK__BudgetLin__Trans__7E6CC920">
+            <End Role="TransactionTypes" EntitySet="TransactionTypes" />
+            <End Role="BudgetLineItems" EntitySet="BudgetLineItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BudgetLin__UserI__7F60ED59" Association="Self.FK__BudgetLin__UserI__7F60ED59">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="BudgetLineItems" EntitySet="BudgetLineItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CategoryU__Categ__398D8EEE" Association="Self.FK__CategoryU__Categ__398D8EEE">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="CategoryUser" EntitySet="CategoryUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CategoryU__UserI__3A81B327" Association="Self.FK__CategoryU__UserI__3A81B327">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CategoryUser" EntitySet="CategoryUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BudgetCategories_BudgetCategories" Association="Self.FK_BudgetCategories_BudgetCategories">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="BudgetCategories1" EntitySet="BudgetCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeepReserves_ReserveAccountID" Association="Self.FK_DeepReserves_ReserveAccountID">
+            <End Role="ReserveAccounts" EntitySet="ReserveAccounts" />
+            <End Role="DeepReserves" EntitySet="DeepReserves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeepReserves_ReserveCategoryID" Association="Self.FK_DeepReserves_ReserveCategoryID">
+            <End Role="ReserveCategories" EntitySet="ReserveCategories" />
+            <End Role="DeepReserves" EntitySet="DeepReserves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvestmentTransactions_tblDataPoints" Association="Self.FK_InvestmentTransactions_tblDataPoints">
+            <End Role="tblDataPoints" EntitySet="tblDataPoints" />
+            <End Role="InvestmentTransactions" EntitySet="InvestmentTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvestmentTransactions_tblReserveCategories" Association="Self.FK_InvestmentTransactions_tblReserveCategories">
+            <End Role="ReserveCategories" EntitySet="ReserveCategories" />
+            <End Role="InvestmentTransactions" EntitySet="InvestmentTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReserveCategories_BudgetCategories" Association="Self.FK_ReserveCategories_BudgetCategories">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="ReserveCategories" EntitySet="ReserveCategories" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Household.Data" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BudgetCategory">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BudgetAmount" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="Display" Type="Boolean" Nullable="false" />
+          <Property Name="Archived" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="BudgetLineItems" Relationship="Self.FK__BudgetLin__Categ__7D78A4E7" FromRole="BudgetCategories" ToRole="BudgetLineItems" />
+          <NavigationProperty Name="BudgetCategories1" Relationship="Self.FK_BudgetCategories_BudgetCategories" FromRole="BudgetCategories" ToRole="BudgetCategories1" />
+          <NavigationProperty Name="BudgetCategory1" Relationship="Self.FK_BudgetCategories_BudgetCategories" FromRole="BudgetCategories1" ToRole="BudgetCategories" />
+          <NavigationProperty Name="ReserveCategories" Relationship="Self.FK_ReserveCategories_BudgetCategories" FromRole="BudgetCategories" ToRole="ReserveCategories" />
+          <NavigationProperty Name="Users" Relationship="Self.CategoryUser" FromRole="BudgetCategories" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="BudgetLineItem">
+          <Key>
+            <PropertyRef Name="LineID" />
+          </Key>
+          <Property Name="LineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="75" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CategoryID" Type="Int16" Nullable="false" />
+          <Property Name="TransTypeID" Type="Byte" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="UserID" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="BudgetCategory" Relationship="Self.FK__BudgetLin__Categ__7D78A4E7" FromRole="BudgetLineItems" ToRole="BudgetCategories" />
+          <NavigationProperty Name="TransactionType" Relationship="Self.FK__BudgetLin__Trans__7E6CC920" FromRole="BudgetLineItems" ToRole="TransactionTypes" />
+          <NavigationProperty Name="User" Relationship="Self.FK__BudgetLin__UserI__7F60ED59" FromRole="BudgetLineItems" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="DeepReserve">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AccountID" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="ReserveCategoryID" Type="Int32" />
+          <Property Name="Balance" Type="Int32" />
+          <NavigationProperty Name="ReserveAccount" Relationship="Self.FK_DeepReserves_ReserveAccountID" FromRole="DeepReserves" ToRole="ReserveAccounts" />
+          <NavigationProperty Name="ReserveCategory" Relationship="Self.FK_DeepReserves_ReserveCategoryID" FromRole="DeepReserves" ToRole="ReserveCategories" />
+        </EntityType>
+        <EntityType Name="EnergyBill">
+          <Key>
+            <PropertyRef Name="BillID" />
+          </Key>
+          <Property Name="BillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BillEnd" Type="DateTime" Precision="3" />
+          <Property Name="DaysInPeriod" Type="Int32" />
+          <Property Name="KwH" Type="Int32" />
+          <Property Name="ElectricCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="KwHPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Meter" Type="Int32" />
+          <Property Name="SolarProduction" Type="Int32" />
+          <Property Name="SolarUsage" Type="Int32" />
+          <Property Name="SolarSavings" Type="Decimal" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Therms" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="GasCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AvgTemp" Type="Int32" />
+          <Property Name="Thermostat" Type="Int32" />
+          <Property Name="Mode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Comment" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="InvestmentTransaction">
+          <Key>
+            <PropertyRef Name="InvestmentTransactionID" />
+          </Key>
+          <Property Name="InvestmentTransactionID" Type="Int32" Nullable="false" />
+          <Property Name="DataPointID" Type="Int32" Nullable="false" />
+          <Property Name="ReserveCategoryID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Basis" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="InvestmentDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tblDataPoint" Relationship="Self.FK_InvestmentTransactions_tblDataPoints" FromRole="InvestmentTransactions" ToRole="tblDataPoints" />
+          <NavigationProperty Name="ReserveCategory" Relationship="Self.FK_InvestmentTransactions_tblReserveCategories" FromRole="InvestmentTransactions" ToRole="ReserveCategories" />
+        </EntityType>
+        <EntityType Name="ReserveAccount">
+          <Key>
+            <PropertyRef Name="ReserveAccountID" />
+          </Key>
+          <Property Name="ReserveAccountID" Type="Int32" Nullable="false" />
+          <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DeepReserves" Relationship="Self.FK_DeepReserves_ReserveAccountID" FromRole="ReserveAccounts" ToRole="DeepReserves" />
+        </EntityType>
+        <EntityType Name="ReserveCategory">
+          <Key>
+            <PropertyRef Name="ReserveCategoryID" />
+          </Key>
+          <Property Name="ReserveCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Display" Type="Boolean" />
+          <Property Name="Archived" Type="Boolean" />
+          <Property Name="ParentCategoryID" Type="Int16" />
+          <NavigationProperty Name="BudgetCategory" Relationship="Self.FK_ReserveCategories_BudgetCategories" FromRole="ReserveCategories" ToRole="BudgetCategories" />
+          <NavigationProperty Name="DeepReserves" Relationship="Self.FK_DeepReserves_ReserveCategoryID" FromRole="ReserveCategories" ToRole="DeepReserves" />
+          <NavigationProperty Name="InvestmentTransactions" Relationship="Self.FK_InvestmentTransactions_tblReserveCategories" FromRole="ReserveCategories" ToRole="InvestmentTransactions" />
+        </EntityType>
+        <EntityType Name="ScheduledTran">
+          <Key>
+            <PropertyRef Name="TranID" />
+          </Key>
+          <Property Name="TranID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TranTypeID" Type="Byte" Nullable="false" />
+          <Property Name="CategoryID" Type="Int16" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Day" Type="Byte" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="UserID" Type="Byte" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="LastEntry" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblDataPoint">
+          <Key>
+            <PropertyRef Name="DataPointID" />
+          </Key>
+          <Property Name="DataPointID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DataDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DataValue" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="AccountFundID" Type="Int16" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="InvestmentTransactions" Relationship="Self.FK_InvestmentTransactions_tblDataPoints" FromRole="tblDataPoints" ToRole="InvestmentTransactions" />
+        </EntityType>
+        <EntityType Name="TransactionType">
+          <Key>
+            <PropertyRef Name="TypeID" />
+          </Key>
+          <Property Name="TypeID" Type="Byte" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="BudgetLineItems" Relationship="Self.FK__BudgetLin__Trans__7E6CC920" FromRole="TransactionTypes" ToRole="BudgetLineItems" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Byte" Nullable="false" />
+          <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="BudgetLineItems" Relationship="Self.FK__BudgetLin__UserI__7F60ED59" FromRole="Users" ToRole="BudgetLineItems" />
+          <NavigationProperty Name="BudgetCategories" Relationship="Self.CategoryUser" FromRole="Users" ToRole="BudgetCategories" />
+        </EntityType>
+        <EntityType Name="Cholesterol">
+          <Key>
+            <PropertyRef Name="TestID" />
+            <PropertyRef Name="Date" />
+          </Key>
+          <Property Name="TestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LDL" Type="Int32" />
+          <Property Name="HDL" Type="Int32" />
+          <Property Name="VLDL" Type="Int32" />
+          <Property Name="Total_Cholesterol" Type="Int32" />
+          <Property Name="Triglycerides" Type="Int32" />
+          <Property Name="Non_HDL" Type="Int32" />
+          <Property Name="Total_HDL_Ratio" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="apoB100_calc" Type="Int32" />
+          <Property Name="LDL_R" Type="Int32" />
+          <Property Name="Lp_a_" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="IDL" Type="Int32" />
+          <Property Name="Remnant_Lipo__IDL___VLDL3_" Type="Int32" />
+          <Property Name="HDL_2" Type="Int32" />
+          <Property Name="HDL_3" Type="Int32" />
+          <Property Name="VLDL_3" Type="Int32" />
+          <Property Name="LDL1_Pattern_A" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="LDL_2_Pattern_A" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="LDL_3_Pattern_B" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="LDL_4_Pattern_B" Type="Decimal" Precision="4" Scale="2" />
+          <Property Name="LDL_Density" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Systolic" Type="Int32" />
+          <Property Name="Diastolic" Type="Int32" />
+          <Property Name="Comment" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblAccountFund">
+          <Key>
+            <PropertyRef Name="AccountFundID" />
+            <PropertyRef Name="FundID" />
+            <PropertyRef Name="AccountID" />
+            <PropertyRef Name="Active" />
+          </Key>
+          <Property Name="AccountFundID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FundID" Type="Byte" Nullable="false" />
+          <Property Name="AccountID" Type="Byte" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblAccount">
+          <Key>
+            <PropertyRef Name="AccountID" />
+            <PropertyRef Name="AccountName" />
+            <PropertyRef Name="Active" />
+            <PropertyRef Name="Display" />
+          </Key>
+          <Property Name="AccountID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AccountDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="AccountNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="Display" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblFund">
+          <Key>
+            <PropertyRef Name="FundID" />
+            <PropertyRef Name="FundSymbol" />
+          </Key>
+          <Property Name="FundID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FundSymbol" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FundName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblLoan">
+          <Key>
+            <PropertyRef Name="LoanID" />
+          </Key>
+          <Property Name="LoanID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoanedTo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LoanDate" Type="DateTime" Precision="3" />
+          <Property Name="LoanAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Purpose" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="AmountPaid" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PaidDate" Type="DateTime" Precision="3" />
+          <Property Name="Paid" Type="Boolean" />
+          <Property Name="Account" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <Association Name="FK__BudgetLin__Categ__7D78A4E7">
+          <End Role="BudgetCategories" Type="Self.BudgetCategory" Multiplicity="1" />
+          <End Role="BudgetLineItems" Type="Self.BudgetLineItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="BudgetLineItems">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BudgetCategories_BudgetCategories">
+          <End Role="BudgetCategories" Type="Self.BudgetCategory" Multiplicity="1" />
+          <End Role="BudgetCategories1" Type="Self.BudgetCategory" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="BudgetCategories1">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReserveCategories_BudgetCategories">
+          <End Role="BudgetCategories" Type="Self.BudgetCategory" Multiplicity="0..1" />
+          <End Role="ReserveCategories" Type="Self.ReserveCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BudgetCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="ReserveCategories">
+              <PropertyRef Name="ParentCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BudgetLin__Trans__7E6CC920">
+          <End Role="TransactionTypes" Type="Self.TransactionType" Multiplicity="1" />
+          <End Role="BudgetLineItems" Type="Self.BudgetLineItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TransactionTypes">
+              <PropertyRef Name="TypeID" />
+            </Principal>
+            <Dependent Role="BudgetLineItems">
+              <PropertyRef Name="TransTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BudgetLin__UserI__7F60ED59">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="BudgetLineItems" Type="Self.BudgetLineItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="BudgetLineItems">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeepReserves_ReserveAccountID">
+          <End Role="ReserveAccounts" Type="Self.ReserveAccount" Multiplicity="0..1" />
+          <End Role="DeepReserves" Type="Self.DeepReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReserveAccounts">
+              <PropertyRef Name="ReserveAccountID" />
+            </Principal>
+            <Dependent Role="DeepReserves">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeepReserves_ReserveCategoryID">
+          <End Role="ReserveCategories" Type="Self.ReserveCategory" Multiplicity="0..1" />
+          <End Role="DeepReserves" Type="Self.DeepReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReserveCategories">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Principal>
+            <Dependent Role="DeepReserves">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvestmentTransactions_tblDataPoints">
+          <End Role="tblDataPoints" Type="Self.tblDataPoint" Multiplicity="1" />
+          <End Role="InvestmentTransactions" Type="Self.InvestmentTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDataPoints">
+              <PropertyRef Name="DataPointID" />
+            </Principal>
+            <Dependent Role="InvestmentTransactions">
+              <PropertyRef Name="DataPointID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InvestmentTransactions_tblReserveCategories">
+          <End Role="ReserveCategories" Type="Self.ReserveCategory" Multiplicity="0..1" />
+          <End Role="InvestmentTransactions" Type="Self.InvestmentTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReserveCategories">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Principal>
+            <Dependent Role="InvestmentTransactions">
+              <PropertyRef Name="ReserveCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CategoryUser">
+          <End Role="BudgetCategories" Type="Self.BudgetCategory" Multiplicity="*" />
+          <End Role="Users" Type="Self.User" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="FinanceDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BudgetCategories" EntityType="Self.BudgetCategory" />
+          <EntitySet Name="BudgetLineItems" EntityType="Self.BudgetLineItem" />
+          <EntitySet Name="DeepReserves" EntityType="Self.DeepReserve" />
+          <EntitySet Name="EnergyBills" EntityType="Self.EnergyBill" />
+          <EntitySet Name="InvestmentTransactions" EntityType="Self.InvestmentTransaction" />
+          <EntitySet Name="ReserveAccounts" EntityType="Self.ReserveAccount" />
+          <EntitySet Name="ReserveCategories" EntityType="Self.ReserveCategory" />
+          <EntitySet Name="ScheduledTrans" EntityType="Self.ScheduledTran" />
+          <EntitySet Name="tblDataPoints" EntityType="Self.tblDataPoint" />
+          <EntitySet Name="TransactionTypes" EntityType="Self.TransactionType" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Cholesterols" EntityType="Self.Cholesterol" />
+          <EntitySet Name="tblAccountFunds" EntityType="Self.tblAccountFund" />
+          <EntitySet Name="tblAccounts" EntityType="Self.tblAccount" />
+          <EntitySet Name="tblFunds" EntityType="Self.tblFund" />
+          <EntitySet Name="tblLoans" EntityType="Self.tblLoan" />
+          <AssociationSet Name="FK__BudgetLin__Categ__7D78A4E7" Association="Self.FK__BudgetLin__Categ__7D78A4E7">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="BudgetLineItems" EntitySet="BudgetLineItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BudgetCategories_BudgetCategories" Association="Self.FK_BudgetCategories_BudgetCategories">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="BudgetCategories1" EntitySet="BudgetCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReserveCategories_BudgetCategories" Association="Self.FK_ReserveCategories_BudgetCategories">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="ReserveCategories" EntitySet="ReserveCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BudgetLin__Trans__7E6CC920" Association="Self.FK__BudgetLin__Trans__7E6CC920">
+            <End Role="TransactionTypes" EntitySet="TransactionTypes" />
+            <End Role="BudgetLineItems" EntitySet="BudgetLineItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BudgetLin__UserI__7F60ED59" Association="Self.FK__BudgetLin__UserI__7F60ED59">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="BudgetLineItems" EntitySet="BudgetLineItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeepReserves_ReserveAccountID" Association="Self.FK_DeepReserves_ReserveAccountID">
+            <End Role="ReserveAccounts" EntitySet="ReserveAccounts" />
+            <End Role="DeepReserves" EntitySet="DeepReserves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeepReserves_ReserveCategoryID" Association="Self.FK_DeepReserves_ReserveCategoryID">
+            <End Role="ReserveCategories" EntitySet="ReserveCategories" />
+            <End Role="DeepReserves" EntitySet="DeepReserves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvestmentTransactions_tblDataPoints" Association="Self.FK_InvestmentTransactions_tblDataPoints">
+            <End Role="tblDataPoints" EntitySet="tblDataPoints" />
+            <End Role="InvestmentTransactions" EntitySet="InvestmentTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InvestmentTransactions_tblReserveCategories" Association="Self.FK_InvestmentTransactions_tblReserveCategories">
+            <End Role="ReserveCategories" EntitySet="ReserveCategories" />
+            <End Role="InvestmentTransactions" EntitySet="InvestmentTransactions" />
+          </AssociationSet>
+          <AssociationSet Name="CategoryUser" Association="Self.CategoryUser">
+            <End Role="BudgetCategories" EntitySet="BudgetCategories" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HouseholdDataStoreContainer" CdmEntityContainer="FinanceDB">
+          <EntitySetMapping Name="BudgetCategories">
+            <EntityTypeMapping TypeName="Household.Data.BudgetCategory">
+              <MappingFragment StoreEntitySet="BudgetCategories">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="BudgetAmount" ColumnName="BudgetAmount" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BudgetLineItems">
+            <EntityTypeMapping TypeName="Household.Data.BudgetLineItem">
+              <MappingFragment StoreEntitySet="BudgetLineItems">
+                <ScalarProperty Name="LineID" ColumnName="LineID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="TransTypeID" ColumnName="TransTypeID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeepReserves">
+            <EntityTypeMapping TypeName="Household.Data.DeepReserve">
+              <MappingFragment StoreEntitySet="DeepReserves">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ReserveCategoryID" ColumnName="ReserveCategoryID" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnergyBills">
+            <EntityTypeMapping TypeName="Household.Data.EnergyBill">
+              <MappingFragment StoreEntitySet="EnergyBills">
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="BillEnd" ColumnName="BillEnd" />
+                <ScalarProperty Name="DaysInPeriod" ColumnName="DaysInPeriod" />
+                <ScalarProperty Name="KwH" ColumnName="KwH" />
+                <ScalarProperty Name="ElectricCost" ColumnName="ElectricCost" />
+                <ScalarProperty Name="KwHPrice" ColumnName="KwHPrice" />
+                <ScalarProperty Name="Meter" ColumnName="Meter" />
+                <ScalarProperty Name="SolarProduction" ColumnName="SolarProduction" />
+                <ScalarProperty Name="SolarUsage" ColumnName="SolarUsage" />
+                <ScalarProperty Name="SolarSavings" ColumnName="SolarSavings" />
+                <ScalarProperty Name="Therms" ColumnName="Therms" />
+                <ScalarProperty Name="GasCost" ColumnName="GasCost" />
+                <ScalarProperty Name="AvgTemp" ColumnName="AvgTemp" />
+                <ScalarProperty Name="Thermostat" ColumnName="Thermostat" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvestmentTransactions">
+            <EntityTypeMapping TypeName="Household.Data.InvestmentTransaction">
+              <MappingFragment StoreEntitySet="InvestmentTransactions">
+                <ScalarProperty Name="InvestmentTransactionID" ColumnName="InvestmentTransactionID" />
+                <ScalarProperty Name="DataPointID" ColumnName="DataPointID" />
+                <ScalarProperty Name="ReserveCategoryID" ColumnName="ReserveCategoryID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Basis" ColumnName="Basis" />
+                <ScalarProperty Name="InvestmentDate" ColumnName="InvestmentDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReserveAccounts">
+            <EntityTypeMapping TypeName="Household.Data.ReserveAccount">
+              <MappingFragment StoreEntitySet="ReserveAccounts">
+                <ScalarProperty Name="ReserveAccountID" ColumnName="ReserveAccountID" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReserveCategories">
+            <EntityTypeMapping TypeName="Household.Data.ReserveCategory">
+              <MappingFragment StoreEntitySet="ReserveCategories">
+                <ScalarProperty Name="ReserveCategoryID" ColumnName="ReserveCategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+                <ScalarProperty Name="Archived" ColumnName="Archived" />
+                <ScalarProperty Name="ParentCategoryID" ColumnName="ParentCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScheduledTrans">
+            <EntityTypeMapping TypeName="Household.Data.ScheduledTran">
+              <MappingFragment StoreEntitySet="ScheduledTrans">
+                <ScalarProperty Name="TranID" ColumnName="TranID" />
+                <ScalarProperty Name="TranTypeID" ColumnName="TranTypeID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="LastEntry" ColumnName="LastEntry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDataPoints">
+            <EntityTypeMapping TypeName="Household.Data.tblDataPoint">
+              <MappingFragment StoreEntitySet="tblDataPoints">
+                <ScalarProperty Name="DataPointID" ColumnName="DataPointID" />
+                <ScalarProperty Name="DataDate" ColumnName="DataDate" />
+                <ScalarProperty Name="DataValue" ColumnName="DataValue" />
+                <ScalarProperty Name="AccountFundID" ColumnName="AccountFundID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransactionTypes">
+            <EntityTypeMapping TypeName="Household.Data.TransactionType">
+              <MappingFragment StoreEntitySet="TransactionTypes">
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Household.Data.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Lname" ColumnName="Lname" />
+                <ScalarProperty Name="Fname" ColumnName="Fname" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cholesterols">
+            <EntityTypeMapping TypeName="Household.Data.Cholesterol">
+              <MappingFragment StoreEntitySet="Cholesterol">
+                <ScalarProperty Name="TestID" ColumnName="TestID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="LDL" ColumnName="LDL" />
+                <ScalarProperty Name="HDL" ColumnName="HDL" />
+                <ScalarProperty Name="VLDL" ColumnName="VLDL" />
+                <ScalarProperty Name="Total_Cholesterol" ColumnName="Total Cholesterol" />
+                <ScalarProperty Name="Triglycerides" ColumnName="Triglycerides" />
+                <ScalarProperty Name="Non_HDL" ColumnName="Non HDL" />
+                <ScalarProperty Name="Total_HDL_Ratio" ColumnName="Total/HDL Ratio" />
+                <ScalarProperty Name="apoB100_calc" ColumnName="apoB100-calc" />
+                <ScalarProperty Name="LDL_R" ColumnName="LDL-R" />
+                <ScalarProperty Name="Lp_a_" ColumnName="Lp(a)" />
+                <ScalarProperty Name="IDL" ColumnName="IDL" />
+                <ScalarProperty Name="Remnant_Lipo__IDL___VLDL3_" ColumnName="Remnant Lipo (IDL + VLDL3)" />
+                <ScalarProperty Name="HDL_2" ColumnName="HDL-2" />
+                <ScalarProperty Name="HDL_3" ColumnName="HDL-3" />
+                <ScalarProperty Name="VLDL_3" ColumnName="VLDL-3" />
+                <ScalarProperty Name="LDL1_Pattern_A" ColumnName="LDL1 Pattern A" />
+                <ScalarProperty Name="LDL_2_Pattern_A" ColumnName="LDL-2 Pattern A" />
+                <ScalarProperty Name="LDL_3_Pattern_B" ColumnName="LDL-3 Pattern B" />
+                <ScalarProperty Name="LDL_4_Pattern_B" ColumnName="LDL-4 Pattern B" />
+                <ScalarProperty Name="LDL_Density" ColumnName="LDL Density" />
+                <ScalarProperty Name="Systolic" ColumnName="Systolic" />
+                <ScalarProperty Name="Diastolic" ColumnName="Diastolic" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAccountFunds">
+            <EntityTypeMapping TypeName="Household.Data.tblAccountFund">
+              <MappingFragment StoreEntitySet="tblAccountFunds">
+                <ScalarProperty Name="AccountFundID" ColumnName="AccountFundID" />
+                <ScalarProperty Name="FundID" ColumnName="FundID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAccounts">
+            <EntityTypeMapping TypeName="Household.Data.tblAccount">
+              <MappingFragment StoreEntitySet="tblAccounts">
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="AccountDescription" ColumnName="AccountDescription" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Display" ColumnName="Display" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFunds">
+            <EntityTypeMapping TypeName="Household.Data.tblFund">
+              <MappingFragment StoreEntitySet="tblFunds">
+                <ScalarProperty Name="FundID" ColumnName="FundID" />
+                <ScalarProperty Name="FundSymbol" ColumnName="FundSymbol" />
+                <ScalarProperty Name="FundName" ColumnName="FundName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLoans">
+            <EntityTypeMapping TypeName="Household.Data.tblLoan">
+              <MappingFragment StoreEntitySet="tblLoans">
+                <ScalarProperty Name="LoanID" ColumnName="LoanID" />
+                <ScalarProperty Name="LoanedTo" ColumnName="LoanedTo" />
+                <ScalarProperty Name="LoanDate" ColumnName="LoanDate" />
+                <ScalarProperty Name="LoanAmount" ColumnName="LoanAmount" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="AmountPaid" ColumnName="AmountPaid" />
+                <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="CategoryUser" TypeName="Household.Data.CategoryUser" StoreEntitySet="CategoryUser">
+            <EndProperty Name="BudgetCategories">
+              <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="UserID" ColumnName="UserID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

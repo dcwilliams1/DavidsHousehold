@@ -14,10 +14,19 @@ namespace Household.Data.EntityFramework.Model
     
     public partial class tblDataPoint
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tblDataPoint()
+        {
+            this.InvestmentTransactions = new HashSet<InvestmentTransaction>();
+        }
+    
         public int DataPointID { get; set; }
         public System.DateTime DataDate { get; set; }
         public decimal DataValue { get; set; }
         public short AccountFundID { get; set; }
         public string Type { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InvestmentTransaction> InvestmentTransactions { get; set; }
     }
 }

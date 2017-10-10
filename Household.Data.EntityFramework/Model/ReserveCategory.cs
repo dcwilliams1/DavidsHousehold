@@ -18,6 +18,7 @@ namespace Household.Data.EntityFramework.Model
         public ReserveCategory()
         {
             this.DeepReserves = new HashSet<DeepReserve>();
+            this.InvestmentTransactions = new HashSet<InvestmentTransaction>();
         }
     
         public int ReserveCategoryID { get; set; }
@@ -29,5 +30,7 @@ namespace Household.Data.EntityFramework.Model
         public virtual BudgetCategory BudgetCategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DeepReserve> DeepReserves { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InvestmentTransaction> InvestmentTransactions { get; set; }
     }
 }

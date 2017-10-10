@@ -12,12 +12,16 @@ namespace Household.Data.EntityFramework.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class MonthlyData
+    public partial class tblLoan
     {
-        public byte MonthID { get; set; }
-        public short YearID { get; set; }
-        public Nullable<bool> Initialized { get; set; }
-        public Nullable<decimal> Savings { get; set; }
-        public byte UserID { get; set; }
+        public int LoanID { get; set; }
+        public string LoanedTo { get; set; }
+        public Nullable<System.DateTime> LoanDate { get; set; }
+        public Nullable<decimal> LoanAmount { get; set; }
+        public string Purpose { get; set; }
+        public Nullable<decimal> AmountPaid { get; set; }
+        public Nullable<System.DateTime> PaidDate { get; set; }
+        public Nullable<bool> Paid { get; set; }
+        public Nullable<decimal> Account { get; set; }
     }
 }

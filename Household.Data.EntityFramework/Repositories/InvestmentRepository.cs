@@ -14,13 +14,12 @@ namespace Household.Data.EntityFramework.Repositories
 {
     public class InvestmentRepository: IInvestmentRepository
     {
-        public decimal UpdateInvestmentPrinciple(Investment investment, decimal amount)
+        public bool UpdateInvestmentPrinciple(Investment Investment, decimal Amount)
         {
-            using (var db = new Finance())
+            using (var db = new FinanceDB())
             {
-                
+                return true;
             }
-            return investment.Balance;
         }
     }
 }

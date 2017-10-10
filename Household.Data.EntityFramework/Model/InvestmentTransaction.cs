@@ -12,11 +12,16 @@ namespace Household.Data.EntityFramework.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tblAccountFund
+    public partial class InvestmentTransaction
     {
-        public short AccountFundID { get; set; }
-        public byte FundID { get; set; }
-        public byte AccountID { get; set; }
-        public bool Active { get; set; }
+        public int InvestmentTransactionID { get; set; }
+        public int DataPointID { get; set; }
+        public Nullable<int> ReserveCategoryID { get; set; }
+        public string Description { get; set; }
+        public decimal Basis { get; set; }
+        public System.DateTime InvestmentDate { get; set; }
+    
+        public virtual tblDataPoint tblDataPoint { get; set; }
+        public virtual ReserveCategory ReserveCategory { get; set; }
     }
 }

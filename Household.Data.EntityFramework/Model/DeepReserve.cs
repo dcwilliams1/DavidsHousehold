@@ -20,6 +20,7 @@ namespace Household.Data.EntityFramework.Model
         public Nullable<int> AccountID { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<int> ReserveCategoryID { get; set; }
+        public Nullable<int> Balance { get; set; }
     
         public virtual ReserveAccount ReserveAccount { get; set; }
         public virtual ReserveCategory ReserveCategory { get; set; }

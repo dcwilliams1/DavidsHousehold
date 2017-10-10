@@ -13,10 +13,10 @@ namespace Household.Data.EntityFramework.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Finance : DbContext
+    public partial class FinanceDB : DbContext
     {
-        public Finance()
-            : base("name=Finance")
+        public FinanceDB()
+            : base("name=FinanceDB")
         {
         }
     
@@ -29,15 +29,17 @@ namespace Household.Data.EntityFramework.Model
         public virtual DbSet<BudgetLineItem> BudgetLineItems { get; set; }
         public virtual DbSet<DeepReserve> DeepReserves { get; set; }
         public virtual DbSet<EnergyBill> EnergyBills { get; set; }
-        public virtual DbSet<MonthlyData> MonthlyDatas { get; set; }
+        public virtual DbSet<InvestmentTransaction> InvestmentTransactions { get; set; }
         public virtual DbSet<ReserveAccount> ReserveAccounts { get; set; }
         public virtual DbSet<ReserveCategory> ReserveCategories { get; set; }
         public virtual DbSet<ScheduledTran> ScheduledTrans { get; set; }
         public virtual DbSet<tblDataPoint> tblDataPoints { get; set; }
         public virtual DbSet<TransactionType> TransactionTypes { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Cholesterol> Cholesterols { get; set; }
         public virtual DbSet<tblAccountFund> tblAccountFunds { get; set; }
         public virtual DbSet<tblAccount> tblAccounts { get; set; }
         public virtual DbSet<tblFund> tblFunds { get; set; }
+        public virtual DbSet<tblLoan> tblLoans { get; set; }
     }
 }

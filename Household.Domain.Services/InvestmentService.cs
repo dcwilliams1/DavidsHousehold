@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Household.Domain.Model.DataInterface;
 using Household.Domain.Model.Entities;
 using Household.Domain.Model.ServiceInterface;
+using Household.Domain.Model.ValueObjects;
 
 namespace Household.Domain.Services
 {
@@ -21,9 +22,18 @@ namespace Household.Domain.Services
 
         public decimal UpdateInvestmentPrinciple(Investment investment, decimal amount)
         {
-            decimal newBalance = _investmentRepository.UpdateInvestmentPrinciple(investment, amount);
+            var tran = new InvestmentTransaction(investment, amount);
 
-            return newBalance;
+            try
+            {
+                bool updateSucceeded = _investmentRepository.UpdateInvestmentPrinciple(investment, amount);
+
+                return investment.Principle;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(String.Format("Database update failed in Investment Repository. {0} {1}", ex.Message, ex.InnerException));
+            }
         }
     }
 }
