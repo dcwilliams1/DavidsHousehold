@@ -1,0 +1,23 @@
+
+
+{
+    "amount": 448000,
+    "accounts": [
+        {
+            "name" : "Schwab Individual",
+            "percentage": "43",
+            "balance" : 200000
+        },
+        {
+            "name" : "Schwab Rollover IRA",
+            "percentage": "18",
+            "balance" : 98000
+        },
+        {
+            "name" : "Schwab Contributory IRA",
+            "percentage": "39",
+            "balance" : 150000
+        }
+
+    ]
+}

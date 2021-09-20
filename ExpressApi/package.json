@@ -14,7 +14,8 @@
     "chai": "^3.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha './UnitTests/*.spec.js' --recursive",
+    "test-watch": "mocha './UnitTests/*.spec.js' --recursive --watch"
   },
   "author": "David Williams",
   "license": "ISC"
