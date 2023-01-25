@@ -1,13 +1,14 @@
-import AccountDetail from "../account/accountDetail";
-import { useContext } from "react";
+import AccountDetail from "../account/AccountDetail";
+import React, { useContext } from "react";
 import investmentsContext from "../context/investmentsContext";
+import "./investments.css";
 
 const NetWorth = () => {
   const investments = useContext(investmentsContext);
   if (investments) {
     const accounts = investments.accounts;
     return (
-      <div>
+      <React.Fragment>
         <div className="row mt-2 netWorth">
           <div className="netWorthLabel">Net Worth: ${investments.amount}</div>
         </div>
@@ -19,7 +20,7 @@ const NetWorth = () => {
         {accounts.map((acct) => (
           <AccountDetail account={acct} key={acct.name}></AccountDetail>
         ))}
-      </div>
+      </React.Fragment>
     );
   }
   return <div>Net worth is unavailable at this time</div>;

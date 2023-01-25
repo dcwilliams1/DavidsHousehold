@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "date" : "12/1/2021",
+        "company": "Natural Grocers",
+        "product" : "B Complex",
+        "price" : 6.49,
+        "quantity" : 2,
+        "supplement" : "Vitamin B",
+        "strengthMg" : 150,
+        "dose" : 1
+    },
+    {
+        "id": 2,
+        "date" : "3/10/2022",
+        "company": "KAL",
+        "product" : "B Complex",
+        "price" : 8.51,
+        "quantity" : 1,
+        "supplement" : "Vitamin B",
+        "strengthMg" : 200,
+        "dose" : 1
+    },
+    {
+        "id": 3,
+        "date" : "3/13/2022",
+        "company": "Solaray",
+        "product" : "Quercitin C",
+        "price" : 6.49,
+        "quantity" : 2,
+        "supplement" : "Quercitin",
+        "strengthMg" : 250,
+        "dose" : 1
+    },
+    {
+        "id": 4,
+        "date" : "3/13/2022",
+        "company": "Solaray",
+        "product" : "Quercitin C",
+        "price" : 6.49,
+        "quantity" : 2,
+        "supplement" : "Vitamin C",
+        "strengthMg" : 1000,
+        "dose" : 1
+    },
+    {
+        "id": 5,
+        "date" : "3/13/2022",
+        "company": "Mercola",
+        "product" : "Zinc Selenium",
+        "price" : 12.30,
+        "quantity" : 3,
+        "supplement" : "Zinc",
+        "strengthMg" : 35,
+        "dose" : 1
+    },
+    {
+        "id": 6,
+        "date" : "3/13/2022",
+        "company": "Mercola",
+        "product" : "Zinc Selenium",
+        "price" : 12.30,
+        "quantity" : 3,
+        "supplement" : "Selenium",
+        "strengthMg" : 125,
+        "dose" : 1
+    },
+    {
+        "id": 7,
+        "date" : "4/2/2022",
+        "company": "Natural Grocers",
+        "product" : "Saw Palmetto",
+        "price" : 17.99,
+        "quantity" : 2,
+        "supplement" : "Saw Palmetto",
+        "strengthMg" : 500,
+        "dose" : 3
+    },
+    {
+        "id": 8,
+        "date" : "5/8/2022",
+        "company": "KAL",
+        "product" : "Saw Palmetto",
+        "price" : 21.55,
+        "quantity" : 1,
+        "supplement" : "Saw Palmetto",
+        "strengthMg" : 750,
+        "dose" : 1
+    },
+    {
+        "id": 9,
+        "date" : "5/10/2022",
+        "company": "Now",
+        "product" : "Bio Zinc",
+        "price" : 9.25,
+        "quantity" : 1,
+        "supplement" : "Zinc",
+        "strengthMg" : 35,
+        "dose" : 1
+    }
+]

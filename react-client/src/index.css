@@ -32,3 +32,26 @@ button {
 .formGroup label {
   padding: 15px;
 }
+
+.errorText {
+  color: red;
+}
+
+.tableRow {
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+
+.column-header{
+  font-weight: bold;
+}
+
+.navRoot {
+  width: 20%;
+  float: left;
+  display: block;
+}
+
+.center-subheading {
+  text-align: center;
+}

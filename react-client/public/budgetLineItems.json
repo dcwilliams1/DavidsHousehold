@@ -1,0 +1,30 @@
+[
+    {
+        "id" : 1,
+        "date" : "12/1/2021",
+        "amount" : "400",
+        "category" : "Food",
+        "description" : "Nuts, wine, cheese"
+    },
+    {
+        "id" : 2,
+        "date" : "11/5/2021",
+        "amount" : "15",
+        "category" : "Entertainment",
+        "description" : "Movie"
+    },
+    {
+        "id" : 3,
+        "date" : "11/25/2021",
+        "amount" : "35",
+        "category" : "Transportation",
+        "description" : "Gas for Ford"
+    },
+    {
+        "id" : 4,
+        "date" : "12/5/2021",
+        "amount" : "25",
+        "category" : "Savings",
+        "description" : "Present for Christmas"
+    }
+]

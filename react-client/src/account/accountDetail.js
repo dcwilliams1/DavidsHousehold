@@ -4,7 +4,7 @@ const AccountDetail = ({ account }) => {
   const accountName = account.name;
   const history = useHistory();
   const onAccountClicked = (e) => {
-    history.push(`/EditAccount/${accountName}`);
+    history.push( `/EditAccount/${accountName}`);
   };
   return (
     <div className="row">
