@@ -2,7 +2,7 @@
 
 namespace Household.Domain.Model.DataInterface
 {
-    public interface IInvestmentRepository
+    public interface IInvestmentData
     {
         bool UpdateInvestmentPrinciple(Investment Investment, decimal Amount);
     }

@@ -13,9 +13,9 @@ namespace Household.Domain.Services
 {
     public class InvestmentService:IInvestmentService
     {
-        private readonly IInvestmentRepository _investmentRepository;
+        private readonly IInvestmentData _investmentRepository;
 
-        public InvestmentService(IInvestmentRepository investmentRepository)
+        public InvestmentService(IInvestmentData investmentRepository)
         {
             _investmentRepository = investmentRepository;
         }

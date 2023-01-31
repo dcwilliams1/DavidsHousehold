@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Household.Data.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Household.Data.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BudgetCategories">
           <Key>
             <PropertyRef Name="CategoryID" />
@@ -69,6 +69,13 @@ warning 6002: The table/view 'Finance.dbo.Cholesterol' does not have a primary k
           <Property Name="Diastolic" Type="int" />
           <Property Name="Comment" Type="varchar" MaxLength="300" />
         </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CompanyName" Type="nchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="DeepReserves">
           <Key>
             <PropertyRef Name="ID" />
@@ -113,6 +120,25 @@ warning 6002: The table/view 'Finance.dbo.Cholesterol' does not have a primary k
           <Property Name="Basis" Type="money" Nullable="false" />
           <Property Name="InvestmentDate" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="Count" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductSupplement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="StrengthMg" Type="smallint" Nullable="false" />
+          <Property Name="Dose" Type="tinyint" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="SupplementId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="ReserveAccounts">
           <Key>
             <PropertyRef Name="ReserveAccountID" />
@@ -145,6 +171,23 @@ warning 6002: The table/view 'Finance.dbo.Cholesterol' does not have a primary k
           <Property Name="UserID" Type="tinyint" />
           <Property Name="Active" Type="bit" Nullable="false" />
           <Property Name="LastEntry" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Supplement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SupplementPurchase">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="PurchaseDate" Type="date" Nullable="false" />
+          <Property Name="Quantity" Type="smallint" Nullable="false" />
+		  <Property Name="Price" Type="decimal" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'Finance.dbo.tblAccountFunds' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -198,13 +241,6 @@ warning 6002: The table/view 'Finance.dbo.tblFunds' does not have a primary key 
           <Property Name="FundSymbol" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="FundName" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'Finance.dbo.tblFundsPreferences' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="tblFundsPreferences">
-          <Property Name="DefaultStartDate" Type="smalldatetime" />
-          <Property Name="DefaultEndDate" Type="smalldatetime" />
-          <Property Name="EditDateFormat" Type="varchar" MaxLength="15" />
-        </EntityType>-->
         <!--Errors Found During Generation:
 warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="tblLoans">
@@ -362,6 +398,42 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Product_Company">
+          <End Role="Company" Type="Self.Company" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSupplement_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="ProductSupplement" Type="Self.ProductSupplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSupplement">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSupplement_Supplement">
+          <End Role="Supplement" Type="Self.Supplement" Multiplicity="1" />
+          <End Role="ProductSupplement" Type="Self.ProductSupplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplement">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSupplement">
+              <PropertyRef Name="SupplementId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ReserveCategories_BudgetCategories">
           <End Role="BudgetCategories" Type="Self.BudgetCategories" Multiplicity="0..1" />
           <End Role="ReserveCategories" Type="Self.ReserveCategories" Multiplicity="*" />
@@ -374,16 +446,33 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_SupplementPurchase_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="SupplementPurchase" Type="Self.SupplementPurchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplementPurchase">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="HouseholdDataStoreContainer">
           <EntitySet Name="BudgetCategories" EntityType="Self.BudgetCategories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BudgetLineItems" EntityType="Self.BudgetLineItems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CategoryUser" EntityType="Self.CategoryUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DeepReserves" EntityType="Self.DeepReserves" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EnergyBills" EntityType="Self.EnergyBills" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InvestmentTransactions" EntityType="Self.InvestmentTransactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductSupplement" EntityType="Self.ProductSupplement" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ReserveAccounts" EntityType="Self.ReserveAccounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ReserveCategories" EntityType="Self.ReserveCategories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ScheduledTrans" EntityType="Self.ScheduledTrans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Supplement" EntityType="Self.Supplement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SupplementPurchase" EntityType="Self.SupplementPurchase" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblDataPoints" EntityType="Self.tblDataPoints" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TransactionTypes" EntityType="Self.TransactionTypes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -495,13 +584,28 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
             <End Role="ReserveCategories" EntitySet="ReserveCategories" />
             <End Role="InvestmentTransactions" EntitySet="InvestmentTransactions" />
           </AssociationSet>
+          <AssociationSet Name="FK_Product_Company" Association="Self.FK_Product_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSupplement_Product" Association="Self.FK_ProductSupplement_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductSupplement" EntitySet="ProductSupplement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSupplement_Supplement" Association="Self.FK_ProductSupplement_Supplement">
+            <End Role="Supplement" EntitySet="Supplement" />
+            <End Role="ProductSupplement" EntitySet="ProductSupplement" />
+          </AssociationSet>
           <AssociationSet Name="FK_ReserveCategories_BudgetCategories" Association="Self.FK_ReserveCategories_BudgetCategories">
             <End Role="BudgetCategories" EntitySet="BudgetCategories" />
             <End Role="ReserveCategories" EntitySet="ReserveCategories" />
           </AssociationSet>
+          <AssociationSet Name="FK_SupplementPurchase_Product" Association="Self.FK_SupplementPurchase_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="SupplementPurchase" EntitySet="SupplementPurchase" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Household.Data" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -902,7 +1006,127 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
             <End Role="BudgetCategories" EntitySet="BudgetCategories" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="Companies" EntityType="Household.Data.Company" />
+          <EntitySet Name="Products" EntityType="Household.Data.Product" />
+          <EntitySet Name="ProductSupplements" EntityType="Household.Data.ProductSupplement" />
+          <EntitySet Name="Supplements" EntityType="Household.Data.Supplement" />
+          <EntitySet Name="SupplementPurchases" EntityType="Household.Data.SupplementPurchase" />
+          <AssociationSet Name="FK_Product_Company" Association="Household.Data.FK_Product_Company">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSupplement_Product" Association="Household.Data.FK_ProductSupplement_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductSupplement" EntitySet="ProductSupplements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SupplementPurchase_Product" Association="Household.Data.FK_SupplementPurchase_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="SupplementPurchase" EntitySet="SupplementPurchases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSupplement_Supplement" Association="Household.Data.FK_ProductSupplement_Supplement">
+            <End Role="Supplement" EntitySet="Supplements" />
+            <End Role="ProductSupplement" EntitySet="ProductSupplements" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="Household.Data.FK_Product_Company" FromRole="Company" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="CompanyId" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="Household.Data.FK_Product_Company" FromRole="Product" ToRole="Company" />
+          <NavigationProperty Name="ProductSupplements" Relationship="Household.Data.FK_ProductSupplement_Product" FromRole="Product" ToRole="ProductSupplement" />
+          <NavigationProperty Name="SupplementPurchases" Relationship="Household.Data.FK_SupplementPurchase_Product" FromRole="Product" ToRole="SupplementPurchase" />
+        </EntityType>
+        <EntityType Name="ProductSupplement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="StrengthMg" Type="Int16" Nullable="false" />
+          <Property Name="Dose" Type="Byte" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="SupplementId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Household.Data.FK_ProductSupplement_Product" FromRole="ProductSupplement" ToRole="Product" />
+          <NavigationProperty Name="Supplement" Relationship="Household.Data.FK_ProductSupplement_Supplement" FromRole="ProductSupplement" ToRole="Supplement" />
+        </EntityType>
+        <EntityType Name="Supplement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="ProductSupplements" Relationship="Household.Data.FK_ProductSupplement_Supplement" FromRole="Supplement" ToRole="ProductSupplement" />
+        </EntityType>
+        <EntityType Name="SupplementPurchase">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Quantity" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="Household.Data.FK_SupplementPurchase_Product" FromRole="SupplementPurchase" ToRole="Product" />
+          <Property Name="Price" Type="Decimal" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Product_Company">
+          <End Type="Household.Data.Company" Role="Company" Multiplicity="1" />
+          <End Type="Household.Data.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSupplement_Product">
+          <End Type="Household.Data.Product" Role="Product" Multiplicity="1" />
+          <End Type="Household.Data.ProductSupplement" Role="ProductSupplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSupplement">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SupplementPurchase_Product">
+          <End Type="Household.Data.Product" Role="Product" Multiplicity="1" />
+          <End Type="Household.Data.SupplementPurchase" Role="SupplementPurchase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SupplementPurchase">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSupplement_Supplement">
+          <End Type="Household.Data.Supplement" Role="Supplement" Multiplicity="1" />
+          <End Type="Household.Data.ProductSupplement" Role="ProductSupplement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplement">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSupplement">
+              <PropertyRef Name="SupplementId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1133,6 +1357,54 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
               <ScalarProperty Name="UserID" ColumnName="UserID" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="Household.Data.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="Name" ColumnName="CompanyName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="Household.Data.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSupplements">
+            <EntityTypeMapping TypeName="Household.Data.ProductSupplement">
+              <MappingFragment StoreEntitySet="ProductSupplement">
+                <ScalarProperty Name="SupplementId" ColumnName="SupplementId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Dose" ColumnName="Dose" />
+                <ScalarProperty Name="StrengthMg" ColumnName="StrengthMg" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Supplements">
+            <EntityTypeMapping TypeName="Household.Data.Supplement">
+              <MappingFragment StoreEntitySet="Supplement">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SupplementPurchases">
+            <EntityTypeMapping TypeName="Household.Data.SupplementPurchase">
+              <MappingFragment StoreEntitySet="SupplementPurchase">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+				  <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -12,7 +12,7 @@ using Household.Domain.Model.Entities;
 
 namespace Household.Data.EntityFramework.Repositories
 {
-    public class InvestmentRepository: IInvestmentRepository
+    public class InvestmentRepository: IInvestmentData
     {
         public bool UpdateInvestmentPrinciple(Investment Investment, decimal Amount)
         {

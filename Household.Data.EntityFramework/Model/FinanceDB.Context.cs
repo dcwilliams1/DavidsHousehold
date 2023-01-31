@@ -41,5 +41,10 @@ namespace Household.Data.EntityFramework.Model
         public virtual DbSet<tblAccount> tblAccounts { get; set; }
         public virtual DbSet<tblFund> tblFunds { get; set; }
         public virtual DbSet<tblLoan> tblLoans { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductSupplement> ProductSupplements { get; set; }
+        public virtual DbSet<Supplement> Supplements { get; set; }
+        public virtual DbSet<SupplementPurchase> SupplementPurchases { get; set; }
     }
 }

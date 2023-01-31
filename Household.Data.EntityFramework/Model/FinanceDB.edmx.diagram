@@ -31,6 +31,15 @@
         <AssociationConnector Association="Household.Data.FK_InvestmentTransactions_tblDataPoints" ManuallyRouted="false" />
         <AssociationConnector Association="Household.Data.FK_InvestmentTransactions_tblReserveCategories" ManuallyRouted="false" />
         <AssociationConnector Association="Household.Data.CategoryUser" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Household.Data.Company" Width="1.5" PointX="12.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Household.Data.Product" Width="1.5" PointX="14.625" PointY="3.25" />
+        <EntityTypeShape EntityType="Household.Data.ProductSupplement" Width="1.5" PointX="16.875" PointY="3.375" />
+        <EntityTypeShape EntityType="Household.Data.Supplement" Width="1.5" PointX="14.625" PointY="0.75" />
+        <EntityTypeShape EntityType="Household.Data.SupplementPurchase" Width="1.5" PointX="16.875" PointY="6.625" />
+        <AssociationConnector Association="Household.Data.FK_Product_Company" />
+        <AssociationConnector Association="Household.Data.FK_ProductSupplement_Product" />
+        <AssociationConnector Association="Household.Data.FK_SupplementPurchase_Product" />
+        <AssociationConnector Association="Household.Data.FK_ProductSupplement_Supplement" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

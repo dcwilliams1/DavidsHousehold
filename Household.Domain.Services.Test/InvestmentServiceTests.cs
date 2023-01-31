@@ -21,14 +21,14 @@ namespace Household.Domain.Services.Test
         int investmentFundId;
         int accountId;
         Investment testInvestmnt;
-        IInvestmentRepository repository;
+        IInvestmentData repository;
         InvestmentService svc;
 
         [TestInitialize]
         public void TestSetup()
         {
             mock = new MockRepository();
-            repository = mock.StrictMock<IInvestmentRepository>();
+            repository = mock.StrictMock<IInvestmentData>();
             testInvestmnt = new Investment(accountId, investmentFundId);
             svc = new InvestmentService(repository);
             transactionAmt = 10.5M;
