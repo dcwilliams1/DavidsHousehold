@@ -1,4 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Household.Data.EntityFramework.Model;
+using Household.Data.EntityFramework.Repositories;
+using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +13,14 @@ namespace Household.Data.EntityFramework.Test
     [TestClass]
     public class SupplementRepositoryTests
     {
-
+        [TestMethod]
+        public void Add_Supplement_AddsRecordToDatabase()
+        {
+            //var supplementInMemoryDatabase = new List<SupplementPurchase>();
+            //var repository = new Mock<IRepository<SupplementPurchase>>();
+            //repository.Setup(x => x.Add(It.IsAny<SupplementPurchase>())
+            //    .Callback((SupplementPurchase sp) => supplementInMemoryDatabase.Add(sp)));
+        }
     }
 }
 

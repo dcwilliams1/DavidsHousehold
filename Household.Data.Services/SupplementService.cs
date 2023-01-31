@@ -41,11 +41,11 @@ namespace Household.Data.Services
                     Name = Purchase.Supplement,
                 }
             });
-            using (var db = new FinanceDbContext())
-            {
-                db.SupplementPurchases.Add(purchase);
-                return true;
-            }
+
+            var context = new FinanceDbContext();
+            var repo = new Repository<EFModel.SupplementPurchase>(context);
+            repo.Add(purchase);
+            return true;
         }
 
     }
