@@ -1,30 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Household.Domain.Model.Entities;
+using Household.Domain.Model.DataInterface;
 using Household.Data.Services;
+using Household.Data.EntityFramework.Repositories;
 
 namespace Household.Application.Api.Controllers
 {
-    [Route("api/supplements")]
-    public class SupplementsController : Controller
+    [ApiController]
+    [Route("api")]
+    public class SupplementsController : ControllerBase
     {
-        [HttpPost]
-        public ActionResult AddSupplementPurchase(SupplementPurchase supplementPurchase)
+
+        private readonly ILogger<SupplementsController> _logger;
+        private readonly ISupplementData _supplementService;
+
+        public SupplementsController(ISupplementData supplementService, ILogger<SupplementsController> logger)
         {
-            var supplementService = new SupplementService();
-            try
-            {
-                supplementService.AddSupplementPurchase(supplementPurchase);
-                return Ok();
-            }
-            catch(Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-            }
+            _logger = logger;
+            _supplementService = supplementService;
+            var context = new FinanceDbContext();
+            var repo = new SupplementRepository(context);
+        }
+
+        [HttpGet(Name = "GetSupplementPurchases")]
+        [Route("/supplementPurchases")]
+        public List<SupplementPurchase> GetSupplementPurchases()
+        {
+            return _supplementService.GetSupplementPurchases();
         }
     }
 }

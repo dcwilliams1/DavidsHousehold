@@ -3,12 +3,22 @@ using System.Linq;
 using EFModel = Household.Data.EntityFramework.Model;
 using DomainModel = Household.Domain.Model.Entities;
 using Household.Data.EntityFramework.Repositories;
-
+using Household.Domain.Model.DataInterface;
+using System.Collections.Generic;
+using Household.Data.EntityFramework.Model;
+using AutoMapper;
 
 namespace Household.Data.Services
 {
-    public class SupplementService
+    public class SupplementService : ISupplementData
     {
+        private Repository<EFModel.SupplementPurchase> _repo;
+        private Mapper _autoMapper = AutoMapper.InitializeAutoMapper();
+            
+        public SupplementService(Repository<SupplementPurchase> repo)
+        { 
+            _repo = repo; 
+        }
         public bool UpdateSupplementPurchase(DomainModel.SupplementPurchase Purchase)
         {
             return true;
@@ -42,12 +52,14 @@ namespace Household.Data.Services
                 }
             });
 
-            var context = new FinanceDbContext();
-            var repo = new Repository<EFModel.SupplementPurchase>(context);
-            repo.Add(purchase);
+            _repo.Add(purchase);
             return true;
         }
 
+        public List<DomainModel.SupplementPurchase> GetSupplementPurchases()
+        {
+            return _autoMapper.Map<List<EFModel.SupplementPurchase>, List<DomainModel.SupplementPurchase>>(_repo.GetAll().ToList());
+        }
     }
 }
 
