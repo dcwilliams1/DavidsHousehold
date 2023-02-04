@@ -7,7 +7,7 @@ using Household.Data.EntityFramework.Repositories;
 namespace Household.Application.Api.Controllers
 {
     [ApiController]
-    [Route("api")]
+    [Route("api/[controller]/[action]")]
     public class SupplementsController : ControllerBase
     {
 
@@ -18,12 +18,11 @@ namespace Household.Application.Api.Controllers
         {
             _logger = logger;
             _supplementService = supplementService;
-            var context = new FinanceDbContext();
+            var context = new FinanceDbContext("Server=(localdb)\\mssqllocaldb;Database=Finance;Trusted_Connection=True;MultipleActiveResultSets=true");
             var repo = new SupplementRepository(context);
         }
 
-        [HttpGet(Name = "GetSupplementPurchases")]
-        [Route("/supplementPurchases")]
+        [HttpGet]
         public List<SupplementPurchase> GetSupplementPurchases()
         {
             return _supplementService.GetSupplementPurchases();

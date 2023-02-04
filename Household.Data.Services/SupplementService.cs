@@ -12,12 +12,12 @@ namespace Household.Data.Services
 {
     public class SupplementService : ISupplementData
     {
-        private Repository<EFModel.SupplementPurchase> _repo;
+        private Repository<SupplementPurchase> _repo;
         private Mapper _autoMapper = AutoMapper.InitializeAutoMapper();
             
-        public SupplementService(Repository<SupplementPurchase> repo)
-        { 
-            _repo = repo; 
+        public SupplementService(IRepository<SupplementPurchase> repo)
+        {
+            _repo = (Repository<SupplementPurchase>)repo;
         }
         public bool UpdateSupplementPurchase(DomainModel.SupplementPurchase Purchase)
         {
@@ -26,7 +26,7 @@ namespace Household.Data.Services
 
         public bool AddSupplementPurchase(DomainModel.SupplementPurchase Purchase)
         {
-            EFModel.SupplementPurchase purchase = new EFModel.SupplementPurchase()
+            SupplementPurchase purchase = new SupplementPurchase()
             {
                 Id = Purchase.Id,
                 PurchaseDate = Purchase.Date,
@@ -46,7 +46,7 @@ namespace Household.Data.Services
             {
                 StrengthMg = (Int16)Purchase.Strength,
                 Dose = (byte)Purchase.Dose,
-                Supplement = new EFModel.Supplement()
+                Supplement = new Supplement()
                 {
                     Name = Purchase.Supplement,
                 }
@@ -58,7 +58,7 @@ namespace Household.Data.Services
 
         public List<DomainModel.SupplementPurchase> GetSupplementPurchases()
         {
-            return _autoMapper.Map<List<EFModel.SupplementPurchase>, List<DomainModel.SupplementPurchase>>(_repo.GetAll().ToList());
+            return _autoMapper.Map<List<SupplementPurchase>, List<DomainModel.SupplementPurchase>>(_repo.GetAll().ToList());
         }
     }
 }

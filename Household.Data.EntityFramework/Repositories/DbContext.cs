@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using Household.Data.EntityFramework.Model;
-using System.Data;
+
 
 namespace Household.Data.EntityFramework.Repositories
 {
     public class FinanceDbContext : FinanceDB, IDbContext
     {
+        public FinanceDbContext(string connectionString) : base(connectionString)
+        {
+
+        }
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {
             return base.Set<TEntity>();
@@ -36,3 +35,5 @@ namespace Household.Data.EntityFramework.Repositories
         }
     }
 }
+
+//https://learn.microsoft.com/en-us/aspnet/core/data/entity-framework-6?view=aspnetcore-2.1
