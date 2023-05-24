@@ -8,7 +8,7 @@ using Household.Domain.Model.ValueObjects;
 
 namespace Household.Domain.Model.Entities
 {
-    public class Investment
+    public class Investment : Entity
     {
         public int AccountId { 
             get

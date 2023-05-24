@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Household.Domain.Model.Entities
 {
-    public class SupplementPurchase 
+    public class SupplementPurchase : Entity
     {
         public int Id { get; set; }
 

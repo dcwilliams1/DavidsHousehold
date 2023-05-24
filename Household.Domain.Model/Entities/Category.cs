@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Household.Domain.Model.Entities
 {
-    public abstract class Category
+    public abstract class Category : Entity
     {
         public string Name
         {
