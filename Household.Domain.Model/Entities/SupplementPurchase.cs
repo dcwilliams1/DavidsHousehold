@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Household.Domain.Model.Events;
 namespace Household.Domain.Model.Entities
 {
-    public class SupplementPurchase : Entity
+    public class SupplementPurchase : AggregateRoot
     {
-        public int Id { get; set; }
-
         public DateTime Date { get; set; }
         public string Company { get; set; }
         public string Product { get; set; }
@@ -19,5 +13,10 @@ namespace Household.Domain.Model.Entities
         public int Strength { get; set; }
         public int Dose { get; set; }
         public Int16 Count { get; set; }
+
+        public void SampleMethodWithEvent()
+        {
+            AddDomainEvent(new SampleDomainEvent());
+        }
     }
 }

@@ -2,8 +2,15 @@
 using Household.Data.EntityFramework.Model;
 
 
-namespace Household.Data.EntityFramework.Repositories
+namespace Household.Data.EntityFramework
 {
+    public interface IDbContext
+    {
+        IDbSet<TEntity> Set<TEntity>() where TEntity : class;
+        int SaveChanges();
+        void Dispose();
+    }
+
     public class FinanceDbContext : FinanceDB, IDbContext
     {
         public FinanceDbContext(string connectionString) : base(connectionString)

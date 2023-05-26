@@ -2,7 +2,7 @@
 using System.Linq;
 using EFModel = Household.Data.EntityFramework.Model;
 using DomainModel = Household.Domain.Model.Entities;
-using Household.Data.EntityFramework.Repositories;
+using Household.Data.Repository;
 using Household.Domain.Model.DataInterface;
 using System.Collections.Generic;
 using Household.Data.EntityFramework.Model;
@@ -12,12 +12,12 @@ namespace Household.Data.Services
 {
     public class SupplementService : ISupplementData
     {
-        private Repository<SupplementPurchase> _repo;
+        private Repository<DomainModel.SupplementPurchase> _repo;
         private Mapper _autoMapper = AutoMapper.InitializeAutoMapper();
             
-        public SupplementService(IRepository<SupplementPurchase> repo)
+        public SupplementService(Repository<DomainModel.SupplementPurchase> repo)
         {
-            _repo = (Repository<SupplementPurchase>)repo;
+            _repo = (Repository<DomainModel.SupplementPurchase>)repo;
         }
         public bool UpdateSupplementPurchase(DomainModel.SupplementPurchase Purchase)
         {
@@ -26,33 +26,7 @@ namespace Household.Data.Services
 
         public bool AddSupplementPurchase(DomainModel.SupplementPurchase Purchase)
         {
-            SupplementPurchase purchase = new SupplementPurchase()
-            {
-                Id = Purchase.Id,
-                PurchaseDate = Purchase.Date,
-                Quantity = Purchase.Quantity,
-                Price = Purchase.Price,
-                Product = new EFModel.Product()
-                {
-                    Name = Purchase.Product,
-                    Company = new EFModel.Company()
-                    {
-                        Name = Purchase.Company,
-                    },
-                    Count = Purchase.Count,
-                },
-            };
-            purchase.Product.ProductSupplements.Add(new EFModel.ProductSupplement()
-            {
-                StrengthMg = (Int16)Purchase.Strength,
-                Dose = (byte)Purchase.Dose,
-                Supplement = new Supplement()
-                {
-                    Name = Purchase.Supplement,
-                }
-            });
-
-            _repo.Add(purchase);
+            _repo.Add(Purchase);
             return true;
         }
 

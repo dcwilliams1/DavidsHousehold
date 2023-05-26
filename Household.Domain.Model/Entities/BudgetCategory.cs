@@ -8,7 +8,7 @@ namespace Household.Domain.Model.Entities
 {
     public class BudgetCategory : Category
     {
-        public void EditCategoryName(string newname)
+        protected override void EditCategoryName(string newname)
         {
             base.EditCategoryName(newname);
         }

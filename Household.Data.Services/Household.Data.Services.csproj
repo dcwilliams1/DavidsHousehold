@@ -63,6 +63,10 @@
       <Project>{22e89a56-b772-4092-bf96-a25cdc3d66bf}</Project>
       <Name>Household.Data.EntityFramework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Household.Data.Repository\Household.Data.Repository.csproj">
+      <Project>{0018e52f-1f3d-4d4f-81d4-040f74a83191}</Project>
+      <Name>Household.Data.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Household.Domain.Model\Household.Domain.Model.csproj">
       <Project>{c667c5f3-9fa1-48d5-a210-40f4686f3633}</Project>
       <Name>Household.Domain.Model</Name>

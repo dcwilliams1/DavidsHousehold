@@ -35,5 +35,13 @@ namespace Household.Domain.Model.ValueObjects
 
         }
 
+        public InvestmentTransaction(decimal amount) : base(amount)
+        {
+        }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

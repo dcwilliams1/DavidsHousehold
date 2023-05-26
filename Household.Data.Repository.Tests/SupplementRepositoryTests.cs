@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Household.Data.EntityFramework.Model;
-using Household.Data.EntityFramework.Repositories;
+using Household.Data.Repository;
 using Moq;
 using System;
 using System.Collections.Generic;

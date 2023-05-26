@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Household.Data.EntityFramework.Repositories
+namespace Household.Data.EntityFramework
 {
     public class FinanceDBContextFactory : IDbContextFactory<FinanceDbContext>
     {

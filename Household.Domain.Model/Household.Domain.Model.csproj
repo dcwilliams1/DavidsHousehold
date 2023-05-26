@@ -29,9 +29,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-<PropertyGroup>
-   <LangVersion>11.0</LangVersion>
-</PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,15 +45,24 @@
     <Compile Include="DataInterface\ISupplementData.cs" />
     <Compile Include="DataInterface\IInvestmentData.cs" />
     <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\AggregateRootBase.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Entities\SupplementPurchase.cs" />
     <Compile Include="Entities\BudgetCategory.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Fund.cs" />
     <Compile Include="Entities\Investment.cs" />
+    <Compile Include="Events\DomainEvents.cs" />
+    <Compile Include="Events\EventListener.cs" />
+    <Compile Include="Events\IDomainEvent.cs" />
+    <Compile Include="Events\IDomainEventHandler.cs" />
+    <Compile Include="Events\SampleDomainEvent.cs" />
+    <Compile Include="Events\SampleDomainEventHandler.cs" />
     <Compile Include="ServiceInterface\IInvestmentService.cs" />
     <Compile Include="ValueObjects\InvestmentTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueObjects\Transaction.cs" />
+    <Compile Include="ValueObjects\ValueObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Factories\" />
