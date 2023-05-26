@@ -6,7 +6,7 @@ namespace Household.Domain.Model.Entities
 {
     public abstract class Entity
     {
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
 
         public override bool Equals(object obj)
         {
@@ -18,7 +18,7 @@ namespace Household.Domain.Model.Entities
                 return true;
             if (GetType() != other.GetType())
                 return false;
-            if (Id == Guid.Empty || other.Id == Guid.Empty)
+            if (Id == 0 || other.Id == 0)
                 return false;
             return Id == other.Id;
         }

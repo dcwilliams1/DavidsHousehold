@@ -16,7 +16,7 @@ namespace Household.Domain.Model.ValueObjects
         }
         public int CompareTo(object obj)
         {
-            if (this != obj)
+            if (this != (ValueObject)obj)
             {
                 return string.Compare(this.ToString(), obj.ToString(), StringComparison.Ordinal);
             }

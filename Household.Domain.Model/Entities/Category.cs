@@ -14,7 +14,7 @@ namespace Household.Domain.Model.Entities
             private set;
         }
 
-        protected virtual void EditCategoryName(string newName)
+        public virtual void EditCategoryName(string newName)
         {
             this.Name = newName;
         }

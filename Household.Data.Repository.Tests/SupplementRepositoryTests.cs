@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Household.Data.EntityFramework.Model;
+using Household.Data.EntityFramework;
 using Household.Data.Repository;
 using Moq;
 using System;
