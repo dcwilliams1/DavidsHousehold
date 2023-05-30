@@ -37,7 +37,6 @@
   <ItemGroup>
     <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
       <HintPath>..\packages\RhinoMocks.3.6.1\lib\net\Rhino.Mocks.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -62,10 +61,6 @@
     <ProjectReference Include="..\Household.Domain.Model\Household.Domain.Model.csproj">
       <Project>{c667c5f3-9fa1-48d5-a210-40f4686f3633}</Project>
       <Name>Household.Domain.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Household.Domain.Services\Household.Domain.Services.csproj">
-      <Project>{acf5ea5b-d1f0-4f69-92b9-30c7b2ef5df2}</Project>
-      <Name>Household.Domain.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

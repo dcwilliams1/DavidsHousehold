@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{22E89A56-B772-4092-BF96-A25CDC3D66BF}</ProjectGuid>
+    <ProjectGuid>{709AC3CB-0D95-4060-BB74-842F8EE2BDC7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Household.Data.EntityFramework</RootNamespace>
-    <AssemblyName>Household.Data.EntityFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>Household.SharedKernel</RootNamespace>
+    <AssemblyName>Household.SharedKernel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,137 +40,134 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\BudgetCategory.cs">
+    <Compile Include="Data\Repository.cs" />
+    <Compile Include="Domain\Model\Entity\AggregateRoot.cs" />
+    <Compile Include="Domain\Model\Entity\EntityBase.cs" />
+    <Compile Include="Domain\Model\Event\DomainEvents.cs" />
+    <Compile Include="Domain\Model\Event\IDomainEvent.cs" />
+    <Compile Include="Domain\Model\Event\EventListener.cs" />
+    <Compile Include="Domain\Model\Event\IDomainEventHandler.cs" />
+    <Compile Include="Domain\Model\Event\SampleDomainEvent.cs" />
+    <Compile Include="Domain\Model\Event\SampleDomainEventHandler.cs" />
+    <Compile Include="Domain\Model\ValueObject\ValueObjectBase.cs" />
+    <Compile Include="EntityFramework\Context\DbContext.cs" />
+    <Compile Include="EntityFramework\Context\FinanceDBContextFactory.cs" />
+    <Compile Include="EntityFramework\Model\BudgetCategory.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\BudgetLineItem.cs">
+    <Compile Include="EntityFramework\Model\BudgetLineItem.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Cholesterol.cs">
+    <Compile Include="EntityFramework\Model\Cholesterol.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Company.cs">
+    <Compile Include="EntityFramework\Model\Company.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DeepReserve.cs">
+    <Compile Include="EntityFramework\Model\DeepReserve.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\EnergyBill.cs">
+    <Compile Include="EntityFramework\Model\EnergyBill.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\FinanceDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
+    <Compile Include="EntityFramework\Model\FinanceDB.Context.cs">
       <DependentUpon>FinanceDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\FinanceDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EntityFramework\Model\FinanceDB.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\FinanceDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EntityFramework\Model\FinanceDB.Designer.cs">
       <DependentUpon>FinanceDB.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Model\InvestmentTransaction.cs">
+    <Compile Include="EntityFramework\Model\InvestmentTransaction.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Product.cs">
+    <Compile Include="EntityFramework\Model\Product.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ProductSupplement.cs">
+    <Compile Include="EntityFramework\Model\ProductSupplement.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ReserveAccount.cs">
+    <Compile Include="EntityFramework\Model\ReserveAccount.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ReserveCategory.cs">
+    <Compile Include="EntityFramework\Model\ReserveCategory.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\ScheduledTran.cs">
+    <Compile Include="EntityFramework\Model\ScheduledTran.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Supplement.cs">
+    <Compile Include="EntityFramework\Model\Supplement.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\SupplementPurchase.cs">
+    <Compile Include="EntityFramework\Model\SupplementPurchase.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tblAccount.cs">
+    <Compile Include="EntityFramework\Model\tblAccount.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tblAccountFund.cs">
+    <Compile Include="EntityFramework\Model\tblAccountFund.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tblDataPoint.cs">
+    <Compile Include="EntityFramework\Model\tblDataPoint.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tblFund.cs">
+    <Compile Include="EntityFramework\Model\tblFund.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tblLoan.cs">
+    <Compile Include="EntityFramework\Model\tblLoan.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\TransactionType.cs">
+    <Compile Include="EntityFramework\Model\TransactionType.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\User.cs">
+    <Compile Include="EntityFramework\Model\User.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Context\DbContext.cs" />
-    <Compile Include="Context\FinanceDBContextFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="Model\FinanceDB.edmx">
+    <EntityDeploy Include="EntityFramework\Model\FinanceDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FinanceDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\FinanceDB.edmx.diagram">
+    <None Include="EntityFramework\Model\FinanceDB.edmx.diagram">
       <DependentUpon>FinanceDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Household.Domain.Model\Household.Domain.Model.csproj">
-      <Project>{c667c5f3-9fa1-48d5-a210-40f4686f3633}</Project>
-      <Name>Household.Domain.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Model\FinanceDB.Context.tt">
+    <Content Include="EntityFramework\Model\FinanceDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FinanceDB.edmx</DependentUpon>
       <LastGenOutput>FinanceDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\FinanceDB.tt">
+    <Content Include="EntityFramework\Model\FinanceDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FinanceDB.edmx</DependentUpon>
       <LastGenOutput>FinanceDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

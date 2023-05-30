@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Household.Application.Services.Test")]
+[assembly: AssemblyTitle("Household.Supplements")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Household.Application.Services.Test")]
+[assembly: AssemblyProduct("Household.Supplements")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e17c9c3c-31a7-45b5-8b6b-8765dd5dde57")]
+[assembly: Guid("e3ca2ab6-3be6-4c9e-8baf-def586df0893")]
 
 // Version information for an assembly consists of the following four values:
 //

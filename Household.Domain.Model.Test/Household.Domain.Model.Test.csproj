@@ -78,7 +78,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Household.Domain.Model\Household.Domain.Model.csproj">
       <Project>{c667c5f3-9fa1-48d5-a210-40f4686f3633}</Project>
-      <Name>Household.Domain</Name>
+      <Name>Household.Domain.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
