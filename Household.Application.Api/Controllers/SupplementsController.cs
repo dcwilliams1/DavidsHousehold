@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Household.Domain.Model.Entities;
+using Household.Supplements.Domain.Model.Entity;
+using Household.Supplements.Data.Repository;
 using Household.Domain.Model.DataInterface;
-using Household.Data.Services;
-using Household.Data.EntityFramework.Repositories;
+using Household.Application.Service.Interface;
+using Household.SharedKernel.EntityFramework;
+using Microsoft.Extensions.Logging;
 
 namespace Household.Application.Api.Controllers
 {
@@ -12,9 +15,9 @@ namespace Household.Application.Api.Controllers
     {
 
         private readonly ILogger<SupplementsController> _logger;
-        private readonly ISupplementData _supplementService;
+        private readonly ISupplementService _supplementService;
 
-        public SupplementsController(ISupplementData supplementService, ILogger<SupplementsController> logger)
+        public SupplementsController(ISupplementService supplementService, ILogger<SupplementsController> logger)
         {
             _logger = logger;
             _supplementService = supplementService;

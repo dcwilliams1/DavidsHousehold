@@ -1,34 +1,33 @@
-using Household.Domain.Model.DataInterface;
-using Household.Data.Services;
-using Household.Data.EntityFramework.Repositories;
-using Household.Data.EntityFramework.Model;
+using Household.Application.Service;
+using Household.Application.Service.Interface;
+using Household.Supplements.Domain.Model.Entity;
+using Household.SharedKernel.EntityFramework;
+using Household.SharedKernel.Data.Repository;
+using Microsoft.Extensions.Hosting;
+using Household.Application.Api;
+using Microsoft.AspNetCore.Hosting;
 
-var builder = WebApplication.CreateBuilder(args);
+public class Program {
 
-// Add services to the container.
+    public static void Main()
+    {
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<ISupplementData, SupplementService>();
-builder.Services.AddScoped<IDbContext, FinanceDbContext>();
-builder.Services.AddScoped<IRepository<SupplementPurchase>, Repository<SupplementPurchase>>();
-builder.Services.AddScoped(_ => new FinanceDbContext("Server=(localdb)\\mssqllocaldb;Database=Finance;Trusted_Connection=True;MultipleActiveResultSets=true"));
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    }
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+      Host.CreateDefaultBuilder(args)
+          .ConfigureWebHostDefaults(webBuilder =>
+          {
+              webBuilder.ConfigureKestrel(options =>
+              {
+                  options.RequestHeaderEncodingSelector = encoding =>
+                  {
+                      return encoding switch
+                      {
+                          "Host" => System.Text.Encoding.Latin1,
+                          _ => System.Text.Encoding.UTF8,
+                      };
+                  };
+              });
+              webBuilder.UseStartup<Startup>();
+          });
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();

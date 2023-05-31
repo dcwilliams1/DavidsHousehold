@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
-using EFModel = Household.Data.EntityFramework.Model;
-using DomainMode = Household.Domain.Model.Entities;
+using EFModel = Household.SharedKernel.EntityFramework.Model;
+using DomainModel = Household.SharedKernel.Domain.Model.Entity;
+using Household.Supplements.Domain.Model.Entity;
 
 namespace Household.Application.Services
 {
@@ -10,7 +11,7 @@ namespace Household.Application.Services
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<EFModel.SupplementPurchase, DomainMode.SupplementPurchase>();
+                cfg.CreateMap<EFModel.SupplementPurchase, SupplementPurchase>();
             });
 
             return new Mapper(config);

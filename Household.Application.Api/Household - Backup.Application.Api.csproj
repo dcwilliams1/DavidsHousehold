@@ -12,10 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Household.Application.Services\Household.Application.Service.csproj" />
-    <ProjectReference Include="..\Household.Budget\Household.Budget.csproj" />
-    <ProjectReference Include="..\Household.Investments\Household.Investments.csproj" />
-    <ProjectReference Include="..\Household.Supplements\Household.Supplements.csproj" />
+    <ProjectReference Include="..\Household.Data.Services\Household.Data.Services.csproj" />
+    <ProjectReference Include="..\Household.Domain.Model\Household.Domain.Model.csproj" />
   </ItemGroup>
 
 </Project>
