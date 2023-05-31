@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Household.SharedKernel.Domain.Model.Event
 {
-    public class SampleDomainEvent : IDomainEvent
+    public class SampleDomainEvent : DomainEvent
     {
     }
 }

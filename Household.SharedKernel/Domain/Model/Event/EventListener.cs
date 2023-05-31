@@ -11,7 +11,7 @@ namespace Household.SharedKernel.Domain.Model.Event
     {
         public void DispatchEvents(AggregateRoot aggregate)
         {
-            foreach (IDomainEvent domainEvent in aggregate.DomainEvents)
+            foreach (DomainEvent domainEvent in aggregate.DomainEvents)
             {
                 DomainEvents.Dispatch(domainEvent);
             }

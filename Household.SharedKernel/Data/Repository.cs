@@ -7,7 +7,7 @@ using Household.SharedKernel.EntityFramework;
 
 namespace Household.SharedKernel.Data.Repository
 {
-    public abstract class Repository<TEntity> where TEntity : AggregateRoot
+    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : AggregateRoot
     {
         private IDbContext _dataContext;
         public Repository(IDbContext context)
@@ -21,8 +21,6 @@ namespace Household.SharedKernel.Data.Repository
                 return _dataContext.Set<TEntity>();
             }
         }
-
-        //https://stackoverflow.com/questions/49572079/net-core-dependency-injection-backwards-compatibility-with-net-framework
 
         public TEntity GetById(Guid Id)
         {
@@ -40,13 +38,10 @@ namespace Household.SharedKernel.Data.Repository
         {
             DbSet.Add(entity);
         }
-
         public void Update(TEntity entity)
         {
             throw new NotImplementedException();
         }
-
-
         public void Dispose()
         {
             Dispose(true);

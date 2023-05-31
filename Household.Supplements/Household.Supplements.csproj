@@ -67,11 +67,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Repository\ISupplementRepository.cs" />
     <Compile Include="Data\Repository\SupplementRepository.cs" />
     <Compile Include="Data\Repository\SupplementRepositoryTests.cs" />
     <Compile Include="Data\Service\AutoMapper.cs" />
-    <Compile Include="Data\Service\SupplementServiceTests.cs" />
     <Compile Include="Domain\Model\Entity\SupplementPurchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

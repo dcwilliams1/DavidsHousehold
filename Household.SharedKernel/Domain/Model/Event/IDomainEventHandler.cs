@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Household.SharedKernel.Domain.Model.Event
 {
-    public interface IDomainEventHandler<T> where T: IDomainEvent
+    public interface IDomainEventHandler<T> where T: DomainEvent
     {
         void Handle(T domainEvent);
     }

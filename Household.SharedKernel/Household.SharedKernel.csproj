@@ -48,11 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\IRepository.cs" />
     <Compile Include="Data\Repository.cs" />
     <Compile Include="Domain\Model\Entity\AggregateRoot.cs" />
     <Compile Include="Domain\Model\Entity\EntityBase.cs" />
     <Compile Include="Domain\Model\Event\DomainEvents.cs" />
-    <Compile Include="Domain\Model\Event\IDomainEvent.cs" />
+    <Compile Include="Domain\Model\Event\DomainEvent.cs" />
     <Compile Include="Domain\Model\Event\EventListener.cs" />
     <Compile Include="Domain\Model\Event\IDomainEventHandler.cs" />
     <Compile Include="Domain\Model\Event\SampleDomainEvent.cs" />

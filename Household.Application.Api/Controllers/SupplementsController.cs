@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Household.Supplements.Domain.Model.Entity;
 using Household.Supplements.Data.Repository;
-using Household.Domain.Model.DataInterface;
 using Household.Application.Service.Interface;
 using Household.SharedKernel.EntityFramework;
 using Microsoft.Extensions.Logging;

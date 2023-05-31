@@ -20,7 +20,7 @@ namespace Household.SharedKernel.Domain.Model.Event
         }
 
         //Call this after the data has been successfully saved
-        public static void Dispatch(IDomainEvent domainEvent)
+        public static void Dispatch(DomainEvent domainEvent)
         {
             foreach (Type handlerType in _handlers)
             {
