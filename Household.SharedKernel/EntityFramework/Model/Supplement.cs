@@ -25,5 +25,7 @@ namespace Household.SharedKernel.EntityFramework.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductSupplement> ProductSupplements { get; set; }
+        public virtual Supplement Supplement1 { get; set; }
+        public virtual Supplement Supplement2 { get; set; }
     }
 }

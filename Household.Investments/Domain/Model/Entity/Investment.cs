@@ -63,8 +63,8 @@ namespace Household.Investments.Domain.Model.Entity
         public string FundName { get; private set; }
         
 
-        private Account investmentAccount;
-        private Fund investmentFund;
+        private readonly Account investmentAccount;
+        private readonly Fund investmentFund;
 
         public Investment(int accountId, int fundId)
         {

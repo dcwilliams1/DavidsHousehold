@@ -10,6 +10,11 @@ namespace Household.SharedKernel.Data.Repository
     public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : AggregateRoot
     {
         private IDbContext _dataContext;
+
+        public Repository()
+        {
+
+        }
         public Repository(IDbContext context)
         {
             _dataContext = context;

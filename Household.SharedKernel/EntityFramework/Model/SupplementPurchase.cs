@@ -14,7 +14,7 @@ namespace Household.SharedKernel.EntityFramework.Model
     
     public partial class SupplementPurchase
     {
-        public int Id { get; set; }
+        public System.Guid Id { get; set; }
         public int ProductId { get; set; }
         public System.DateTime PurchaseDate { get; set; }
         public short Quantity { get; set; }

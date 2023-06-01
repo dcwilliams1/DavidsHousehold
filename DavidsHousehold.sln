@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularClient", "AngularCli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Application.Service", "Household.Application.Services\Household.Application.Service.csproj", "{88A83564-1B7D-468D-8751-54A05159E7C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Application.Api", "Household.Application.Api\Household.Application.Api.csproj", "{F16F8FE9-95D4-454E-B242-7D3C74C734C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Household.Application.Api", "Household.Application.Api\Household.Application.Api.csproj", "{F16F8FE9-95D4-454E-B242-7D3C74C734C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.SharedKernel", "Household.SharedKernel\Household.SharedKernel.csproj", "{709AC3CB-0D95-4060-BB74-842F8EE2BDC7}"
 EndProject
@@ -18,6 +18,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Supplements", "Household.Supplements\Household.Supplements.csproj", "{E3CA2AB6-3BE6-4C9E-8BAF-DEF586DF0893}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Budget", "Household.Budget\Household.Budget.csproj", "{627B08E7-DCB4-4E2B-A934-953AA4AF312D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Household.Application.Service.Test", "Household.Application.Service.Test\Household.Application.Service.Test.csproj", "{C98B46AE-339C-4E67-90FE-00C5F29220C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{927F73B0-B062-43C0-B0D1-8E331A91C5E9}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +166,22 @@ Global
 		{627B08E7-DCB4-4E2B-A934-953AA4AF312D}.Release|x64.Build.0 = Release|Any CPU
 		{627B08E7-DCB4-4E2B-A934-953AA4AF312D}.Release|x86.ActiveCfg = Release|Any CPU
 		{627B08E7-DCB4-4E2B-A934-953AA4AF312D}.Release|x86.Build.0 = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|ARM.Build.0 = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|x64.Build.0 = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Debug|x86.Build.0 = Debug|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|ARM.Build.0 = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|x64.ActiveCfg = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|x64.Build.0 = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{C98B46AE-339C-4E67-90FE-00C5F29220C4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

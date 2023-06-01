@@ -6,7 +6,11 @@ namespace Household.SharedKernel.Domain.Model.Entity
 {
     public abstract class EntityBase
     {
-        public int Id { get; private set; }
+        public EntityBase()
+        {
+            this.Id = Guid.NewGuid();
+        }
+        public Guid Id { get; private set; }
 
         public override bool Equals(object obj)
         {
@@ -18,7 +22,7 @@ namespace Household.SharedKernel.Domain.Model.Entity
                 return true;
             if (GetType() != other.GetType())
                 return false;
-            if (Id == 0 || other.Id == 0)
+            if (Id == Guid.Empty || other.Id == Guid.Empty)
                 return false;
             return Id == other.Id;
         }

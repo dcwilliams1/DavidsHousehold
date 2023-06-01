@@ -40,6 +40,7 @@
         <AssociationConnector Association="Household.Data.FK_ProductSupplement_Product" />
         <AssociationConnector Association="Household.Data.FK_SupplementPurchase_Product" />
         <AssociationConnector Association="Household.Data.FK_ProductSupplement_Supplement" />
+        <AssociationConnector Association="Household.Data.FK_Supplement_Supplement" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

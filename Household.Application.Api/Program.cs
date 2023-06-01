@@ -1,8 +1,3 @@
-using Household.Application.Service;
-using Household.Application.Service.Interface;
-using Household.Supplements.Domain.Model.Entity;
-using Household.SharedKernel.EntityFramework;
-using Household.SharedKernel.Data.Repository;
 using Microsoft.Extensions.Hosting;
 using Household.Application.Api;
 using Microsoft.AspNetCore.Hosting;

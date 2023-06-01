@@ -13,7 +13,7 @@ namespace Household.SharedKernel.EntityFramework
 
     public class FinanceDbContext : FinanceDB, IDbContext
     {
-        public FinanceDbContext(string connectionString) : base(connectionString)
+        public FinanceDbContext(string connectionString) : base()
         {
 
         }

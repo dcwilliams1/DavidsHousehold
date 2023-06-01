@@ -9,9 +9,9 @@ namespace Household.Application.Service
 {
     public class SupplementService : ISupplementService
     {
-        private Repository<SupplementPurchase> _repo;
+        private readonly Repository<SupplementPurchase> _repo;
             
-        public SupplementService(Repository<SupplementPurchase> repo)
+        public SupplementService(IRepository<SupplementPurchase> repo)
         {
             _repo = (Repository<SupplementPurchase>)repo;
 

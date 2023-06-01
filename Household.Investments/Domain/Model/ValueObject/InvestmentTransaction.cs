@@ -26,7 +26,7 @@ namespace Household.Investments.Domain.Model.ValueObject
         }
 
 
-        private Investment investment;
+        private readonly Investment investment;
 
         public InvestmentTransaction(Investment investment, decimal amount) : base(amount)
         {

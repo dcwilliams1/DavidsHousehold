@@ -16,15 +16,10 @@ namespace Household.SharedKernel.EntityFramework.Model
     public partial class FinanceDB : DbContext
     {
         public FinanceDB()
-            : base("FinanceDB")
+            : base("name=FinanceDB")
         {
         }
-
-        public FinanceDB(string connectionString) : base(connectionString)
-        {
-
-        }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

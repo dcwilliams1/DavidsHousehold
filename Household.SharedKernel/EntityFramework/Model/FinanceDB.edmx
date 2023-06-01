@@ -74,7 +74,7 @@ warning 6002: The table/view 'Finance.dbo.Cholesterol' does not have a primary k
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="CompanyName" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="DeepReserves">
           <Key>
@@ -183,11 +183,11 @@ warning 6002: The table/view 'Finance.dbo.Cholesterol' does not have a primary k
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="ProductId" Type="int" Nullable="false" />
           <Property Name="PurchaseDate" Type="date" Nullable="false" />
           <Property Name="Quantity" Type="smallint" Nullable="false" />
-		  <Property Name="Price" Type="decimal" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'Finance.dbo.tblAccountFunds' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -446,6 +446,18 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Supplement_Supplement">
+          <End Role="Supplement" Type="Self.Supplement" Multiplicity="1" />
+          <End Role="Supplement1" Type="Self.Supplement" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Supplement">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Supplement1">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SupplementPurchase_Product">
           <End Role="Product" Type="Self.Product" Multiplicity="1" />
           <End Role="SupplementPurchase" Type="Self.SupplementPurchase" Multiplicity="*" />
@@ -599,6 +611,10 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
           <AssociationSet Name="FK_ReserveCategories_BudgetCategories" Association="Self.FK_ReserveCategories_BudgetCategories">
             <End Role="BudgetCategories" EntitySet="BudgetCategories" />
             <End Role="ReserveCategories" EntitySet="ReserveCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Supplement_Supplement" Association="Self.FK_Supplement_Supplement">
+            <End Role="Supplement" EntitySet="Supplement" />
+            <End Role="Supplement1" EntitySet="Supplement" />
           </AssociationSet>
           <AssociationSet Name="FK_SupplementPurchase_Product" Association="Self.FK_SupplementPurchase_Product">
             <End Role="Product" EntitySet="Product" />
@@ -1027,6 +1043,10 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
             <End Role="Supplement" EntitySet="Supplements" />
             <End Role="ProductSupplement" EntitySet="ProductSupplements" />
           </AssociationSet>
+          <AssociationSet Name="FK_Supplement_Supplement" Association="Household.Data.FK_Supplement_Supplement">
+            <End Role="Supplement" EntitySet="Supplements" />
+            <End Role="Supplement1" EntitySet="Supplements" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Company">
           <Key>
@@ -1067,17 +1087,19 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="ProductSupplements" Relationship="Household.Data.FK_ProductSupplement_Supplement" FromRole="Supplement" ToRole="ProductSupplement" />
+          <NavigationProperty Name="Supplement1" Relationship="Household.Data.FK_Supplement_Supplement" FromRole="Supplement" ToRole="Supplement1" />
+          <NavigationProperty Name="Supplement2" Relationship="Household.Data.FK_Supplement_Supplement" FromRole="Supplement1" ToRole="Supplement" />
         </EntityType>
         <EntityType Name="SupplementPurchase">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="ProductId" Type="Int32" Nullable="false" />
           <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Quantity" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Product" Relationship="Household.Data.FK_SupplementPurchase_Product" FromRole="SupplementPurchase" ToRole="Product" />
-          <Property Name="Price" Type="Decimal" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
         </EntityType>
         <Association Name="FK_Product_Company">
           <End Type="Household.Data.Company" Role="Company" Multiplicity="1" />
@@ -1124,6 +1146,18 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
             </Principal>
             <Dependent Role="ProductSupplement">
               <PropertyRef Name="SupplementId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Supplement_Supplement">
+          <End Type="Household.Data.Supplement" Role="Supplement" Multiplicity="1" />
+          <End Type="Household.Data.Supplement" Role="Supplement1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Supplement">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Supplement1">
+              <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1360,7 +1394,7 @@ warning 6002: The table/view 'Finance.dbo.tblLoans' does not have a primary key 
           <EntitySetMapping Name="Companies">
             <EntityTypeMapping TypeName="Household.Data.Company">
               <MappingFragment StoreEntitySet="Company">
-                <ScalarProperty Name="Name" ColumnName="CompanyName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

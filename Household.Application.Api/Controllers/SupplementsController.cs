@@ -5,6 +5,7 @@ using Household.Supplements.Data.Repository;
 using Household.Application.Service.Interface;
 using Household.SharedKernel.EntityFramework;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
 
 namespace Household.Application.Api.Controllers
 {
@@ -29,5 +30,17 @@ namespace Household.Application.Api.Controllers
         {
             return _supplementService.GetSupplementPurchases();
         }
+
+        [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(500)]
+        public IActionResult AddSupplementPurchases(SupplementPurchase purchase)
+        {
+            _supplementService.AddSupplementPurchase(purchase);
+            return Ok();
+        }
     }
 }
+
+//https://learn.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-5.0
+//https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-5.0
