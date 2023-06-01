@@ -34,7 +34,7 @@ namespace Household.Application.Api
             });
             services.AddScoped<ISupplementService, SupplementService>();
             services.AddScoped<IDbContext, FinanceDbContext>();
-            services.AddScoped<Repository<SupplementPurchase>, Repository<SupplementPurchase>>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(_ => new FinanceDbContext("Server=(localdb)\\mssqllocaldb;Database=Finance;Trusted_Connection=True;MultipleActiveResultSets=true"));
         }
 

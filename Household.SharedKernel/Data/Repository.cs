@@ -7,7 +7,7 @@ using Household.SharedKernel.EntityFramework;
 
 namespace Household.SharedKernel.Data.Repository
 {
-    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : AggregateRoot
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : AggregateRoot
     {
         private IDbContext _dataContext;
 
