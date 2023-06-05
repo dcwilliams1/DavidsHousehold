@@ -4,13 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Household.Application.Service;
 using Household.Application.Service.Interface;
 using Household.Supplements.Domain.Model.Entity;
+using Household.Supplements.Data.Repository;
 using Household.SharedKernel.EntityFramework;
 using Household.SharedKernel.Data.Repository;
 
@@ -34,6 +31,7 @@ namespace Household.Application.Api
             });
             services.AddScoped<ISupplementService, SupplementService>();
             services.AddScoped<IDbContext, FinanceDbContext>();
+            services.AddScoped<IRepository<SupplementPurchase>, SupplementRepository>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(_ => new FinanceDbContext("Server=(localdb)\\mssqllocaldb;Database=Finance;Trusted_Connection=True;MultipleActiveResultSets=true"));
         }

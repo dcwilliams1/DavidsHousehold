@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Repository\MapperConfig.cs" />
     <Compile Include="Data\Repository\SupplementRepository.cs" />
     <Compile Include="Data\Repository\SupplementRepositoryTests.cs" />
     <Compile Include="Data\Service\AutoMapper.cs" />

@@ -29,6 +29,7 @@ namespace Household.Application.Service
 
         public List<SupplementPurchase> GetSupplementPurchases()
         {
+
             return _repo.GetAll().ToList();
         }
     }

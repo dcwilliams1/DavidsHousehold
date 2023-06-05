@@ -27,11 +27,16 @@ namespace Household.SharedKernel.Data.Repository
             }
         }
 
-        public TEntity GetById(Guid Id)
+        public IDbContext db
+        {
+            get { return _dataContext; }
+        }
+
+        public virtual TEntity GetById(Guid Id)
         {
             throw new NotImplementedException();
         }
-        public IEnumerable<TEntity> GetAll()
+        public virtual IEnumerable<TEntity> GetAll()
         {
             return DbSet.AsEnumerable();
         }
@@ -43,7 +48,7 @@ namespace Household.SharedKernel.Data.Repository
         {
             DbSet.Add(entity);
         }
-        public void Update(TEntity entity)
+        public virtual void Update(TEntity entity)
         {
             throw new NotImplementedException();
         }
