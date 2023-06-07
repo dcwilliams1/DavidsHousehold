@@ -41,6 +41,9 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,105 +67,84 @@
     <Compile Include="EntityFramework\Context\FinanceDBContextFactory.cs" />
     <Compile Include="EntityFramework\Model\BudgetCategory.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\BudgetLineItem.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\Cholesterol.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\Company.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\DeepReserve.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\EnergyBill.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\FinanceDB.Context.cs">
-      <DependentUpon>FinanceDB.Context.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FinanceDB.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Model\FinanceDB.cs">
-      <DependentUpon>FinanceDB.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Model\FinanceDB.Designer.cs">
-      <DependentUpon>FinanceDB.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FinanceDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Model\InvestmentTransaction.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="EntityFramework\Model\PineryEnergyBill.cs">
+      <DependentUpon>FinanceDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityFramework\Model\Product.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\ProductSupplement.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\ReserveAccount.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\ReserveCategory.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\ScheduledTran.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\Supplement.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\SupplementPurchase.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\tblAccount.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\tblAccountFund.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\tblDataPoint.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\tblFund.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\tblLoan.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\TransactionType.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EntityFramework\Model\User.cs">
       <DependentUpon>FinanceDB.tt</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -173,31 +155,26 @@
     <EntityDeploy Include="EntityFramework\Model\FinanceDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FinanceDB.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EntityDeploy>
     <None Include="EntityFramework\Model\FinanceDB.edmx.diagram">
       <DependentUpon>FinanceDB.edmx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="EntityFramework\Model\FinanceDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FinanceDB.edmx</DependentUpon>
       <LastGenOutput>FinanceDB.Context.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="EntityFramework\Model\FinanceDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FinanceDB.edmx</DependentUpon>
       <LastGenOutput>FinanceDB.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

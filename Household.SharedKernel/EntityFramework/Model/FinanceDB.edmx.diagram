@@ -4,43 +4,44 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="be63f4c58f284d788913d13602e356f9" Name="Diagram1">
-        <EntityTypeShape EntityType="Household.Data.BudgetCategory" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.BudgetLineItem" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.DeepReserve" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.EnergyBill" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.InvestmentTransaction" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.ReserveAccount" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.ReserveCategory" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.ScheduledTran" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.tblDataPoint" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.TransactionType" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.User" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.Cholesterol" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.tblAccountFund" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.tblAccount" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.tblFund" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Household.Data.tblLoan" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
-        <AssociationConnector Association="Household.Data.FK__BudgetLin__Categ__7D78A4E7" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK_BudgetCategories_BudgetCategories" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK_ReserveCategories_BudgetCategories" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK__BudgetLin__Trans__7E6CC920" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK__BudgetLin__UserI__7F60ED59" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK_DeepReserves_ReserveAccountID" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK_DeepReserves_ReserveCategoryID" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK_InvestmentTransactions_tblDataPoints" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.FK_InvestmentTransactions_tblReserveCategories" ManuallyRouted="false" />
-        <AssociationConnector Association="Household.Data.CategoryUser" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="Household.Data.Company" Width="1.5" PointX="12.375" PointY="3.75" />
-        <EntityTypeShape EntityType="Household.Data.Product" Width="1.5" PointX="14.625" PointY="3.25" />
-        <EntityTypeShape EntityType="Household.Data.ProductSupplement" Width="1.5" PointX="16.875" PointY="3.375" />
-        <EntityTypeShape EntityType="Household.Data.Supplement" Width="1.5" PointX="14.625" PointY="0.75" />
-        <EntityTypeShape EntityType="Household.Data.SupplementPurchase" Width="1.5" PointX="16.875" PointY="6.625" />
-        <AssociationConnector Association="Household.Data.FK_Product_Company" />
-        <AssociationConnector Association="Household.Data.FK_ProductSupplement_Product" />
-        <AssociationConnector Association="Household.Data.FK_SupplementPurchase_Product" />
-        <AssociationConnector Association="Household.Data.FK_ProductSupplement_Supplement" />
-        <AssociationConnector Association="Household.Data.FK_Supplement_Supplement" />
+      <Diagram DiagramId="a8a829d0246b45a7afbe152a89614001" Name="Diagram1">
+        <EntityTypeShape EntityType="FinanceModel.BudgetCategory" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.BudgetLineItem" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.Company" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.DeepReserve" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.EnergyBill" Width="1.5" PointX="10.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.InvestmentTransaction" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.Product" Width="1.5" PointX="10" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.ProductSupplement" Width="1.5" PointX="12.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.ReserveAccount" Width="1.5" PointX="6" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.ReserveCategory" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.ScheduledTran" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.Supplement" Width="1.5" PointX="10" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.tblDataPoint" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.TransactionType" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.User" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.Cholesterol" Width="1.5" PointX="12.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.PineryEnergyBill" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.SupplementPurchase" Width="1.5" PointX="12.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.tblAccountFund" Width="1.5" PointX="4.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.tblAccount" Width="1.5" PointX="14.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.tblFund" Width="1.5" PointX="6.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FinanceModel.tblLoan" Width="1.5" PointX="14.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="FinanceModel.FK__BudgetLin__Categ__7D78A4E7" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_BudgetCategories_BudgetCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_ReserveCategories_BudgetCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK__BudgetLin__Trans__7E6CC920" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK__BudgetLin__UserI__7F60ED59" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_Product_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_DeepReserves_ReserveAccountID" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_DeepReserves_ReserveCategoryID" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_InvestmentTransactions_tblDataPoints" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_InvestmentTransactions_tblReserveCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_ProductSupplement_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_SupplementPurchase_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_ProductSupplement_ProductSupplement" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.FK_ProductSupplement_Supplement" ManuallyRouted="false" />
+        <AssociationConnector Association="FinanceModel.CategoryUser" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

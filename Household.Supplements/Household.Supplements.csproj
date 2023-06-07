@@ -71,6 +71,9 @@
     <Compile Include="Data\Repository\SupplementRepository.cs" />
     <Compile Include="Data\Repository\SupplementRepositoryTests.cs" />
     <Compile Include="Data\Service\AutoMapper.cs" />
+    <Compile Include="Domain\Model\Entity\Company.cs" />
+    <Compile Include="Domain\Model\Entity\Product.cs" />
+    <Compile Include="Domain\Model\Entity\Supplement.cs" />
     <Compile Include="Domain\Model\Entity\SupplementPurchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

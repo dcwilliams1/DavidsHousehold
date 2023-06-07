@@ -21,9 +21,9 @@ namespace Household.SharedKernel.EntityFramework.Model
             this.SupplementPurchases = new HashSet<SupplementPurchase>();
         }
     
-        public int Id { get; set; }
+        public System.Guid Id { get; set; }
         public string Name { get; set; }
-        public int CompanyId { get; set; }
+        public System.Guid CompanyId { get; set; }
         public short Count { get; set; }
     
         public virtual Company Company { get; set; }

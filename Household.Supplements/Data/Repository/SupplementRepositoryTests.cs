@@ -20,14 +20,17 @@ namespace Household.Data.EntityFramework.Test
                 .Callback((SupplementPurchase sp) => supplementInMemoryDatabase.Add(sp));
 
             var expectedSupplementPurchase = new SupplementPurchase()
-            { 
-                Company = "Test Company",
+            {
+                Company = new Company()
+                {
+                    Name = "Test Company"
+                },
             };
 
             repository.Object.Add(expectedSupplementPurchase);
 
             Assert.IsTrue(supplementInMemoryDatabase.Count == 1);
-            Assert.IsTrue(supplementInMemoryDatabase[0].Company.Equals(expectedSupplementPurchase.Company));
+            Assert.IsTrue(supplementInMemoryDatabase[0].Company.Equals(expectedSupplementPurchase.Company.Name));
         }
     }
 }

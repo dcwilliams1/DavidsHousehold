@@ -27,24 +27,25 @@ namespace Household.SharedKernel.EntityFramework.Model
     
         public virtual DbSet<BudgetCategory> BudgetCategories { get; set; }
         public virtual DbSet<BudgetLineItem> BudgetLineItems { get; set; }
+        public virtual DbSet<Company> Companies { get; set; }
         public virtual DbSet<DeepReserve> DeepReserves { get; set; }
         public virtual DbSet<EnergyBill> EnergyBills { get; set; }
         public virtual DbSet<InvestmentTransaction> InvestmentTransactions { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductSupplement> ProductSupplements { get; set; }
         public virtual DbSet<ReserveAccount> ReserveAccounts { get; set; }
         public virtual DbSet<ReserveCategory> ReserveCategories { get; set; }
         public virtual DbSet<ScheduledTran> ScheduledTrans { get; set; }
+        public virtual DbSet<Supplement> Supplements { get; set; }
         public virtual DbSet<tblDataPoint> tblDataPoints { get; set; }
         public virtual DbSet<TransactionType> TransactionTypes { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Cholesterol> Cholesterol { get; set; }
+        public virtual DbSet<Cholesterol> Cholesterols { get; set; }
+        public virtual DbSet<PineryEnergyBill> PineryEnergyBills { get; set; }
+        public virtual DbSet<SupplementPurchase> SupplementPurchases { get; set; }
         public virtual DbSet<tblAccountFund> tblAccountFunds { get; set; }
         public virtual DbSet<tblAccount> tblAccounts { get; set; }
         public virtual DbSet<tblFund> tblFunds { get; set; }
         public virtual DbSet<tblLoan> tblLoans { get; set; }
-        public virtual DbSet<Company> Company { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
-        public virtual DbSet<ProductSupplement> ProductSupplement { get; set; }
-        public virtual DbSet<Supplement> Supplement { get; set; }
-        public virtual DbSet<SupplementPurchase> SupplementPurchase { get; set; }
     }
 }

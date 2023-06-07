@@ -12,14 +12,18 @@ namespace Household.SharedKernel.EntityFramework.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class SupplementPurchase
+    public partial class PineryEnergyBill
     {
-        public System.Guid Id { get; set; }
-        public System.DateTime PurchaseDate { get; set; }
-        public short Quantity { get; set; }
-        public decimal Price { get; set; }
-        public System.Guid ProductId { get; set; }
-    
-        public virtual Product Product { get; set; }
+        public int Id { get; set; }
+        public System.DateTime MonthEnd { get; set; }
+        public int DaysInPeriod { get; set; }
+        public int KwH { get; set; }
+        public decimal ElectricCost { get; set; }
+        public int Meter { get; set; }
+        public int Therms { get; set; }
+        public decimal GasCost { get; set; }
+        public Nullable<int> AvgTemp { get; set; }
+        public string Mode { get; set; }
+        public string Comment { get; set; }
     }
 }

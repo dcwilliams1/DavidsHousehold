@@ -15,12 +15,14 @@ namespace Household.SharedKernel.EntityFramework.Model
     public partial class ProductSupplement
     {
         public int Id { get; set; }
-        public short StrengthMg { get; set; }
+        public decimal StrengthMg { get; set; }
         public byte Dose { get; set; }
-        public int ProductId { get; set; }
-        public int SupplementId { get; set; }
+        public System.Guid ProductId { get; set; }
+        public System.Guid SupplementId { get; set; }
     
         public virtual Product Product { get; set; }
+        public virtual ProductSupplement ProductSupplement1 { get; set; }
+        public virtual ProductSupplement ProductSupplement2 { get; set; }
         public virtual Supplement Supplement { get; set; }
     }
 }

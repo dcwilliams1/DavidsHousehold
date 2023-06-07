@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using Household.SharedKernel.EntityFramework;
 using EFModel=Household.SharedKernel.EntityFramework.Model;
@@ -12,9 +13,11 @@ namespace Household.Supplements.Data.Repository
     public class SupplementRepository : Repository<DomainModel.SupplementPurchase>
     {
         private Mapper _mapper;
+        private FinanceDbContext _financeDb;
         public SupplementRepository(FinanceDbContext context) : base(context)
         {
             _mapper = MapperConfig.InitializeAutoMapper();
+            _financeDb = context;
         }
         
         public override void Add(DomainModel.SupplementPurchase Purchase)
@@ -27,28 +30,34 @@ namespace Household.Supplements.Data.Repository
                 Price = Purchase.Price,
                 Product = new EFModel.Product()
                 {
-                    Name = Purchase.Product,
+                    Name = Purchase.Product.Name,
                     Company = new EFModel.Company()
                     {
-                        Name = Purchase.Company,
+                        Name = Purchase.Company.Name,
                     },
-                    Count = Purchase.Count,
+                    Count = Purchase.Product.ItemCount,
                 },
             };
-            purchase.Product.ProductSupplements.Add(new EFModel.ProductSupplement()
+            var existingProductSupplements = _financeDb.ProductSupplements.Where(ps => ps.ProductId == purchase.ProductId);
+
+            foreach (DomainModel.Supplement supplement in Purchase.Product.Supplements)
             {
-                StrengthMg = (Int16)Purchase.Strength,
-                Dose = (byte)Purchase.Dose,
-                Supplement = new EFModel.Supplement()
+                if (!existingProductSupplements.Any(ps => ps.Supplement.Id == supplement.Id))
                 {
-                    Name = Purchase.Supplement,
+                    purchase.Product.ProductSupplements.Add(new EFModel.ProductSupplement()
+                    {
+                        Supplement = new EFModel.Supplement()
+                        {
+                            Name = supplement.Name
+                        }
+                    });
                 }
-            });
+            }
         }
 
         public override IEnumerable<DomainModel.SupplementPurchase> GetAll()
         {
-            var supplementPurchases = ((FinanceDbContext)db).SupplementPurchase.Include("Product");
+            var supplementPurchases = _financeDb.SupplementPurchases.Include(sp => sp.Product.Company);
             List<DomainModel.SupplementPurchase> returnValue = _mapper.Map<List<DomainModel.SupplementPurchase>>(supplementPurchases);
             return returnValue;
         }
@@ -58,3 +67,4 @@ namespace Household.Supplements.Data.Repository
 //https://rogerjohansson.blog/2013/12/01/why-mapping-dtos-to-entities-using-automapper-and-entityframework-is-horrible/
 //https://docs.automapper.org/en/stable/Lists-and-arrays.html
 //https://dotnettutorials.net/lesson/automapper-in-c-sharp/
+//https://www.entityframeworktutorial.net/efcore/create-model-for-existing-database-in-ef-core.aspx
