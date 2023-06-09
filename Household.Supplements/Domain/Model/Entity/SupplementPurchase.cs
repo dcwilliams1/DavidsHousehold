@@ -7,7 +7,6 @@ namespace Household.Supplements.Domain.Model.Entity
     public class SupplementPurchase : AggregateRoot
     {
         public DateTime Date { get; set; }
-        public Company Company { get; set; }
         public Product Product { get; set; }
         public decimal Price { get; set; }
         public Int16 Quantity { get; set; }

@@ -21,16 +21,16 @@ namespace Household.Data.EntityFramework.Test
 
             var expectedSupplementPurchase = new SupplementPurchase()
             {
-                Company = new Company()
+                Product = new Product()
                 {
-                    Name = "Test Company"
-                },
+                    Name = "Test Product"
+                }
             };
 
             repository.Object.Add(expectedSupplementPurchase);
 
             Assert.IsTrue(supplementInMemoryDatabase.Count == 1);
-            Assert.IsTrue(supplementInMemoryDatabase[0].Company.Equals(expectedSupplementPurchase.Company.Name));
+            Assert.IsTrue(supplementInMemoryDatabase[0].Product.Equals(expectedSupplementPurchase.Product));
         }
     }
 }

@@ -9,8 +9,8 @@ namespace Household.Supplements.Domain.Model.Entity
 {
     public class Product : EntityBase
     {
-        public string Name { get; private set; }
-        public Int16 ItemCount { get; private set; }
+        public string Name { get; set; }
+        public Int16 ItemCount { get; set; }
         public List<Supplement> Supplements { get; set; }
         public Company Company { get; private set; }
     }

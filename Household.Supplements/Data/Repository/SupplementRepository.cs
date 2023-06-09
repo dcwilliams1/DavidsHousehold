@@ -33,7 +33,7 @@ namespace Household.Supplements.Data.Repository
                     Name = Purchase.Product.Name,
                     Company = new EFModel.Company()
                     {
-                        Name = Purchase.Company.Name,
+                        Name = Purchase.Product.Company.Name,
                     },
                     Count = Purchase.Product.ItemCount,
                 },
@@ -57,7 +57,7 @@ namespace Household.Supplements.Data.Repository
 
         public override IEnumerable<DomainModel.SupplementPurchase> GetAll()
         {
-            var supplementPurchases = _financeDb.SupplementPurchases.Include(sp => sp.Product.Company);
+            var supplementPurchases = _financeDb.SupplementPurchases.Include(sp => sp.Product.Company).Include(sp => sp.Product.ProductSupplements);
             List<DomainModel.SupplementPurchase> returnValue = _mapper.Map<List<DomainModel.SupplementPurchase>>(supplementPurchases);
             return returnValue;
         }
@@ -68,3 +68,4 @@ namespace Household.Supplements.Data.Repository
 //https://docs.automapper.org/en/stable/Lists-and-arrays.html
 //https://dotnettutorials.net/lesson/automapper-in-c-sharp/
 //https://www.entityframeworktutorial.net/efcore/create-model-for-existing-database-in-ef-core.aspx
+//https://learn.microsoft.com/en-us/ef/ef6/querying/related-data

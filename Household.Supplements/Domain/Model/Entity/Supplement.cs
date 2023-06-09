@@ -9,6 +9,8 @@ namespace Household.Supplements.Domain.Model.Entity
 {
     public class Supplement: EntityBase
     {
-        public string Name { get; private set; }
+        public string Name { get; set; }
+        public decimal Strength { get; set; }
+        public Int16 Dose { get; set; }
     }
 }
